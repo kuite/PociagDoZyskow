@@ -1,12 +1,10 @@
 ﻿using System;
 
-namespace PociagDoZyskow.Model
+namespace PociagDoZyskow.DataAccess.Entities.Stock
 {
-    public class Company
+    public class Record
     {
-        public string Name { get; set; }
-
-        public string ShortName { get; set; }
+        public int Id { get; set; }
 
         public DateTime LastTransactionTime { get; set; }
 
@@ -25,5 +23,9 @@ namespace PociagDoZyskow.Model
         public int TotalTransactionVolume { get; set; }
 
         public int TransactionsCount { get; set; }
+
+        public int CompanyId { get; set; }
+
+        public Company Company { get; set; }
     }
 }
