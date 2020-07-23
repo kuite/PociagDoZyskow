@@ -12,7 +12,7 @@ namespace PociagDoZyskow.DataAccess.Contexts
 
         public virtual DbSet<Company> Companies { get; set; }
 
-        public virtual DbSet<Record> Records { get; set; }
+        public virtual DbSet<DataScan> Records { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,7 +25,7 @@ namespace PociagDoZyskow.DataAccess.Contexts
             modelBuilder.Entity<Exchange>().HasData(new Exchange { Id = 1, Name = "NewConnect", ShortName = "NC" });
             modelBuilder.Entity<Company>().HasData(new Company
                 { Id = 1, ExchangeId = 1, Name = "Cookieland", ShortName = "CL" });
-            modelBuilder.Entity<Record>().HasData(new Record
+            modelBuilder.Entity<DataScan>().HasData(new DataScan
             {
                 Id = 1,
                 CompanyId = 1,

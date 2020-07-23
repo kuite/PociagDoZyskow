@@ -2,9 +2,11 @@
 
 namespace PociagDoZyskow.DataAccess.Entities.Stock
 {
-    public class Record
+    public class DataScan
     {
         public int Id { get; set; }
+
+        public DateTime ScanTime { get; set; }
 
         public DateTime LastTransactionTime { get; set; }
 

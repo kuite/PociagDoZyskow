@@ -23,7 +23,7 @@ namespace PociagDoZyskow.DataAccess.Contexts
             {
                 foreach (var sqlError in dbUpdateConcurrencyException.Data.Keys)
                 {
-                    Console.WriteLine("Error Property Name {0} : Error Message: {1}", sqlError, dbUpdateConcurrencyException.Data[sqlError]);
+                    Console.WriteLine($"Error Property Name {0} : Error Message: {1}", sqlError, dbUpdateConcurrencyException.Data[sqlError]);
                 }
 
                 throw;
@@ -32,7 +32,7 @@ namespace PociagDoZyskow.DataAccess.Contexts
             {
                 foreach (var sqlError in dbUpdateException.Data.Keys)
                 {
-                    Console.WriteLine("Error Property Name {0} : Error Message: {1}", sqlError, dbUpdateException.Data[sqlError]);
+                    Console.WriteLine($"Error Property Name {0} : Error Message: {1}", sqlError, dbUpdateException.Data[sqlError]);
                 }
 
                 throw;

@@ -5,9 +5,9 @@ using PociagDoZyskow.DataAccess.Entities.Stock;
 
 namespace PociagDoZyskow.DataAccess.Mapping
 {
-    public class RecordMap : IEntityTypeConfiguration<Record>
+    public class RecordMap : IEntityTypeConfiguration<DataScan>
     {
-        public void Configure(EntityTypeBuilder<Record> builder)
+        public void Configure(EntityTypeBuilder<DataScan> builder)
         {
             builder.HasKey(p => p.Id);
 
