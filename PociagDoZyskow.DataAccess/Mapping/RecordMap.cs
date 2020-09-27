@@ -15,7 +15,7 @@ namespace PociagDoZyskow.DataAccess.Mapping
 
             builder
                 .HasOne(left => left.Company)
-                .WithMany(right => right.Records)
+                .WithMany(right => right.DataScans)
                 .HasForeignKey(foreign => foreign.CompanyId);
 
             builder.ToTable("Record","stock");

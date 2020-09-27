@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Entities;
+using PociagDoZyskow.DataAccess.Entities.Algorithms;
 using PociagDoZyskow.DataAccess.Mapping;
 
 namespace PociagDoZyskow.DataAccess.Contexts
@@ -12,6 +13,8 @@ namespace PociagDoZyskow.DataAccess.Contexts
         public virtual DbSet<Company> Companies { get; set; }
 
         public virtual DbSet<DataScan> Records { get; set; }
+
+        public virtual DbSet<AlgorithmResult> AlgorithmResults { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
