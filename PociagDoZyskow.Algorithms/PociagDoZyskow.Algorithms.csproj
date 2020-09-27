@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="obj\Program.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\PociagDoZyskow.DataAccess\PociagDoZyskow.DataAccess.csproj" />
   </ItemGroup>
 
