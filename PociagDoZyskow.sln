@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PociagDoZyskow.QuotationsRe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.QuotationsReader", "PociagDoZyskow.QuotationsReader\PociagDoZyskow.QuotationsReader.csproj", "{41F25C7A-FDDF-425E-90D2-B50487520855}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PociagDoZyskow.Start", "PociagDoZyskow.Start", "{E970BECE-BB90-40FC-BBE1-315A8F5ED8F5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Start", "PociagDoZyskow.Start\PociagDoZyskow.Start.csproj", "{52498D9A-5FE3-470D-8954-F5877B02C516}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PociagDoZyskow.Algorithms", "PociagDoZyskow.Algorithms", "{8970BECE-BB91-40FC-BBE1-315A8F5FD8F5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Algorithms", "PociagDoZyskow.Algorithms\PociagDoZyskow.Algorithms.csproj", "{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PociagDoZyskow.Tests", "PociagDoZyskow.Tests", "{8970BECE-DD91-40FC-BBE1-315A8F5FD8F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Tests", "PociagDoZyskow.Tests\PociagDoZyskow.Tests.csproj", "{D4469D2E-455D-46E4-9CFD-3A66276ADEA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,14 +33,14 @@ Global
 		{41F25C7A-FDDF-425E-90D2-B50487520855}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41F25C7A-FDDF-425E-90D2-B50487520855}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41F25C7A-FDDF-425E-90D2-B50487520855}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52498D9A-5FE3-470D-8954-F5877B02C516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52498D9A-5FE3-470D-8954-F5877B02C516}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52498D9A-5FE3-470D-8954-F5877B02C516}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52498D9A-5FE3-470D-8954-F5877B02C516}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4469D2E-455D-46E4-9CFD-3A66276ADEA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4469D2E-455D-46E4-9CFD-3A66276ADEA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4469D2E-455D-46E4-9CFD-3A66276ADEA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4469D2E-455D-46E4-9CFD-3A66276ADEA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,8 +48,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{40ADB6DC-7D0D-4A3E-97DA-4BD1DCFBE5FE} = {8FBF1954-4431-4A2A-B83B-F314BCC6177E}
 		{41F25C7A-FDDF-425E-90D2-B50487520855} = {F3A49418-C895-46A5-AC31-FE50B1FDFE01}
-		{52498D9A-5FE3-470D-8954-F5877B02C516} = {E970BECE-BB90-40FC-BBE1-315A8F5ED8F5}
 		{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9} = {8970BECE-BB91-40FC-BBE1-315A8F5FD8F5}
+		{D4469D2E-455D-46E4-9CFD-3A66276ADEA6} = {8970BECE-DD91-40FC-BBE1-315A8F5FD8F5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6FE003AD-3A9E-4A83-A55C-4AEEEBB34DE0}
