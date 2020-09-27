@@ -1,0 +1,38 @@
+
+Wymagania biznesowe PociagDoZyskow:
+
+cel: 
+wykrywać anomalie/trendy na rynku new connect i generować raporty, wysyłane na maile/slack
+chciałbym dostawać informacje że np. spółka która średnio ma obroty 10k dziennie, pewnego dnia ma 1kk i idzie 100% w góre
+raporty spekulacyjne chcialbym dostawać co godzine
+
+dane wejsciowe: 
+https://newconnect.pl/notowania
+wskaźniki konkretnej spółki: https://newconnect.pl/spolka?isin=PLVCAOC00015#indicatorsTab (je trzymajmy lokalnie, update spolki raz na 4 dni, ale każde spółki innego dnia)
+
+
+raporty:
+
+A) gra pod raport:
+
+szukamy spółek która ma raport finansowy w najbliższych 4 tygodniach. Sprawdzamy obroty tej spółki przez ostatnie np 3 miesiace oraz porównujemy obroty 4 tygodnie przed raportem. Jeśli średnie obroty sie zwiększyły to chcemy raport, dołek, wskaźniki itd. Obrot dzienny rozpatrywany razem ze zmianną
+tutaj czytamy daty raportów https://strefainwestorow.pl/dane/raporty/lista-dat-publikacji-raportow-okresowych/wszystkie
+
+
+
+
+B) inwestycyjne:
+
+1. wykrywa trend wzrostu (preferujemy spolki kapitalizacja 10M + ?), interwał dzienny, posortowane dane: % pozytywnych sesji dziennych w okresach: tydzień, 3,6 1 miesiąc; wolumen dzienny na wykresie
+
+
+
+
+
+Program flow:
+
+Algorytmy
+
+W projekcie Algorithms trzymamy logike dla obliczeń.
+
+

@@ -1,3 +1,4 @@
+
 PociagDoZyskow.QuotationsReader/obj/Debug/netcoreapp2.2/PociagDoZyskow.QuotationsReader.csprojAssemblyReference.cache
 PociagDoZyskow.QuotationsReader/obj/Debug/netcoreapp2.2/PociagDoZyskow.QuotationsReader.assets.cache
 PociagDoZyskow.QuotationsReader/obj/Debug/netcoreapp2.2/PociagDoZyskow.QuotationsReader.AssemblyInfoInputs.cache
@@ -17,3 +18,48 @@ PociagDoZyskow.Algorithms/obj/Debug/netcoreapp2.2/PociagDoZyskow.Algorithms.asse
 PociagDoZyskow.Algorithms/obj/Debug/netcoreapp2.2/PociagDoZyskow.Algorithms.AssemblyInfoInputs.cache
 PociagDoZyskow.Algorithms/obj/Debug/netcoreapp2.2/PociagDoZyskow.Algorithms.AssemblyInfo.cs
 PociagDoZyskow.Model/obj/Debug/netstandard2.0/PociagDoZyskow.Model.csprojAssemblyReference.cache
+=======
+.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+
+# Visual Studio Code
+.vscode
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Visual Studio 2015
+.vs/
+
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+>>>>>>> algorithms-concept
