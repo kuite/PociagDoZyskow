@@ -1,7 +1,4 @@
-using System.Collections.Generic;
-using PociagDoZyskow.DataAccess.Entities;
-
-namespace PociagDoZyskow.Algorithms
+namespace PociagDoZyskow.Algorithms.Interfaces
 {
     public interface IAlgorithm
     {

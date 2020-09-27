@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using PociagDoZyskow.DataAccess.Entities.Stock;
+using PociagDoZyskow.DataAccess.Entities;
 
 namespace PociagDoZyskow.DataAccess.Mapping
 {

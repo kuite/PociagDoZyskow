@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Entities;
-using PociagDoZyskow.DataAccess.Entities.Stock;
 using PociagDoZyskow.DataAccess.Mapping;
 
 namespace PociagDoZyskow.DataAccess.Contexts

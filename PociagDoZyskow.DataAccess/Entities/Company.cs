@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using PociagDoZyskow.DataAccess.Entities.Stock;
+using PociagDoZyskow.DataAccess.Entities;
 
 namespace PociagDoZyskow.DataAccess.Entities
 {

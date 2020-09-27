@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PociagDoZyskow.DataAccess.Entities.Stock
+namespace PociagDoZyskow.DataAccess.Entities
 {
     public class Exchange
     {

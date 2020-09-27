@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PociagDoZyskow.DataAccess.Entities.Stock
+namespace PociagDoZyskow.DataAccess.Entities
 {
     public class DataScan
     {
