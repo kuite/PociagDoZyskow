@@ -8,7 +8,7 @@ namespace PociagDoZyskow.Start
         static void Main(string[] args)
         {
             var model = new Company();
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("dotnet ef database update --project ../PociagDoZyskow.DataAccess -c StockExchangeContext");
         }
     }
 }
