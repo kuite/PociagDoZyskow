@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PociagDoZyskow.Tests", "Poc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Tests", "PociagDoZyskow.Tests\PociagDoZyskow.Tests.csproj", "{D4469D2E-455D-46E4-9CFD-3A66276ADEA6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PociagDoZyskow.Start", "PociagDoZyskow.Start", "{B01DF66B-A764-4283-9F6D-B16091D34293}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Start", "PociagDoZyskow.Start\PociagDoZyskow.Start.csproj", "{99A1E343-FB7F-4FA4-8AFA-21426C78DA67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,10 @@ Global
 		{D4469D2E-455D-46E4-9CFD-3A66276ADEA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4469D2E-455D-46E4-9CFD-3A66276ADEA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4469D2E-455D-46E4-9CFD-3A66276ADEA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A1E343-FB7F-4FA4-8AFA-21426C78DA67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A1E343-FB7F-4FA4-8AFA-21426C78DA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A1E343-FB7F-4FA4-8AFA-21426C78DA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A1E343-FB7F-4FA4-8AFA-21426C78DA67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{41F25C7A-FDDF-425E-90D2-B50487520855} = {F3A49418-C895-46A5-AC31-FE50B1FDFE01}
 		{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9} = {8970BECE-BB91-40FC-BBE1-315A8F5FD8F5}
 		{D4469D2E-455D-46E4-9CFD-3A66276ADEA6} = {8970BECE-DD91-40FC-BBE1-315A8F5FD8F5}
+		{99A1E343-FB7F-4FA4-8AFA-21426C78DA67} = {B01DF66B-A764-4283-9F6D-B16091D34293}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6FE003AD-3A9E-4A83-A55C-4AEEEBB34DE0}
