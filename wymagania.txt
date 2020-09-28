@@ -8,6 +8,10 @@ raporty spekulacyjne chcialbym dostawać co godzine
 
 dane wejsciowe: 
 https://newconnect.pl/notowania
+https://www.gpw.pl/akcje
+
+http://notowania.pb.pl/stocktable/mWIG40
+
 wskaźniki konkretnej spółki: https://newconnect.pl/spolka?isin=PLVCAOC00015#indicatorsTab (je trzymajmy lokalnie, update spolki raz na 4 dni, ale każde spółki innego dnia)
 
 
