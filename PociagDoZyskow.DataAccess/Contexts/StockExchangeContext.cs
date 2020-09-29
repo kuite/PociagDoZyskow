@@ -12,7 +12,7 @@ namespace PociagDoZyskow.DataAccess.Contexts
 
         public virtual DbSet<Company> Companies { get; set; }
 
-        public virtual DbSet<DataScan> Records { get; set; }
+        public virtual DbSet<CompanyDataScan> Records { get; set; }
 
         public virtual DbSet<AlgorithmResult> AlgorithmResults { get; set; }
 
@@ -27,14 +27,12 @@ namespace PociagDoZyskow.DataAccess.Contexts
             modelBuilder.Entity<Exchange>().HasData(new Exchange { Id = 1, Name = "NewConnect", ShortName = "NC" });
             modelBuilder.Entity<Company>().HasData(new Company
                 { Id = 1, ExchangeId = 1, Name = "Cookieland", ShortName = "CL" });
-            modelBuilder.Entity<DataScan>().HasData(new DataScan
+            modelBuilder.Entity<CompanyDataScan>().HasData(new CompanyDataScan
             {
                 Id = 1,
                 CompanyId = 1,
                 HighestPrice = 1.0m,
                 LastPrice = 1.0m,
-                LastTransactionTime = DateTime.UtcNow,
-                LastTransactionVolume = 1,
                 LowestPrice = 1.0m,
                 OpenPrice = 1.0m,
                 ReferencePrice = 1.0m,

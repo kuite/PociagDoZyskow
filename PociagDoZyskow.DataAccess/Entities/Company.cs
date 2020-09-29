@@ -15,6 +15,6 @@ namespace PociagDoZyskow.DataAccess.Entities
 
         public Exchange Exchange { get; set; }
 
-        public ICollection<DataScan> DataScans { get; set; }
+        public ICollection<CompanyDataScan> CompanyDataScans { get; set; }
     }
 }

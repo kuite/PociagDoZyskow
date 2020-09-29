@@ -1,14 +1,10 @@
 ﻿using System;
 
-namespace PociagDoZyskow.DataAccess.Entities
+namespace PociagDoZyskow.DTO
 {
-    public class DataScan
+    public class CompanyDataScan
     {
-        public int Id { get; set; }
-
         public DateTime ScanTime { get; set; }
-
-        public DateTime LastTransactionTime { get; set; }
 
         public decimal ReferencePrice { get; set; }
 
@@ -20,14 +16,14 @@ namespace PociagDoZyskow.DataAccess.Entities
 
         public decimal LastPrice { get; set; }
 
-        public int LastTransactionVolume { get; set; }
+        public decimal ChangePrice { get; set; }
 
         public int TotalTransactionVolume { get; set; }
 
+        public int TotalTransactionValue { get; set; }
+
         public int TransactionsCount { get; set; }
 
-        public int CompanyId { get; set; }
-
-        public Company Company { get; set; }
+        public string CompanyName { get; set; }
     }
 }
