@@ -3,25 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PociagDoZyskow.DataAccess", "PociagDoZyskow.DataAccess", "{8FBF1954-4431-4A2A-B83B-F314BCC6177E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.DataAccess", "PociagDoZyskow.DataAccess\PociagDoZyskow.DataAccess.csproj", "{40ADB6DC-7D0D-4A3E-97DA-4BD1DCFBE5FE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PociagDoZyskow.QuotationsReader", "PociagDoZyskow.QuotationsReader", "{F3A49418-C895-46A5-AC31-FE50B1FDFE01}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.QuotationsReader", "PociagDoZyskow.QuotationsReader\PociagDoZyskow.QuotationsReader.csproj", "{41F25C7A-FDDF-425E-90D2-B50487520855}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PociagDoZyskow.Algorithms", "PociagDoZyskow.Algorithms", "{8970BECE-BB91-40FC-BBE1-315A8F5FD8F5}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Algorithms", "PociagDoZyskow.Algorithms\PociagDoZyskow.Algorithms.csproj", "{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PociagDoZyskow.Tests", "PociagDoZyskow.Tests", "{8970BECE-DD91-40FC-BBE1-315A8F5FD8F5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Tests", "PociagDoZyskow.Tests\PociagDoZyskow.Tests.csproj", "{D4469D2E-455D-46E4-9CFD-3A66276ADEA6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PociagDoZyskow.Start", "PociagDoZyskow.Start", "{B01DF66B-A764-4283-9F6D-B16091D34293}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Start", "PociagDoZyskow.Start\PociagDoZyskow.Start.csproj", "{99A1E343-FB7F-4FA4-8AFA-21426C78DA67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PociagDoZyskow.DTO", "PociagDoZyskow.DTO\PociagDoZyskow.DTO.csproj", "{E65C4428-3055-4F36-B00B-277152449ACA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,16 +41,13 @@ Global
 		{99A1E343-FB7F-4FA4-8AFA-21426C78DA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99A1E343-FB7F-4FA4-8AFA-21426C78DA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99A1E343-FB7F-4FA4-8AFA-21426C78DA67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E65C4428-3055-4F36-B00B-277152449ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E65C4428-3055-4F36-B00B-277152449ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E65C4428-3055-4F36-B00B-277152449ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E65C4428-3055-4F36-B00B-277152449ACA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{40ADB6DC-7D0D-4A3E-97DA-4BD1DCFBE5FE} = {8FBF1954-4431-4A2A-B83B-F314BCC6177E}
-		{41F25C7A-FDDF-425E-90D2-B50487520855} = {F3A49418-C895-46A5-AC31-FE50B1FDFE01}
-		{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9} = {8970BECE-BB91-40FC-BBE1-315A8F5FD8F5}
-		{D4469D2E-455D-46E4-9CFD-3A66276ADEA6} = {8970BECE-DD91-40FC-BBE1-315A8F5FD8F5}
-		{99A1E343-FB7F-4FA4-8AFA-21426C78DA67} = {B01DF66B-A764-4283-9F6D-B16091D34293}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6FE003AD-3A9E-4A83-A55C-4AEEEBB34DE0}
