@@ -17,7 +17,10 @@ namespace PociagDoZyskow.QuotationsReader.Services
         private readonly int HighestPriceIndex = 4;
         private readonly int LowestPriceIndex = 5;
         private readonly int LastPriceIndex = 6; 
-        private readonly int ChangePriceIndex = 7;
+        private readonly int ChangePriceIndex = 7; 
+        private readonly int TotalTransactionVolumeIndex = 8;
+        private readonly int TransactionCountIndex = 9; 
+        private readonly int TotalTransactionValueIndex = 10;
         private readonly WebClient _client;
 
         public GpwQuotationsReader(WebClient client)
@@ -43,7 +46,14 @@ namespace PociagDoZyskow.QuotationsReader.Services
                     var companyDataScan = new CompanyDataScan();
                     var cells = row.SelectNodes("th|td");
                     companyDataScan.CompanyName = cells[CompanyNameIndex].InnerText;
-
+                    companyDataScan.OpenPrice = decimal.Parse(cells[OpenPriceIndex].InnerText);
+                    companyDataScan.HighestPrice = decimal.Parse(cells[HighestPriceIndex].InnerText);
+                    companyDataScan.LowestPrice = decimal.Parse(cells[LowestPriceIndex].InnerText);
+                    companyDataScan.LastPrice = decimal.Parse(cells[LastPriceIndex].InnerText);
+                    companyDataScan.ChangePrice = decimal.Parse(cells[ChangePriceIndex].InnerText);
+                    companyDataScan.TotalTransactionVolume = int.Parse(cells[TotalTransactionVolumeIndex].InnerText);
+                    companyDataScan.TransactionsCount = int.Parse(cells[TransactionCountIndex].InnerText);
+                    companyDataScan.TotalTransactionValue = int.Parse(cells[TotalTransactionValueIndex].InnerText);
 
                     scans.Add(companyDataScan);
                 }
