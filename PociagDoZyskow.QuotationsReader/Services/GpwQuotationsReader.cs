@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using PociagDoZyskow.DTO;
+using PociagDoZyskow.QuotationsReader.Helpers;
 using PociagDoZyskow.QuotationsReader.Services.Interfaces;
 
 namespace PociagDoZyskow.QuotationsReader.Services
@@ -18,7 +19,7 @@ namespace PociagDoZyskow.QuotationsReader.Services
         private readonly int LowestPriceIndex = 5;
         private readonly int LastPriceIndex = 6; 
         private readonly int ChangePriceIndex = 7; 
-        private readonly int TotalTransactionVolumeIndex = 8;
+        private readonly int TotalTransactionVolumeStockCountIndex = 8;
         private readonly int TransactionCountIndex = 9; 
         private readonly int TotalTransactionValueIndex = 10;
         private readonly WebClient _client;
@@ -37,6 +38,7 @@ namespace PociagDoZyskow.QuotationsReader.Services
             doc.LoadHtml(result);
 
             var scans = new List<CompanyDataScan>();
+            var scanTime = DateTime.Now;
 
             foreach (HtmlNode table in doc.DocumentNode.SelectNodes("/html/body/section[2]/table"))
             {
@@ -45,15 +47,16 @@ namespace PociagDoZyskow.QuotationsReader.Services
                 {
                     var companyDataScan = new CompanyDataScan();
                     var cells = row.SelectNodes("th|td");
-                    companyDataScan.CompanyName = cells[CompanyNameIndex].InnerText;
-                    companyDataScan.OpenPrice = decimal.Parse(cells[OpenPriceIndex].InnerText);
-                    companyDataScan.HighestPrice = decimal.Parse(cells[HighestPriceIndex].InnerText);
-                    companyDataScan.LowestPrice = decimal.Parse(cells[LowestPriceIndex].InnerText);
-                    companyDataScan.LastPrice = decimal.Parse(cells[LastPriceIndex].InnerText);
-                    companyDataScan.ChangePrice = decimal.Parse(cells[ChangePriceIndex].InnerText);
-                    companyDataScan.TotalTransactionVolume = int.Parse(cells[TotalTransactionVolumeIndex].InnerText);
-                    companyDataScan.TransactionsCount = int.Parse(cells[TransactionCountIndex].InnerText);
-                    companyDataScan.TotalTransactionValue = int.Parse(cells[TotalTransactionValueIndex].InnerText);
+                    companyDataScan.ScanTime = scanTime;
+                    companyDataScan.CompanyName = cells[CompanyNameIndex].InnerText.CleanString();
+                    companyDataScan.OpenPrice = decimal.Parse(cells[OpenPriceIndex].InnerText.CleanString());
+                    companyDataScan.HighestPrice = decimal.Parse(cells[HighestPriceIndex].InnerText.CleanString());
+                    companyDataScan.LowestPrice = decimal.Parse(cells[LowestPriceIndex].InnerText.CleanString());
+                    companyDataScan.LastPrice = decimal.Parse(cells[LastPriceIndex].InnerText.CleanString());
+                    companyDataScan.ChangePrice = decimal.Parse(cells[ChangePriceIndex].InnerText.CleanString());
+                    companyDataScan.TotalTransactionVolumeStockCount = int.Parse(cells[TotalTransactionVolumeStockCountIndex].InnerText.CleanString());
+                    companyDataScan.TransactionsCount = int.Parse(cells[TransactionCountIndex].InnerText.CleanString());
+                    companyDataScan.TotalTransactionValue = decimal.Parse(cells[TotalTransactionValueIndex].InnerText.CleanString()) * 1000;
 
                     scans.Add(companyDataScan);
                 }

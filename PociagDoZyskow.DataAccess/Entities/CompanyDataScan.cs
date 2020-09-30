@@ -22,7 +22,7 @@ namespace PociagDoZyskow.DataAccess.Entities
 
         public int TotalTransactionVolume { get; set; }
 
-        public int TotalTransactionValue { get; set; }
+        public decimal TotalTransactionValue { get; set; }
 
         public int TransactionsCount { get; set; }
 
