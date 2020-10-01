@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using PociagDoZyskow.DTO;
 using PociagDoZyskow.QuotationsReader.Helpers;
-using PociagDoZyskow.QuotationsReader.Services.Interfaces;
+using PociagDoZyskow.QuotationsReader.Quotations.Interfaces;
 
-namespace PociagDoZyskow.QuotationsReader.Services
+namespace PociagDoZyskow.QuotationsReader.Quotations
 {
     public class GpwQuotationsReader : IQuotationsReader
     {

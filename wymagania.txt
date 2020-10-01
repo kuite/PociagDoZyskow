@@ -20,7 +20,9 @@ raporty:
 A) gra pod raport:
 
 szukamy spółek która ma raport finansowy w najbliższych 4 tygodniach. Sprawdzamy obroty tej spółki przez ostatnie np 3 miesiace oraz porównujemy obroty 4 tygodnie przed raportem. Jeśli średnie obroty sie zwiększyły to chcemy raport, dołek, wskaźniki itd. Obrot dzienny rozpatrywany razem ze zmianną
-tutaj czytamy daty raportów https://strefainwestorow.pl/dane/raporty/lista-dat-publikacji-raportow-okresowych/wszystkie
+tutaj czytamy daty raportów 
+https://strefainwestorow.pl/dane/raporty/lista-dat-publikacji-raportow-okresowych/wszystkie
+https://www.money.pl/gielda/raporty/ -> zawiera archiwalne
 
 
 

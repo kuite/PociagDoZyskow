@@ -22,7 +22,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
             migrationBuilder.InsertData(
                 schema: "stock",
                 table: "Record",
-                columns: new[] { "Id", "CompanyId", "HighestPrice", "LastPrice", "LastTransactionTime", "LastTransactionVolume", "LowestPrice", "OpenPrice", "ReferencePrice", "TotalTransactionVolume", "TransactionsCount" },
+                columns: new[] { "Id", "CompanyId", "HighestPrice", "LastPrice", "LastTransactionTime", "LastTransactionVolume", "LowestPrice", "OpenPrice", "ReferencePrice", "TotalTransactionVolumeStockCount", "TransactionsCount" },
                 values: new object[] { 1, 1, 1.0m, 1.0m, new DateTime(2020, 7, 22, 19, 22, 52, 281, DateTimeKind.Utc).AddTicks(9923), 1, 1.0m, 1.0m, 1.0m, 1, 1 });
         }
 

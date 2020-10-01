@@ -20,7 +20,7 @@ namespace PociagDoZyskow.DataAccess.Entities
 
         public decimal ChangePrice { get; set; }
 
-        public int TotalTransactionVolume { get; set; }
+        public int TotalTransactionVolumeStockCount { get; set; }
 
         public decimal TotalTransactionValue { get; set; }
 

@@ -1,8 +1,9 @@
 using Moq;
 using System;
 using System.IO;
+using System.Linq;
 using System.Net;
-using PociagDoZyskow.QuotationsReader.Services;
+using PociagDoZyskow.QuotationsReader.Quotations;
 using Xunit;
 
 namespace PociagDoZyskow.Tests.Integration.QuotationsReader
@@ -23,6 +24,7 @@ namespace PociagDoZyskow.Tests.Integration.QuotationsReader
             var result = await gpwReader.GetExchangeScans(date);
 
             //Assert
+            Assert.Equal(436, result.Count());
         }
     }
 }

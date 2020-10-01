@@ -124,8 +124,8 @@ namespace PociagDoZyskow.DataAccess.Migrations
                         .HasColumnName("ReferencePrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("TotalTransactionVolume")
-                        .HasColumnName("TotalTransactionVolume")
+                    b.Property<int>("TotalTransactionVolumeStockCount")
+                        .HasColumnName("TotalTransactionVolumeStockCount")
                         .HasColumnType("int");
 
                     b.Property<int>("TransactionsCount")

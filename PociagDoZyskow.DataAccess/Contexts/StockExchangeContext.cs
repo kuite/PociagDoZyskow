@@ -36,7 +36,7 @@ namespace PociagDoZyskow.DataAccess.Contexts
                 LowestPrice = 1.0m,
                 OpenPrice = 1.0m,
                 ReferencePrice = 1.0m,
-                TotalTransactionVolume = 1,
+                TotalTransactionVolumeStockCount = 1,
                 TransactionsCount = 1
             });
         }

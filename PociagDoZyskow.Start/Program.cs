@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Net;
 using HtmlAgilityPack;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Firefox;
 using PociagDoZyskow.DataAccess.Entities;
 
 namespace PociagDoZyskow.Start
@@ -12,11 +16,18 @@ namespace PociagDoZyskow.Start
             var model = new Company();
             using (var client = new WebClient())
             {
-                string result = client.DownloadString("https://www.gpw.pl/archiwum-notowan-full?type=10&instrument=&date=25-09-2020");
-                // TODO: do something with the downloaded result from the remote
+                string result = client.DownloadString("https://www.money.pl/gielda/raporty/");
+                var service = FirefoxDriverService.CreateDefaultService();
+                FirefoxOptions options = new FirefoxOptions();
+                //options.AddArguments("--headless");
+                IWebDriver webDriver = new FirefoxDriver(service, options);
+                webDriver.Navigate().GoToUrl(@"https://www.money.pl/gielda/raporty/");
+                webDriver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div[3]/div/button[2]")).Click();
+                var result2 = webDriver.PageSource;
 
                 HtmlDocument doc = new HtmlDocument();
-                doc.LoadHtml(result);
+                //doc.LoadHtml(result);
+                doc.LoadHtml(result2);
 
                 foreach (HtmlNode table in doc.DocumentNode.SelectNodes("/html/body/section[2]/table"))
                 {
