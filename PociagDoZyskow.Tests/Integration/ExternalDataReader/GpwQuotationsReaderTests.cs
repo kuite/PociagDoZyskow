@@ -3,12 +3,12 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Net;
-using PociagDoZyskow.QuotationsReader.Quotations;
+using PociagDoZyskow.ExternalDataReader.Quotations;
 using Xunit;
 
-namespace PociagDoZyskow.Tests.Integration.QuotationsReader
+namespace PociagDoZyskow.Tests.Integration.ExternalDataReader
 {
-    public class GpwQuotationsReaderTests
+    public class GpwExternalDataReaderTests
     {
         
         [Theory]
@@ -18,10 +18,10 @@ namespace PociagDoZyskow.Tests.Integration.QuotationsReader
             //Arrange
             var date = DateTime.Parse(dateString);
             var webClient = new WebClient();
-            var gpwReader = new GpwQuotationsReader(webClient);
+            var gpwReader = new GpwExternalDataReader(webClient);
 
             //Act
-            var result = await gpwReader.GetExchangeScans(date);
+            var result = await gpwReader.GetCompanyDailyDataScans(date);
 
             //Assert
             Assert.Equal(436, result.Count());

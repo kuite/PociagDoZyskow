@@ -1,10 +1,10 @@
 using PociagDoZyskow.Algorithms.Interfaces;
-using PociagDoZyskow.Algorithms.Model;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using PociagDoZyskow.Algorithms.DTO;
 
-namespace PociagDoZyskow.Algorithms.Reports
+namespace PociagDoZyskow.Algorithms.ReportsGenerator
 {
     public class VolumeBeforeFinancialReportsAlgorithm : IAlgorithm
     {

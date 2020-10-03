@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using PociagDoZyskow.Algorithms.Model;
+using PociagDoZyskow.Algorithms.DTO;
 
 namespace PociagDoZyskow.Algorithms.Interfaces
 {

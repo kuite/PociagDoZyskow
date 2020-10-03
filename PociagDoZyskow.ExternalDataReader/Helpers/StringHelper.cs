@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace PociagDoZyskow.QuotationsReader.Helpers
+namespace PociagDoZyskow.ExternalDataReader.Helpers
 {
     public static class StringHelper
     {

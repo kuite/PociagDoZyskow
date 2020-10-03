@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PociagDoZyskow.DTO
+namespace PociagDoZyskow.DataAccess.Entities
 {
     public class FinancialReportTimeDataScan
     {
+        public int Id { get; set; }
+
         public string Ticker { get; set; }
+
+        public int CompanyId { get; set; }
+
+        public Company Company { get; set; }
 
         public string ShortCompanyName { get; set; }
 

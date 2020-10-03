@@ -16,6 +16,9 @@ namespace PociagDoZyskow.DataAccess.Contexts
 
         public virtual DbSet<AlgorithmResult> AlgorithmResults { get; set; }
 
+        public virtual DbSet<FinancialReportTimeDataScan> FinancialReportTimeDataScans { get; set; }
+        
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

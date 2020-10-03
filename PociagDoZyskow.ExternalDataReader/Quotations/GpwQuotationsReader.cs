@@ -4,12 +4,12 @@ using System.Net;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using PociagDoZyskow.DTO;
-using PociagDoZyskow.QuotationsReader.Helpers;
-using PociagDoZyskow.QuotationsReader.Quotations.Interfaces;
+using PociagDoZyskow.ExternalDataReader.Helpers;
+using PociagDoZyskow.ExternalDataReader.Quotations.Interfaces;
 
-namespace PociagDoZyskow.QuotationsReader.Quotations
+namespace PociagDoZyskow.ExternalDataReader.Quotations
 {
-    public class GpwQuotationsReader : IQuotationsReader
+    public class GpwExternalDataReader : IExternalDataReader
     {
         private readonly string GpwBaseUrl = "https://www.gpw.pl/archiwum-notowan-full?type=10&instrument=&date=";
         private readonly int CompanyNameIndex = 0;
@@ -23,12 +23,12 @@ namespace PociagDoZyskow.QuotationsReader.Quotations
         private readonly int TotalTransactionValueIndex = 10;
         private readonly WebClient _client;
 
-        public GpwQuotationsReader(WebClient client)
+        public GpwExternalDataReader(WebClient client)
         {
             _client = client;
         }
 
-        public async Task<IEnumerable<CompanyDataScan>> GetExchangeScans(DateTime date)
+        public async Task<IEnumerable<CompanyDataScan>> GetCompanyDailyDataScans(DateTime date)
         {
             String formattedDate = date.ToString("dd-MM-yyyy");
             var filledUrl = String.Concat(GpwBaseUrl, formattedDate);

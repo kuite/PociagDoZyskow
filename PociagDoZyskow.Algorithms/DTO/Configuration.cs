@@ -2,7 +2,7 @@ using PociagDoZyskow.DataAccess.Entities;
 using System;
 using System.Collections.Generic;
 
-namespace PociagDoZyskow.Algorithms.Model
+namespace PociagDoZyskow.Algorithms.DTO
 {
     public class Configuration
     {

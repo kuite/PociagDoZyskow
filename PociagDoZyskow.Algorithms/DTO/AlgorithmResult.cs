@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using PociagDoZyskow.DataAccess.Entities;
 
-namespace PociagDoZyskow.Algorithms.Model
+namespace PociagDoZyskow.Algorithms.DTO
 {
     public class AlgorithmResult
     {

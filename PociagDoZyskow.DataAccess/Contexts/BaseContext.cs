@@ -10,7 +10,7 @@ namespace PociagDoZyskow.DataAccess.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=train;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=PociagDoZyskow;Integrated Security=True");
         }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

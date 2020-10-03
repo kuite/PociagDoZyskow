@@ -5,15 +5,15 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.DataAccess", "PociagDoZyskow.DataAccess\PociagDoZyskow.DataAccess.csproj", "{40ADB6DC-7D0D-4A3E-97DA-4BD1DCFBE5FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.QuotationsReader", "PociagDoZyskow.QuotationsReader\PociagDoZyskow.QuotationsReader.csproj", "{41F25C7A-FDDF-425E-90D2-B50487520855}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Algorithms", "PociagDoZyskow.Algorithms\PociagDoZyskow.Algorithms.csproj", "{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Tests", "PociagDoZyskow.Tests\PociagDoZyskow.Tests.csproj", "{D4469D2E-455D-46E4-9CFD-3A66276ADEA6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Start", "PociagDoZyskow.Start\PociagDoZyskow.Start.csproj", "{99A1E343-FB7F-4FA4-8AFA-21426C78DA67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PociagDoZyskow.DTO", "PociagDoZyskow.DTO\PociagDoZyskow.DTO.csproj", "{E65C4428-3055-4F36-B00B-277152449ACA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.DTO", "PociagDoZyskow.DTO\PociagDoZyskow.DTO.csproj", "{E65C4428-3055-4F36-B00B-277152449ACA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.ExternalDataReader", "PociagDoZyskow.ExternalDataReader\PociagDoZyskow.ExternalDataReader.csproj", "{F7565618-ED21-4704-A6D5-1B08E94E7EA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		{40ADB6DC-7D0D-4A3E-97DA-4BD1DCFBE5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40ADB6DC-7D0D-4A3E-97DA-4BD1DCFBE5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40ADB6DC-7D0D-4A3E-97DA-4BD1DCFBE5FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{41F25C7A-FDDF-425E-90D2-B50487520855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{41F25C7A-FDDF-425E-90D2-B50487520855}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{41F25C7A-FDDF-425E-90D2-B50487520855}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{41F25C7A-FDDF-425E-90D2-B50487520855}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5946FA1-DEE1-4D6D-8B78-A510BCD00BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{E65C4428-3055-4F36-B00B-277152449ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E65C4428-3055-4F36-B00B-277152449ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E65C4428-3055-4F36-B00B-277152449ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7565618-ED21-4704-A6D5-1B08E94E7EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7565618-ED21-4704-A6D5-1B08E94E7EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7565618-ED21-4704-A6D5-1B08E94E7EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7565618-ED21-4704-A6D5-1B08E94E7EA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

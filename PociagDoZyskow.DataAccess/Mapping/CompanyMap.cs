@@ -18,7 +18,6 @@ namespace PociagDoZyskow.DataAccess.Mapping
                 .WithMany(right => right.Companies)
                 .HasForeignKey(foreign => foreign.ExchangeId);
 
-            builder.ToTable("Company", "stock");
             builder.Property(p => p.Id).HasColumnName("Id");
             builder.Property(p => p.Name).HasColumnName("Name");
             builder.Property(p => p.ShortName).HasColumnName("ShortName");
