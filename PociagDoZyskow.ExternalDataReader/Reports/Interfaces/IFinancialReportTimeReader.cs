@@ -8,8 +8,8 @@ namespace PociagDoZyskow.ExternalDataReader.Reports.Interfaces
 {
     public interface IFinancialReportTimeReader
     {
-        Task<IEnumerable<FinancialReportTimeDataScan>> GetAllIncomingFinancialReportTimeScans();
+        Task<IEnumerable<FinancialReportTimeScan>> GetIncomingFinancialReportTimeScans();
 
-        Task<IEnumerable<FinancialReportTimeDataScan>> GetPublishedFinancialReportTimeScans();
+        Task<IEnumerable<FinancialReportTimeScan>> GetPublishedFinancialReportTimeScans();
     }
 }

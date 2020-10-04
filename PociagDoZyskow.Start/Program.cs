@@ -64,8 +64,8 @@ namespace PociagDoZyskow.Start
                 //string removedBefore = result.Substring(result.LastIndexOf("</thead>"));
                 //string removedAfter = removedBefore.Substring(0, removedBefore.LastIndexOf("</tr>") + 5);
             }
-            Console.WriteLine("dotnet ef database update --project ../PociagDoZyskow.DataAccess -c StockExchangeContext");
-            Console.WriteLine("dotnet ef migrations add InitialCreate --project ../PociagDoZyskow.DataAccess -c StockExchangeContext");
+            Console.WriteLine("dotnet ef database update --project ../PociagDoZyskow.DataAccess -c DatabaseContext");
+            Console.WriteLine("dotnet ef migrations add InitialCreate --project ../PociagDoZyskow.DataAccess -c DatabaseContext");
         }
     }
 }

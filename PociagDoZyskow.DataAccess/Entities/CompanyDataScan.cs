@@ -6,7 +6,7 @@ namespace PociagDoZyskow.DataAccess.Entities
     {
         public int Id { get; set; }
 
-        public DateTime ScanTime { get; set; }
+        public DateTime ScanReferenceTime { get; set; }
 
         public decimal ReferencePrice { get; set; }
 

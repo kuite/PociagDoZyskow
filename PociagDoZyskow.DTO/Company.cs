@@ -6,6 +6,8 @@ namespace PociagDoZyskow.DTO
     {
         public string Name { get; set; }
 
+        public string Ticker { get; set; }
+
         public string ShortName { get; set; }
     }
 }

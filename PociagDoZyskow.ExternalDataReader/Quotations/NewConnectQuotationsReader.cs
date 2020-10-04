@@ -2,6 +2,6 @@
 {
     public class NewConnectExternalDataReader
     {
-
+        private readonly string NewConnectBaseUrl = "https://newconnect.pl/notowania=";
     }
 }

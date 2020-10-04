@@ -27,6 +27,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Ticker = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     ShortName = table.Column<string>(nullable: true),
                     ExchangeId = table.Column<int>(nullable: false)
@@ -66,12 +67,41 @@ namespace PociagDoZyskow.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CompanyDataScans",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ScanReferenceTime = table.Column<DateTime>(nullable: false),
+                    ReferencePrice = table.Column<decimal>(nullable: false),
+                    OpenPrice = table.Column<decimal>(nullable: false),
+                    LowestPrice = table.Column<decimal>(nullable: false),
+                    HighestPrice = table.Column<decimal>(nullable: false),
+                    LastPrice = table.Column<decimal>(nullable: false),
+                    ChangePrice = table.Column<decimal>(nullable: false),
+                    TotalTransactionVolumeStockCount = table.Column<int>(nullable: false),
+                    TotalTransactionValue = table.Column<decimal>(nullable: false),
+                    TransactionsCount = table.Column<int>(nullable: false),
+                    CompanyId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CompanyDataScans", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CompanyDataScans_Companies_CompanyId",
+                        column: x => x.CompanyId,
+                        principalTable: "Companies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "FinancialReportTimeDataScans",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Ticker = table.Column<string>(nullable: true),
+                    CompanyTicker = table.Column<string>(nullable: true),
                     CompanyId = table.Column<int>(nullable: false),
                     ShortCompanyName = table.Column<string>(nullable: true),
                     FullCompanyName = table.Column<string>(nullable: true),
@@ -89,35 +119,6 @@ namespace PociagDoZyskow.DataAccess.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Records",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ScanTime = table.Column<DateTime>(nullable: false),
-                    ReferencePrice = table.Column<decimal>(nullable: false),
-                    OpenPrice = table.Column<decimal>(nullable: false),
-                    LowestPrice = table.Column<decimal>(nullable: false),
-                    HighestPrice = table.Column<decimal>(nullable: false),
-                    LastPrice = table.Column<decimal>(nullable: false),
-                    ChangePrice = table.Column<decimal>(nullable: false),
-                    TotalTransactionVolumeStockCount = table.Column<int>(nullable: false),
-                    TotalTransactionValue = table.Column<decimal>(nullable: false),
-                    TransactionsCount = table.Column<int>(nullable: false),
-                    CompanyId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Records", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Records_Companies_CompanyId",
-                        column: x => x.CompanyId,
-                        principalTable: "Companies",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
             migrationBuilder.InsertData(
                 table: "StockExchanges",
                 columns: new[] { "Id", "Name", "ShortName" },
@@ -125,12 +126,12 @@ namespace PociagDoZyskow.DataAccess.Migrations
 
             migrationBuilder.InsertData(
                 table: "Companies",
-                columns: new[] { "Id", "ExchangeId", "Name", "ShortName" },
-                values: new object[] { 1, 1, "Cookieland", "CL" });
+                columns: new[] { "Id", "ExchangeId", "Name", "ShortName", "Ticker" },
+                values: new object[] { 1, 1, "Cookieland", "CL", null });
 
             migrationBuilder.InsertData(
-                table: "Records",
-                columns: new[] { "Id", "ChangePrice", "CompanyId", "HighestPrice", "LastPrice", "LowestPrice", "OpenPrice", "ReferencePrice", "ScanTime", "TotalTransactionValue", "TotalTransactionVolumeStockCount", "TransactionsCount" },
+                table: "CompanyDataScans",
+                columns: new[] { "Id", "ChangePrice", "CompanyId", "HighestPrice", "LastPrice", "LowestPrice", "OpenPrice", "ReferencePrice", "ScanReferenceTime", "TotalTransactionValue", "TotalTransactionVolumeStockCount", "TransactionsCount" },
                 values: new object[] { 1, 0m, 1, 1.0m, 1.0m, 1.0m, 1.0m, 1.0m, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 0m, 1, 1 });
 
             migrationBuilder.CreateIndex(
@@ -144,13 +145,13 @@ namespace PociagDoZyskow.DataAccess.Migrations
                 column: "ExchangeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_FinancialReportTimeDataScans_CompanyId",
-                table: "FinancialReportTimeDataScans",
+                name: "IX_CompanyDataScans_CompanyId",
+                table: "CompanyDataScans",
                 column: "CompanyId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Records_CompanyId",
-                table: "Records",
+                name: "IX_FinancialReportTimeDataScans_CompanyId",
+                table: "FinancialReportTimeDataScans",
                 column: "CompanyId");
         }
 
@@ -160,10 +161,10 @@ namespace PociagDoZyskow.DataAccess.Migrations
                 name: "AlgorithmResults");
 
             migrationBuilder.DropTable(
-                name: "FinancialReportTimeDataScans");
+                name: "CompanyDataScans");
 
             migrationBuilder.DropTable(
-                name: "Records");
+                name: "FinancialReportTimeDataScans");
 
             migrationBuilder.DropTable(
                 name: "Companies");

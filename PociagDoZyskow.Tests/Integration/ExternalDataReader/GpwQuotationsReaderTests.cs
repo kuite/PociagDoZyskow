@@ -18,7 +18,7 @@ namespace PociagDoZyskow.Tests.Integration.ExternalDataReader
             //Arrange
             var date = DateTime.Parse(dateString);
             var webClient = new WebClient();
-            var gpwReader = new GpwExternalDataReader(webClient);
+            var gpwReader = new GpwQuotationsReader(webClient);
 
             //Act
             var result = await gpwReader.GetCompanyDailyDataScans(date);

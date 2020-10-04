@@ -14,8 +14,12 @@ namespace PociagDoZyskow.ExternalDataReader.Reports
 {
     public class FinancialReportTimeReader : IFinancialReportTimeReader
     {
-        private readonly string BaseUrl =
+        private readonly string PublishedReportsBaseUrl =
             "https://strefainwestorow.pl/dane/raporty/lista-dat-publikacji-raportow-okresowych/";
+
+        private readonly string FutureReportsBaseUrl =
+            "https://www.money.pl/gielda/raporty/";
+
 
         private readonly int TickerIndex = 0;
         private readonly int ShortCompanyNameIndex = 1;
@@ -29,37 +33,29 @@ namespace PociagDoZyskow.ExternalDataReader.Reports
             _client = client;
         }
 
-        public async Task<IEnumerable<FinancialReportTimeDataScan>> GetAllIncomingFinancialReportTimeScans()
+        public async Task<IEnumerable<FinancialReportTimeScan>> GetIncomingFinancialReportTimeScans()
         {
-            var service = FirefoxDriverService.CreateDefaultService();
-            FirefoxOptions options = new FirefoxOptions();
-            //options.AddArguments("--headless");
-            IWebDriver webDriver = new FirefoxDriver(service, options);
-            webDriver.Navigate().GoToUrl(@"https://www.money.pl/gielda/raporty/");
-
-            webDriver.FindElement(By.XPath("/html/body/div[3]/div/div[2]/div[3]/div/button[2]")).Click();
-
-            return null;
+            throw new NotImplementedException();
+            //"https://www.money.pl/gielda/raporty/"
         }
 
-        public async Task<IEnumerable<FinancialReportTimeDataScan>> GetPublishedFinancialReportTimeScans()
+        public async Task<IEnumerable<FinancialReportTimeScan>> GetPublishedFinancialReportTimeScans()
         {
-            var filledUrl = String.Concat(BaseUrl, "opublikowane");
+            var filledUrl = String.Concat(PublishedReportsBaseUrl, "opublikowane");
             var result = _client.DownloadString(filledUrl);
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(result);
 
-            var scans = new List<FinancialReportTimeDataScan>();
-            var scanTime = DateTime.Now;
+            var scans = new List<FinancialReportTimeScan>();
 
             foreach (HtmlNode table in doc.DocumentNode.SelectNodes("//*[@id=\"block-system-main\"]/table/tbody"))
             {
 
                 foreach (HtmlNode row in table.SelectNodes("tr"))
                 {
-                    var reportDataScan = new FinancialReportTimeDataScan();
+                    var reportDataScan = new FinancialReportTimeScan();
                     var cells = row.SelectNodes("th|td");
-                    reportDataScan.Ticker = cells[TickerIndex].InnerText.CleanString();
+                    reportDataScan.CompanyTicker = cells[TickerIndex].InnerText.CleanString();
                     reportDataScan.ShortCompanyName = cells[ShortCompanyNameIndex].InnerText.CleanString();
                     reportDataScan.FullCompanyName = cells[FullCompanyNameIndex].InnerText;
                     reportDataScan.ReportType = cells[ReportTypeNameIndex].InnerText;

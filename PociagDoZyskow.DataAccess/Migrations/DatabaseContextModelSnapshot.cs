@@ -3,21 +3,19 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PociagDoZyskow.DataAccess.Contexts;
 
 namespace PociagDoZyskow.DataAccess.Migrations
 {
-    [DbContext(typeof(StockExchangeContext))]
-    [Migration("20201003232757_InitialCreate")]
-    partial class InitialCreate
+    [DbContext(typeof(DatabaseContext))]
+    partial class DatabaseContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.6")
+                .HasAnnotation("ProductVersion", "3.1.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -67,6 +65,9 @@ namespace PociagDoZyskow.DataAccess.Migrations
 
                     b.Property<string>("ShortName")
                         .HasColumnName("ShortName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ticker")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -119,7 +120,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
                         .HasColumnName("ReferencePrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<DateTime>("ScanTime")
+                    b.Property<DateTime>("ScanReferenceTime")
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("TotalTransactionValue")
@@ -137,7 +138,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("Records");
+                    b.ToTable("CompanyDataScans");
 
                     b.HasData(
                         new
@@ -150,7 +151,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
                             LowestPrice = 1.0m,
                             OpenPrice = 1.0m,
                             ReferencePrice = 1.0m,
-                            ScanTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ScanReferenceTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TotalTransactionValue = 0m,
                             TotalTransactionVolumeStockCount = 1,
                             TransactionsCount = 1
@@ -186,7 +187,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("PociagDoZyskow.DataAccess.Entities.FinancialReportTimeDataScan", b =>
+            modelBuilder.Entity("PociagDoZyskow.DataAccess.Entities.FinancialReportTimeScan", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -195,6 +196,9 @@ namespace PociagDoZyskow.DataAccess.Migrations
 
                     b.Property<int>("CompanyId")
                         .HasColumnType("int");
+
+                    b.Property<string>("CompanyTicker")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullCompanyName")
                         .HasColumnType("nvarchar(max)");
@@ -206,9 +210,6 @@ namespace PociagDoZyskow.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ShortCompanyName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Ticker")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -245,7 +246,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PociagDoZyskow.DataAccess.Entities.FinancialReportTimeDataScan", b =>
+            modelBuilder.Entity("PociagDoZyskow.DataAccess.Entities.FinancialReportTimeScan", b =>
                 {
                     b.HasOne("PociagDoZyskow.DataAccess.Entities.Company", "Company")
                         .WithMany()

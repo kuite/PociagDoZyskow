@@ -4,7 +4,7 @@ namespace PociagDoZyskow.DTO
 {
     public class CompanyDataScan
     {
-        public DateTime ScanTime { get; set; }
+        public DateTime ScanReferenceTime { get; set; }
 
         public decimal OpenPrice { get; set; }
 
@@ -22,6 +22,6 @@ namespace PociagDoZyskow.DTO
 
         public int TransactionsCount { get; set; }
 
-        public string CompanyName { get; set; }
+        public string CompanyTicker { get; set; }
     }
 }

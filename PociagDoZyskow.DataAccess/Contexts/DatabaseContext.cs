@@ -6,17 +6,17 @@ using PociagDoZyskow.DataAccess.Mapping;
 
 namespace PociagDoZyskow.DataAccess.Contexts
 {
-    public class StockExchangeContext : BaseContext
+    public class DatabaseContext : BaseContext
     {
         public virtual DbSet<Exchange> StockExchanges { get; set; }
 
         public virtual DbSet<Company> Companies { get; set; }
 
-        public virtual DbSet<CompanyDataScan> Records { get; set; }
+        public virtual DbSet<CompanyDataScan> CompanyDataScans { get; set; }
 
         public virtual DbSet<AlgorithmResult> AlgorithmResults { get; set; }
 
-        public virtual DbSet<FinancialReportTimeDataScan> FinancialReportTimeDataScans { get; set; }
+        public virtual DbSet<FinancialReportTimeScan> FinancialReportTimeDataScans { get; set; }
         
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
