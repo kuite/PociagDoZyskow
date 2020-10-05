@@ -7,6 +7,7 @@ namespace PociagDoZyskow.Algorithms.Interfaces
     public interface IAlgorithm
     {
         string GetAlgorithmName();
+
         Task<IEnumerable<AlgorithmResult>> GetResults(Configuration cfg);
     }
 }

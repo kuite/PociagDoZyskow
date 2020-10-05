@@ -4,7 +4,7 @@ using PociagDoZyskow.DataAccess.Entities;
 
 namespace PociagDoZyskow.DataAccess.Mapping
 {
-    public class RecordMap : IEntityTypeConfiguration<CompanyDataScan>
+    public class CompanyDataScanMap : IEntityTypeConfiguration<CompanyDataScan>
     {
         public void Configure(EntityTypeBuilder<CompanyDataScan> builder)
         {

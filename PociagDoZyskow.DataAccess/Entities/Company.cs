@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using PociagDoZyskow.DataAccess.Entities;
+using PociagDoZyskow.DataAccess.Entities.Algorithms;
 
 namespace PociagDoZyskow.DataAccess.Entities
 {
@@ -18,5 +18,9 @@ namespace PociagDoZyskow.DataAccess.Entities
         public Exchange Exchange { get; set; }
 
         public ICollection<CompanyDataScan> CompanyDataScans { get; set; }
+
+        public ICollection<AlgorithmResult> AlgorithmResults { get; set; }
+
+        public ICollection<FinancialReportTimeScan> FinancialReportTimeScans { get; set; }
     }
 }

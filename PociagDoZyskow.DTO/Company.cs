@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace PociagDoZyskow.DTO
+﻿namespace PociagDoZyskow.DTO
 {
     public class Company
     {

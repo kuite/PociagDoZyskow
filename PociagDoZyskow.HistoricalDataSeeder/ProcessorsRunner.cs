@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
-using AutoMapper;
-using PociagDoZyskow.DataAccess.Contexts;
-using PociagDoZyskow.DataAccess.Entities;
-using PociagDoZyskow.ExternalDataReader.Reports;
 using PociagDoZyskow.HistoricalDataSeeder.Processors;
 
 namespace PociagDoZyskow.HistoricalDataSeeder

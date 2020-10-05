@@ -119,21 +119,6 @@ namespace PociagDoZyskow.DataAccess.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.InsertData(
-                table: "StockExchanges",
-                columns: new[] { "Id", "Name", "ShortName" },
-                values: new object[] { 1, "NewConnect", "NC" });
-
-            migrationBuilder.InsertData(
-                table: "Companies",
-                columns: new[] { "Id", "ExchangeId", "Name", "ShortName", "Ticker" },
-                values: new object[] { 1, 1, "Cookieland", "CL", null });
-
-            migrationBuilder.InsertData(
-                table: "CompanyDataScans",
-                columns: new[] { "Id", "ChangePrice", "CompanyId", "HighestPrice", "LastPrice", "LowestPrice", "OpenPrice", "ReferencePrice", "ScanReferenceTime", "TotalTransactionValue", "TotalTransactionVolumeStockCount", "TransactionsCount" },
-                values: new object[] { 1, 0m, 1, 1.0m, 1.0m, 1.0m, 1.0m, 1.0m, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 0m, 1, 1 });
-
             migrationBuilder.CreateIndex(
                 name: "IX_AlgorithmResults_CompanyId",
                 table: "AlgorithmResults",

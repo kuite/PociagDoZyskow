@@ -10,7 +10,7 @@ using PociagDoZyskow.DataAccess.Contexts;
 namespace PociagDoZyskow.DataAccess.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20201004223125_InitialCreate")]
+    [Migration("20201005202533_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -77,15 +77,6 @@ namespace PociagDoZyskow.DataAccess.Migrations
                     b.HasIndex("ExchangeId");
 
                     b.ToTable("Companies");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ExchangeId = 1,
-                            Name = "Cookieland",
-                            ShortName = "CL"
-                        });
                 });
 
             modelBuilder.Entity("PociagDoZyskow.DataAccess.Entities.CompanyDataScan", b =>
@@ -141,23 +132,6 @@ namespace PociagDoZyskow.DataAccess.Migrations
                     b.HasIndex("CompanyId");
 
                     b.ToTable("CompanyDataScans");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ChangePrice = 0m,
-                            CompanyId = 1,
-                            HighestPrice = 1.0m,
-                            LastPrice = 1.0m,
-                            LowestPrice = 1.0m,
-                            OpenPrice = 1.0m,
-                            ReferencePrice = 1.0m,
-                            ScanReferenceTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            TotalTransactionValue = 0m,
-                            TotalTransactionVolumeStockCount = 1,
-                            TransactionsCount = 1
-                        });
                 });
 
             modelBuilder.Entity("PociagDoZyskow.DataAccess.Entities.Exchange", b =>
@@ -179,14 +153,6 @@ namespace PociagDoZyskow.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("StockExchanges");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "NewConnect",
-                            ShortName = "NC"
-                        });
                 });
 
             modelBuilder.Entity("PociagDoZyskow.DataAccess.Entities.FinancialReportTimeScan", b =>
