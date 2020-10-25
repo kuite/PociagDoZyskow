@@ -41,8 +41,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                 foreach (DTO.FinancialReportTimeScan financialReportTimeDataScan in financialReports)
                 {
                     var company = context.Companies.Include(c => c.Exchange)
-                        .FirstOrDefault(c =>
-                        c.Ticker == financialReportTimeDataScan.CompanyTicker);
+                        .FirstOrDefault(c => c.Ticker == financialReportTimeDataScan.CompanyTicker);
                     if (company == null)
                     {
                         //var x = 5;
@@ -50,9 +49,8 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                         Console.WriteLine($"Not found company {financialReportTimeDataScan.FullCompanyName} for financialReportScan");
                         break;
                     }
-                    var exchange = company.Exchange;
                     var financialReportFactory = new FinancialReportTimeScanEntityFactory(iMapper);
-                    var reportEntity = financialReportFactory.GetFinancialReportTimeScanEntity(exchange, financialReportTimeDataScan);
+                    var reportEntity = financialReportFactory.GetFinancialReportTimeScanEntity(company, financialReportTimeDataScan);
                     reportScans.Add(reportEntity);
                 }
                 Console.WriteLine($"Transformed reports newScans to database entities.");
