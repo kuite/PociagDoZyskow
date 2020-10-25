@@ -20,9 +20,14 @@ namespace PociagDoZyskow.Tests.Integration.ExternalDataReader
 
             //Act
             var result = await gpwReader.GetCompanyDailyDataScans(date);
+            var companyDataScans = result.ToList();
+            var selectedScan = companyDataScans.FirstOrDefault();
 
             //Assert
-            Assert.Equal(436, result.Count());
+            Assert.NotNull(result);
+            Assert.Equal(436, companyDataScans.Count);
+            Assert.NotNull(selectedScan);
+            Assert.NotNull(selectedScan.CompanyTicker);
         }
     }
 }

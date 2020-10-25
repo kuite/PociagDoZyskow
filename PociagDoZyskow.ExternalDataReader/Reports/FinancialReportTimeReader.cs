@@ -56,8 +56,7 @@ namespace PociagDoZyskow.ExternalDataReader.Reports
                     reportDataScan.ShortCompanyName = cells[ShortCompanyNameIndex].InnerText.CleanString();
                     reportDataScan.FullCompanyName = cells[FullCompanyNameIndex].InnerText;
                     reportDataScan.ReportType = cells[ReportTypeNameIndex].InnerText;
-                    reportDataScan.ReportDate = DateTime.Parse(
-                        cells[ReportDateIndex].InnerText.CleanString());
+                    reportDataScan.ReportDate = DateTime.Parse(cells[ReportDateIndex].InnerText.CleanString());
 
                     scans.Add(reportDataScan);
                 }

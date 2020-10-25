@@ -10,11 +10,11 @@ namespace PociagDoZyskow.HistoricalDataSeeder
         {
             Console.WriteLine("FinancialReportTimeReadsProcessor start");
             var reportsProcessor = new FinancialReportTimeReadsProcessor();
-            await reportsProcessor.Start();
+            await reportsProcessor.Start(0);
             Console.WriteLine("FinancialReportTimeReadsProcessor ended");
             Console.WriteLine("GpwExternalDataReadsProcessor start");
             var gpwQuotationsProcessor = new GpwExternalDataReadsProcessor();
-            await gpwQuotationsProcessor.Start();
+            await gpwQuotationsProcessor.Start(180);
             Console.WriteLine("GpwExternalDataReadsProcessor ended");
 
             Console.WriteLine("ProcessorsRunner ended");

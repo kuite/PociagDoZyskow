@@ -14,11 +14,12 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 {
     public class FinancialReportTimeReadsProcessor : IDataSeedProcessor
     {
-        public async Task Start()
+        public async Task Start(int fromDayAgo)
         {
             try
             {
                 Console.WriteLine("Start FinancialReportTimeReadsProcessor");
+                Console.WriteLine("Skipping use of fromDayAgo, as reading only visible financial reports.");
                 var client = new WebClient();
                 var reportReader = new FinancialReportTimeReader(client);
                 var financialReports = await reportReader.GetPublishedFinancialReportTimeScans();
@@ -41,7 +42,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                 Console.WriteLine($"Transformed reports newScans to database entities.");
 
                 Console.WriteLine("Prepare data to avoid duplications or data errors.");
-                reportScans = FlushFromAlreadyInsertedDataScans(context, reportScans).ToList();
+                reportScans = RemoveDuplications(context, reportScans).ToList();
                 await context.FinancialReportTimeDataScans.AddRangeAsync(reportScans);
                 await context.SaveChangesAsync();
                 Console.WriteLine($"Saved {reportScans.Count} financial reports time date scan to database.");
@@ -54,7 +55,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 
         }
 
-        private IEnumerable<FinancialReportTimeScan> FlushFromAlreadyInsertedDataScans(DatabaseContext context, List<FinancialReportTimeScan> newScans)
+        private IEnumerable<FinancialReportTimeScan> RemoveDuplications(DatabaseContext context, List<FinancialReportTimeScan> newScans)
         {
             var freshFinancialReportTimeScanEntities = new List<FinancialReportTimeScan>();
             var existedFinancialReportScans = context.FinancialReportTimeDataScans.ToList();

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using PociagDoZyskow.DataAccess.Entities;
@@ -43,7 +44,11 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Factories
 
                 //TODO: Refactor to:  exchanges.FirstOrDefault(e => e.Companies.Any(r => r.Name == companyEntity.FullCompanyName));
                 var company = companies.FirstOrDefault(c => c.Ticker == scan.CompanyTicker);
-                var exchange = exchanges.FirstOrDefault(e => e.Name == "NewConnect");
+                var exchange = exchanges.FirstOrDefault(e => e.Name == "GPW");
+                if (exchange == null)
+                {
+                    throw new Exception("Not found GPW exchange.");
+                }
                 if (company == null)
                 {
                     company = new Company();

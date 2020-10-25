@@ -4,6 +4,6 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces
 {
     public interface IDataSeedProcessor
     {
-        Task Start();
+        Task Start(int fromDayAgo);
     }
 }

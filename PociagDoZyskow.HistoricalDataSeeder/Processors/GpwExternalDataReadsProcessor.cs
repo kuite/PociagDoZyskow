@@ -15,7 +15,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 {
     class GpwExternalDataReadsProcessor : IDataSeedProcessor
     {
-        public async Task Start()
+        public async Task Start(int fromDaysAgo)
         {
             try
             {
@@ -29,7 +29,8 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 
                 Console.WriteLine($"Transforming quotations scans to database entities...");
                 var quotationsReader = new GpwQuotationsReader(client);
-                var date = DateTime.Now.Subtract(TimeSpan.FromDays(180));
+                //var date = DateTime.Now.Subtract(TimeSpan.FromDays(175));
+                var date = DateTime.Now.Subtract(TimeSpan.FromDays(fromDaysAgo));
                 var processingDate = date.Date;
                 IMapper iMapper = config.CreateMapper();
                 var exchanges = context.StockExchanges.ToList();
@@ -50,12 +51,12 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                         quotationFactory.GetCompanyDataScanEntity(companies, exchanges, dailyQuotationReads).ToList();
 
                     Console.WriteLine("Prepare data to avoid duplications or data errors.");
-                    var flushedQuotationEntities =
-                        FlushFromAlreadyInsertedDataScans(context, quotationEntities).ToList();
+                    var freshQuotationEntities =
+                        RemoveFromAlreadyInsertedDataScans(context, quotationEntities).ToList();
 
-                    await context.CompanyDataScans.AddRangeAsync(flushedQuotationEntities);
+                    await context.CompanyDataScans.AddRangeAsync(freshQuotationEntities);
                     await context.SaveChangesAsync();
-                    Console.WriteLine($"Saved {flushedQuotationEntities.Count} quotations from {processingDate} day to database...");
+                    Console.WriteLine($"Saved {freshQuotationEntities.Count} quotations from {processingDate} day to database...");
                     processingDate = processingDate.AddDays(1);
 
                 }
@@ -67,7 +68,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
             }
         }
 
-        private IEnumerable<CompanyDataScan> FlushFromAlreadyInsertedDataScans(DatabaseContext context, List<CompanyDataScan> newScans)
+        private IEnumerable<CompanyDataScan> RemoveFromAlreadyInsertedDataScans(DatabaseContext context, List<CompanyDataScan> newScans)
         {
             var freshFCompanyDataScansEntities = new List<CompanyDataScan>();
             var existingCompanyDataScans = context.CompanyDataScans.ToList();

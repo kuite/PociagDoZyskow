@@ -23,5 +23,7 @@ namespace PociagDoZyskow.DTO
         public int TransactionsCount { get; set; }
 
         public string CompanyTicker { get; set; }
+
+        public string ExchangeShortName { get; set; }
     }
 }

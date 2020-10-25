@@ -1,7 +1,19 @@
-﻿namespace PociagDoZyskow.ExternalDataReader.Quotations
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using PociagDoZyskow.DTO;
+
+namespace PociagDoZyskow.ExternalDataReader.Quotations
 {
-    public class NewConnectExternalDataReader
+    public class NewConnectExternalDataReader : BaseQuotationsReader
     {
-        private readonly string NewConnectBaseUrl = "https://newconnect.pl/notowania=";
+        public override string QuotationShortName => "NV";
+
+        public override string QuotationLink => "https://newconnect.pl/notowania=";
+
+        public override Task<IEnumerable<CompanyDataScan>> GetCompanyDailyDataScans(DateTime date)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

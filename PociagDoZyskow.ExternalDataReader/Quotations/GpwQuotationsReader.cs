@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using PociagDoZyskow.DTO;
 using PociagDoZyskow.ExternalDataReader.Helpers;
-using PociagDoZyskow.ExternalDataReader.Quotations.Interfaces;
 
 namespace PociagDoZyskow.ExternalDataReader.Quotations
 {
-    public class GpwQuotationsReader : IExternalDataReader
+    public class GpwQuotationsReader : BaseQuotationsReader
     {
-        private readonly string GpwBaseUrl = "https://www.gpw.pl/archiwum-notowan-full?type=10&instrument=&date=";
+        public override string QuotationShortName => "GPW";
+        public override string QuotationLink => "https://www.gpw.pl/archiwum-notowan-full?type=10&instrument=&date=";
+
         private readonly int CompanyTickerIndex = 0;
         private readonly int OpenPriceIndex = 3;
         private readonly int HighestPriceIndex = 4;
@@ -28,10 +29,10 @@ namespace PociagDoZyskow.ExternalDataReader.Quotations
             _client = client;
         }
 
-        public async Task<IEnumerable<CompanyDataScan>> GetCompanyDailyDataScans(DateTime date)
+        public override async Task<IEnumerable<CompanyDataScan>> GetCompanyDailyDataScans(DateTime date)
         {
             String formattedDate = date.ToString("dd-MM-yyyy");
-            var filledUrl = String.Concat(GpwBaseUrl, formattedDate);
+            var filledUrl = String.Concat(QuotationLink, formattedDate);
             var result = _client.DownloadString(filledUrl);
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(result);
@@ -40,6 +41,11 @@ namespace PociagDoZyskow.ExternalDataReader.Quotations
 
             try
             {
+                var nodes = doc.DocumentNode.SelectNodes("/html/body/section[2]/table");
+                if (nodes == null)
+                {
+                    return scans;
+                }
                 foreach (HtmlNode table in doc.DocumentNode.SelectNodes("/html/body/section[2]/table"))
                 {
 
@@ -48,6 +54,7 @@ namespace PociagDoZyskow.ExternalDataReader.Quotations
                         var companyDataScan = new CompanyDataScan();
                         var cells = row.SelectNodes("th|td");
                         companyDataScan.ScanReferenceTime = date;
+                        companyDataScan.ExchangeShortName = QuotationShortName;
                         companyDataScan.CompanyTicker = cells[CompanyTickerIndex].InnerText.CleanString();
                         companyDataScan.OpenPrice = decimal.Parse(cells[OpenPriceIndex].InnerText.CleanString());
                         companyDataScan.HighestPrice = decimal.Parse(cells[HighestPriceIndex].InnerText.CleanString());
