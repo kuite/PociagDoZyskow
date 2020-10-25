@@ -8,7 +8,7 @@ namespace PociagDoZyskow.DataAccess.Contexts
 {
     public sealed class DatabaseContext : BaseContext
     {
-        public DbSet<Exchange> StockExchanges { get; set; }
+        public DbSet<Exchange> Exchanges { get; set; }
 
         public DbSet<Company> Companies { get; set; }
 
@@ -24,7 +24,7 @@ namespace PociagDoZyskow.DataAccess.Contexts
             modelBuilder.ApplyConfiguration(new CompanyDataScanMap());
             modelBuilder.ApplyConfiguration(new CompanyMap());
             modelBuilder.ApplyConfiguration(new FinancialReportTimeScanMap());
-            modelBuilder.ApplyConfiguration(new StockMap());
+            modelBuilder.ApplyConfiguration(new ExchangeMap());
 
             base.OnModelCreating(modelBuilder);
         }

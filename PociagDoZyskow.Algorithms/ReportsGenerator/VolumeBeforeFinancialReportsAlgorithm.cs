@@ -6,12 +6,9 @@ using PociagDoZyskow.Algorithms.DTO;
 
 namespace PociagDoZyskow.Algorithms.ReportsGenerator
 {
-    public class VolumeBeforeFinancialReportsBaseAlgorithm : BaseAlgorithm
+    public class VolumeBeforeFinancialReportsAlgorithm : BaseAlgorithm
     {
-        public string GetAlgorithmName()
-        {
-            return "VolumeBeforeFinancialReports";
-        }
+        public override string AlgorithmName => "VolumeBeforeFinancialReports";
 
         public Task<IEnumerable<AlgorithmResult>> GetResults(Configuration cfg)
         {

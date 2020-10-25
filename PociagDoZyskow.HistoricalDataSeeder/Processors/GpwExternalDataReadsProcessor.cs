@@ -33,10 +33,11 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                 var date = DateTime.Now.Subtract(TimeSpan.FromDays(fromDaysAgo));
                 var processingDate = date.Date;
                 IMapper iMapper = config.CreateMapper();
-                var exchanges = context.StockExchanges.ToList();
+                var exchanges = context.Exchanges.ToList();
                 var companies = context.Companies
                     .Include(c => c.Exchange)
                     .ToList();
+                var quotationFactory = new GpwCompanyDataScanFactory(iMapper);
                 while (processingDate < DateTime.Now)
                 {
                     companies = context.Companies
@@ -44,8 +45,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                         .ToList();
                     var dailyQuotationReads =
                         (await quotationsReader.GetCompanyDailyDataScans(processingDate)).ToList();
-                    var quotationFactory = new GpwCompanyDataScanFactory(iMapper);
-
+                    
                     Console.WriteLine("Map quotation reads to entities.");
                     var quotationEntities =
                         quotationFactory.GetCompanyDataScanEntity(companies, exchanges, dailyQuotationReads).ToList();

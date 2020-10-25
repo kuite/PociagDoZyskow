@@ -23,22 +23,28 @@ namespace PociagDoZyskow.DataAccess.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("AlgorithmName")
+                        .HasColumnName("AlgorithmName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CompanyId")
+                        .HasColumnName("CompanyId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedOn")
+                        .HasColumnName("CreatedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .HasColumnName("Description")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsBuy")
+                        .HasColumnName("IsBuy")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
@@ -86,6 +92,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<decimal>("ChangePrice")
+                        .HasColumnName("ChangePrice")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("CompanyId")
@@ -150,32 +157,53 @@ namespace PociagDoZyskow.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("StockExchanges");
+                    b.ToTable("Exchanges");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "NewConnect",
+                            ShortName = "NC"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Gielda Papierow Wartosciowych",
+                            ShortName = "GPW"
+                        });
                 });
 
             modelBuilder.Entity("PociagDoZyskow.DataAccess.Entities.FinancialReportTimeScan", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("CompanyId")
+                        .HasColumnName("CompanyId")
                         .HasColumnType("int");
 
                     b.Property<string>("CompanyTicker")
+                        .HasColumnName("CompanyTicker")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullCompanyName")
+                        .HasColumnName("FullCompanyName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ReportDate")
+                        .HasColumnName("ReportDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ReportType")
+                        .HasColumnName("ReportType")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ShortCompanyName")
+                        .HasColumnName("ShortCompanyName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -188,7 +216,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
             modelBuilder.Entity("PociagDoZyskow.DataAccess.Entities.Algorithms.AlgorithmResult", b =>
                 {
                     b.HasOne("PociagDoZyskow.DataAccess.Entities.Company", "Company")
-                        .WithMany()
+                        .WithMany("AlgorithmResults")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -215,7 +243,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
             modelBuilder.Entity("PociagDoZyskow.DataAccess.Entities.FinancialReportTimeScan", b =>
                 {
                     b.HasOne("PociagDoZyskow.DataAccess.Entities.Company", "Company")
-                        .WithMany()
+                        .WithMany("FinancialReportTimeScans")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

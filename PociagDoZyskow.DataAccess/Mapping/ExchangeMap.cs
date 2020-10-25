@@ -4,7 +4,7 @@ using PociagDoZyskow.DataAccess.Entities;
 
 namespace PociagDoZyskow.DataAccess.Mapping
 {
-    public class StockMap : IEntityTypeConfiguration<Exchange>
+    public class ExchangeMap : IEntityTypeConfiguration<Exchange>
     {
         public void Configure(EntityTypeBuilder<Exchange> builder)
         {

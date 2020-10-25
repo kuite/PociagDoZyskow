@@ -13,7 +13,7 @@ namespace PociagDoZyskow.ExternalDataReader.Quotations
         public override string QuotationShortName => "GPW";
         public override string QuotationLink => "https://www.gpw.pl/archiwum-notowan-full?type=10&instrument=&date=";
 
-        private readonly int CompanyTickerIndex = 0;
+        private readonly int CompanyShortNameIndex = 0;
         private readonly int OpenPriceIndex = 3;
         private readonly int HighestPriceIndex = 4;
         private readonly int LowestPriceIndex = 5;
@@ -55,7 +55,7 @@ namespace PociagDoZyskow.ExternalDataReader.Quotations
                         var cells = row.SelectNodes("th|td");
                         companyDataScan.ScanReferenceTime = date;
                         companyDataScan.ExchangeShortName = QuotationShortName;
-                        companyDataScan.CompanyTicker = cells[CompanyTickerIndex].InnerText.CleanString();
+                        companyDataScan.CompanyShortName = cells[CompanyShortNameIndex].InnerText.CleanString();
                         companyDataScan.OpenPrice = decimal.Parse(cells[OpenPriceIndex].InnerText.CleanString());
                         companyDataScan.HighestPrice = decimal.Parse(cells[HighestPriceIndex].InnerText.CleanString());
                         companyDataScan.LowestPrice = decimal.Parse(cells[LowestPriceIndex].InnerText.CleanString());

@@ -27,7 +27,7 @@ namespace PociagDoZyskow.Tests.Integration.ExternalDataReader
             Assert.NotNull(result);
             Assert.Equal(436, companyDataScans.Count);
             Assert.NotNull(selectedScan);
-            Assert.NotNull(selectedScan.CompanyTicker);
+            Assert.NotNull(selectedScan.CompanyShortName);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "StockExchanges",
+                name: "Exchanges",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -18,7 +18,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_StockExchanges", x => x.Id);
+                    table.PrimaryKey("PK_Exchanges", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -36,9 +36,9 @@ namespace PociagDoZyskow.DataAccess.Migrations
                 {
                     table.PrimaryKey("PK_Companies", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Companies_StockExchanges_ExchangeId",
+                        name: "FK_Companies_Exchanges_ExchangeId",
                         column: x => x.ExchangeId,
-                        principalTable: "StockExchanges",
+                        principalTable: "Exchanges",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -138,6 +138,15 @@ namespace PociagDoZyskow.DataAccess.Migrations
                 name: "IX_FinancialReportTimeDataScans_CompanyId",
                 table: "FinancialReportTimeDataScans",
                 column: "CompanyId");
+
+            migrationBuilder.InsertData(
+                table: "Exchanges",
+                columns: new[] { "Id", "Name", "ShortName" },
+                values: new object[,]
+                {
+                    { 1, "NewConnect", "NC" },
+                    { 2, "Gielda Papierow Wartosciowych", "GPW" }
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -155,7 +164,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
                 name: "Companies");
 
             migrationBuilder.DropTable(
-                name: "StockExchanges");
+                name: "Exchanges");
         }
     }
 }

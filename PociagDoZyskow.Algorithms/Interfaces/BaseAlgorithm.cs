@@ -6,7 +6,7 @@ namespace PociagDoZyskow.Algorithms.Interfaces
 {
     public abstract class BaseAlgorithm
     {
-        string GetAlgorithmName();
+        public abstract string AlgorithmName { get; }
 
         Task<IEnumerable<AlgorithmResult>> GetResults(Configuration cfg);
     }

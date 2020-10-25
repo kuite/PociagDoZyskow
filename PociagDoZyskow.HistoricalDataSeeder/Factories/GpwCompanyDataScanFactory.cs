@@ -26,7 +26,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Factories
         //    var exchange = exchanges.FirstOrDefault(e => e.Name == "NewConnect");
         //    reportEntity.Company = new Company
         //    {
-        //        Ticker = report.CompanyTicker,
+        //        Ticker = report.CompanyShortName,
         //        Name = report.FullCompanyName,
         //        ShortName = report.ShortCompanyName,
         //        Exchange = exchange
@@ -43,8 +43,8 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Factories
                     _mapper.Map<DTO.CompanyDataScan, CompanyDataScan>(scan);
 
                 //TODO: Refactor to:  exchanges.FirstOrDefault(e => e.Companies.Any(r => r.Name == companyEntity.FullCompanyName));
-                var company = companies.FirstOrDefault(c => c.Ticker == scan.CompanyTicker);
-                var exchange = exchanges.FirstOrDefault(e => e.Name == "GPW");
+                var company = companies.FirstOrDefault(c => c.ShortName == scan.CompanyShortName);
+                var exchange = exchanges.FirstOrDefault(e => e.ShortName == "GPW");
                 if (exchange == null)
                 {
                     throw new Exception("Not found GPW exchange.");
@@ -53,7 +53,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Factories
                 {
                     company = new Company();
                     company.Exchange = exchange;
-                    company.Ticker = scan.CompanyTicker;
+                    company.ShortName = scan.CompanyShortName;
                 }
                 //var exchange = exchanges.FirstOrDefault(e => e.Name == "NewConnect");
                 companyDataScanEntity.Company = company;
@@ -63,7 +63,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Factories
             return companyEntites;
             //reportEntity.Company = new Company
             //{
-            //    Ticker = report.CompanyTicker,
+            //    Ticker = report.CompanyShortName,
             //    Name = report.FullCompanyName,
             //    ShortName = report.ShortCompanyName,
             //    Exchange = exchange
