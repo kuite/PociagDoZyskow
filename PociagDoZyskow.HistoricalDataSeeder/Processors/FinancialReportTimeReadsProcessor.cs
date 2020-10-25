@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.DataAccess.Entities;
 using PociagDoZyskow.ExternalDataReader.Reports;
@@ -22,8 +23,10 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                 Console.WriteLine("Skipping use of fromDayAgo, as reading only visible financial reports.");
                 var client = new WebClient();
                 var reportReader = new FinancialReportTimeReader(client);
-                var financialReports = await reportReader.GetPublishedFinancialReportTimeScans();
-                Console.WriteLine($"Read {financialReports.Count()} published reports.");
+                var publishedFinancialReports = await reportReader.GetPublishedFinancialReportTimeScans();
+                Console.WriteLine($"Read {publishedFinancialReports.Count()} published reports.");
+                var incomingFinancialReports = await reportReader.GetIncomingFinancialReportTimeScans();
+                Console.WriteLine($"Read {incomingFinancialReports.Count()} incoming reports.");
 
                 Console.WriteLine($"Transform published reports newScans to database entities.");
                 var reportScans = new List<FinancialReportTimeScan>();
@@ -32,11 +35,24 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                     cfg.CreateMap<DTO.FinancialReportTimeScan, FinancialReportTimeScan>().ReverseMap();
                 });
                 IMapper iMapper = config.CreateMapper();
-                var echanges = context.StockExchanges.ToList();
+                var financialReports = new List<DTO.FinancialReportTimeScan>();
+                financialReports.AddRange(publishedFinancialReports);
+                financialReports.AddRange(incomingFinancialReports);
                 foreach (DTO.FinancialReportTimeScan financialReportTimeDataScan in financialReports)
                 {
-                    var financialReportFactory = new FinancialReportTimeScanFactory(iMapper);
-                    var reportEntity = financialReportFactory.GetFinancialReportTimeScanEntity(echanges, financialReportTimeDataScan);
+                    var company = context.Companies.Include(c => c.Exchange)
+                        .FirstOrDefault(c =>
+                        c.Ticker == financialReportTimeDataScan.CompanyTicker);
+                    if (company == null)
+                    {
+                        //var x = 5;
+                        //throw new Exception("Not found company for financialReportScan");
+                        Console.WriteLine($"Not found company {financialReportTimeDataScan.FullCompanyName} for financialReportScan");
+                        break;
+                    }
+                    var exchange = company.Exchange;
+                    var financialReportFactory = new FinancialReportTimeScanEntityFactory(iMapper);
+                    var reportEntity = financialReportFactory.GetFinancialReportTimeScanEntity(exchange, financialReportTimeDataScan);
                     reportScans.Add(reportEntity);
                 }
                 Console.WriteLine($"Transformed reports newScans to database entities.");

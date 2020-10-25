@@ -5,6 +5,6 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Factories.Interfaces
 {
     public interface IFinancialReportTimeScanFactory
     {
-        FinancialReportTimeScan GetFinancialReportTimeScanEntity(List<Exchange> exchanges, DTO.FinancialReportTimeScan report);
+        FinancialReportTimeScan GetFinancialReportTimeScanEntity(Exchange exchange, DTO.FinancialReportTimeScan report);
     }
 }

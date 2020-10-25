@@ -6,7 +6,7 @@ using PociagDoZyskow.Algorithms.DTO;
 
 namespace PociagDoZyskow.Algorithms.ReportsGenerator
 {
-    public class VolumeBeforeFinancialReportsAlgorithm : IAlgorithm
+    public class VolumeBeforeFinancialReportsBaseAlgorithm : BaseAlgorithm
     {
         public string GetAlgorithmName()
         {

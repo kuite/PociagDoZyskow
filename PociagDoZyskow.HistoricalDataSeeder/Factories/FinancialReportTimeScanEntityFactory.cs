@@ -6,23 +6,23 @@ using PociagDoZyskow.HistoricalDataSeeder.Factories.Interfaces;
 
 namespace PociagDoZyskow.HistoricalDataSeeder.Factories
 {
-    public class FinancialReportTimeScanFactory : IFinancialReportTimeScanFactory
+    public class FinancialReportTimeScanEntityFactory : IFinancialReportTimeScanFactory
     {
         public IMapper _mapper { get; }
 
-        public FinancialReportTimeScanFactory(IMapper iMapper)
+        public FinancialReportTimeScanEntityFactory(IMapper iMapper)
         {
             _mapper = iMapper;
         }
         
 
-        public FinancialReportTimeScan GetFinancialReportTimeScanEntity(List<Exchange> exchanges, DTO.FinancialReportTimeScan report)
+        public FinancialReportTimeScan GetFinancialReportTimeScanEntity(Exchange exchange, DTO.FinancialReportTimeScan report)
         {
             var reportEntity =
                 _mapper.Map<DTO.FinancialReportTimeScan, FinancialReportTimeScan>(report);
 
             //TODO: Refactor to:  exchanges.FirstOrDefault(e => e.Companies.Any(r => r.Name == reportEntity.FullCompanyName));
-            var exchange = exchanges.FirstOrDefault(e => e.Name == "NewConnect");
+            //var exchange = exchanges.FirstOrDefault(e => e.Name == "NewConnect");
             reportEntity.Company = new Company
             {
                 Ticker = report.CompanyTicker,

@@ -14,7 +14,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder
             Console.WriteLine("FinancialReportTimeReadsProcessor ended");
             Console.WriteLine("GpwExternalDataReadsProcessor start");
             var gpwQuotationsProcessor = new GpwExternalDataReadsProcessor();
-            await gpwQuotationsProcessor.Start(180);
+            await gpwQuotationsProcessor.Start(80);
             Console.WriteLine("GpwExternalDataReadsProcessor ended");
 
             Console.WriteLine("ProcessorsRunner ended");

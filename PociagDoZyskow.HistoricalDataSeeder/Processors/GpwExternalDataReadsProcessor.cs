@@ -56,7 +56,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 
                     await context.CompanyDataScans.AddRangeAsync(freshQuotationEntities);
                     await context.SaveChangesAsync();
-                    Console.WriteLine($"Saved {freshQuotationEntities.Count} quotations from {processingDate} day to database...");
+                    Console.WriteLine($"Saved {freshQuotationEntities.Count} quotations from {processingDate.ToShortDateString()} day to database...");
                     processingDate = processingDate.AddDays(1);
 
                 }

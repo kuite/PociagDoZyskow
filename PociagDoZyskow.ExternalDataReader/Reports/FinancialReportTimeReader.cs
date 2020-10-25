@@ -32,8 +32,32 @@ namespace PociagDoZyskow.ExternalDataReader.Reports
 
         public async Task<IEnumerable<FinancialReportTimeScan>> GetIncomingFinancialReportTimeScans()
         {
-            throw new NotImplementedException();
             //"https://www.money.pl/gielda/raporty/"
+            var filledUrl = String.Concat(PublishedReportsBaseUrl, "wszystkie");
+            var result = _client.DownloadString(filledUrl);
+            HtmlDocument doc = new HtmlDocument();
+            doc.LoadHtml(result);
+
+            var scans = new List<FinancialReportTimeScan>();
+
+            foreach (HtmlNode table in doc.DocumentNode.SelectNodes("//*[@id=\"block-system-main\"]/table/tbody"))
+            {
+
+                foreach (HtmlNode row in table.SelectNodes("tr"))
+                {
+                    var reportDataScan = new FinancialReportTimeScan();
+                    var cells = row.SelectNodes("th|td");
+                    reportDataScan.CompanyTicker = cells[TickerIndex].InnerText.CleanString();
+                    reportDataScan.ShortCompanyName = cells[ShortCompanyNameIndex].InnerText.CleanString();
+                    reportDataScan.FullCompanyName = cells[FullCompanyNameIndex].InnerText;
+                    reportDataScan.ReportType = cells[ReportTypeNameIndex].InnerText;
+                    reportDataScan.ReportDate = DateTime.Parse(cells[ReportDateIndex].InnerText.CleanString());
+
+                    scans.Add(reportDataScan);
+                }
+            }
+
+            return scans;
         }
 
         public async Task<IEnumerable<FinancialReportTimeScan>> GetPublishedFinancialReportTimeScans()

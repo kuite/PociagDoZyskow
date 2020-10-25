@@ -4,7 +4,7 @@ using PociagDoZyskow.Algorithms.DTO;
 
 namespace PociagDoZyskow.Algorithms.Interfaces
 {
-    public interface IAlgorithm
+    public abstract class BaseAlgorithm
     {
         string GetAlgorithmName();
 
