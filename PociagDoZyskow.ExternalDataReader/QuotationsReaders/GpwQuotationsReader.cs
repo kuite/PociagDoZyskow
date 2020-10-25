@@ -6,7 +6,7 @@ using HtmlAgilityPack;
 using PociagDoZyskow.DTO;
 using PociagDoZyskow.ExternalDataReader.Helpers;
 
-namespace PociagDoZyskow.ExternalDataReader.Quotations
+namespace PociagDoZyskow.ExternalDataReader.QuotationsReaders
 {
     public class GpwQuotationsReader : BaseQuotationsReader
     {

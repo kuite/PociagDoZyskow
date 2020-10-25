@@ -8,7 +8,7 @@ namespace PociagDoZyskow.DataAccess.Entities.Algorithms
 
         public int CompanyId { get; set; }
 
-        public string Description { get; set; }
+        public string ResultDescription { get; set; }
 
         public string AlgorithmName { get; set; }
 

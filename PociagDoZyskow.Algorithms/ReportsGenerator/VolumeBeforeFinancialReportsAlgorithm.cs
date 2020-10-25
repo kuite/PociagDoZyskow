@@ -10,7 +10,7 @@ namespace PociagDoZyskow.Algorithms.ReportsGenerator
     {
         public override string AlgorithmName => "VolumeBeforeFinancialReports";
 
-        public Task<IEnumerable<AlgorithmResult>> GetResults(Configuration cfg)
+        public override Task<IEnumerable<AlgorithmResult>> GetResults(Configuration cfg)
         {
             throw new NotImplementedException();
         }

@@ -22,7 +22,7 @@ namespace PociagDoZyskow.DataAccess.Mapping.Algorithms
             builder.Property(p => p.CompanyId).HasColumnName("CompanyId");
             builder.Property(p => p.AlgorithmName).HasColumnName("AlgorithmName");
             builder.Property(p => p.CreatedOn).HasColumnName("CreatedOn");
-            builder.Property(p => p.Description).HasColumnName("Description");
+            builder.Property(p => p.ResultDescription).HasColumnName("ResultDescription");
             builder.Property(p => p.IsBuy).HasColumnName("IsBuy");
         }
     }

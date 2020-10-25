@@ -7,7 +7,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.DataAccess.Entities;
-using PociagDoZyskow.ExternalDataReader.Quotations;
+using PociagDoZyskow.ExternalDataReader.QuotationsReaders;
 using PociagDoZyskow.HistoricalDataSeeder.Factories;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
 

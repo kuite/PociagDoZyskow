@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using PociagDoZyskow.DTO;
 
-namespace PociagDoZyskow.ExternalDataReader.Quotations
+namespace PociagDoZyskow.ExternalDataReader.QuotationsReaders
 {
     public class NewConnectExternalDataReader : BaseQuotationsReader
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using PociagDoZyskow.DTO;
-using PociagDoZyskow.ExternalDataReader.Quotations.Interfaces;
+using PociagDoZyskow.ExternalDataReader.QuotationsReaders.Interfaces;
 
-namespace PociagDoZyskow.ExternalDataReader.Quotations
+namespace PociagDoZyskow.ExternalDataReader.QuotationsReaders
 {
     public abstract class BaseQuotationsReader : IExternalDataReader
     {

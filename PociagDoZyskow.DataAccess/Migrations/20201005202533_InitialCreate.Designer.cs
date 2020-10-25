@@ -37,7 +37,7 @@ namespace PociagDoZyskow.DataAccess.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("ResultDescription")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsBuy")

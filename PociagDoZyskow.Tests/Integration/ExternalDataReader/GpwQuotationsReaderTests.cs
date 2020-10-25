@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.Net;
-using PociagDoZyskow.ExternalDataReader.Quotations;
+using PociagDoZyskow.ExternalDataReader.QuotationsReaders;
 using Xunit;
 
 namespace PociagDoZyskow.Tests.Integration.ExternalDataReader
