@@ -7,6 +7,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.DataAccess.Entities;
+using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
 using PociagDoZyskow.ExternalDataReader.QuotationsReaders;
 using PociagDoZyskow.HistoricalDataSeeder.Factories;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
@@ -20,16 +21,17 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
             try
             {
                 var client = new WebClient();
+                var externalDataReadsContext = new ExternalDataReadsContext();
                 var context = new DatabaseContext();
                 var config = new MapperConfiguration(cfg =>
                 {
                     cfg.CreateMap<DTO.CompanyDataScan, CompanyDataScan>().ReverseMap();
                 });
-
                 var quotationsReader = new GpwQuotationsReader(client);
+                IMapper iMapper = config.CreateMapper();
+
                 var date = DateTime.Now.Subtract(TimeSpan.FromDays(fromDaysAgo));
                 var processingDate = date.Date;
-                IMapper iMapper = config.CreateMapper();
                 var exchanges = context.Exchanges.ToList();
                 var companies = context.Companies
                     .Include(c => c.Exchange)
@@ -37,20 +39,25 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                 var quotationFactory = new GpwCompanyDataScanEntityFactory(iMapper);
                 while (processingDate < DateTime.Now)
                 {
+                    var dailyQuotationReads =
+                        (await quotationsReader.GetCompanyDailyDataScans(processingDate)).ToList();
+
+                    var newCompanies = CreateCompanyForScans(context, dailyQuotationReads);
+                    await context.Companies.AddRangeAsync(newCompanies);
+                    await context.SaveChangesAsync();
+
                     companies = context.Companies
                         .Include(c => c.Exchange)
                         .ToList();
-                    var dailyQuotationReads =
-                        (await quotationsReader.GetCompanyDailyDataScans(processingDate)).ToList();
-                    
+
                     var quotationEntities =
                         quotationFactory.GetCompanyDataScanEntity(companies, exchanges, dailyQuotationReads).ToList();
 
                     var freshQuotationEntities =
-                        RemoveFromAlreadyInsertedDataScans(context, quotationEntities).ToList();
+                        RemoveFromAlreadyInsertedDataScans(externalDataReadsContext, quotationEntities).ToList();
 
-                    await context.CompanyDataScans.AddRangeAsync(freshQuotationEntities);
-                    await context.SaveChangesAsync();
+                    await externalDataReadsContext.CompanyDataScans.AddRangeAsync(freshQuotationEntities);
+                    await externalDataReadsContext.SaveChangesAsync();
                     Console.WriteLine($"Saved {freshQuotationEntities.Count} quotations from {processingDate.ToShortDateString()} day to database...");
                     processingDate = processingDate.AddDays(1);
 
@@ -63,16 +70,41 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
             }
         }
 
-        private IEnumerable<CompanyDataScan> RemoveFromAlreadyInsertedDataScans(DatabaseContext context, List<CompanyDataScan> newScans)
+        private IEnumerable<Company> CreateCompanyForScans(DatabaseContext context, List<DTO.CompanyDataScan> dailyQuotationReads)
+        {
+            var companies = new List<Company>();
+            var exsitingCompanies = context.Companies.ToList();
+            foreach (DTO.CompanyDataScan scan in dailyQuotationReads)
+            {
+                //TODO: Refactor to:  exchanges.FirstOrDefault(e => e.Companies.Any(r => r.Name == companyEntity.FullCompanyName));
+                var company = exsitingCompanies.FirstOrDefault(c => c.ShortName == scan.CompanyShortName);
+                var exchange = context.Exchanges.FirstOrDefault(e => e.ShortName == "GPW");
+                if (exchange == null)
+                {
+                    throw new Exception("Not found GPW exchange.");
+                }
+                if (company == null)
+                {
+                    //TODO: Save company  
+                    company = new Company();
+                    company.Exchange = exchange;
+                    company.ShortName = scan.CompanyShortName;
+                    companies.Add(company);
+                }
+            }
+
+            return companies;
+        }
+
+        private IEnumerable<CompanyDataScan> RemoveFromAlreadyInsertedDataScans(ExternalDataReadsContext externalDataReadsContext, List<CompanyDataScan> newScans)
         {
             var freshFCompanyDataScansEntities = new List<CompanyDataScan>();
-            var existingCompanyDataScans = context.CompanyDataScans.ToList();
-            var companies = context.Companies.ToList();
+            var existingCompanyDataScans = externalDataReadsContext.CompanyDataScans.ToList();
 
             foreach (CompanyDataScan scan in newScans)
             {
                 if (existingCompanyDataScans.Any(r =>
-                    r.Company.Ticker == scan.Company.Ticker &&
+                    r.CompanyId == scan.CompanyId &&
                     r.ScanReferenceTime == scan.ScanReferenceTime))
                 {
                     continue;

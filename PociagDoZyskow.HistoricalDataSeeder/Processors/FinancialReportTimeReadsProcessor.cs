@@ -7,6 +7,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.DataAccess.Entities;
+using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
 using PociagDoZyskow.ExternalDataReader.ReportsReaders;
 using PociagDoZyskow.HistoricalDataSeeder.Factories;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
@@ -31,11 +32,13 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                 Console.WriteLine($"Transforming published reports newScans to database entities.");
                 var reportScans = new List<FinancialReportTimeScan>();
                 var context = new DatabaseContext();
+                var externalDataReadsContext = new ExternalDataReadsContext();
                 var config = new MapperConfiguration(cfg => {
                     cfg.CreateMap<DTO.FinancialReportTimeScan, FinancialReportTimeScan>().ReverseMap();
                 });
                 IMapper iMapper = config.CreateMapper();
                 var financialReports = new List<DTO.FinancialReportTimeScan>();
+
                 financialReports.AddRange(publishedFinancialReports);
                 financialReports.AddRange(incomingFinancialReports);
                 var companies = await context.Companies.Include(c => c.Exchange).ToListAsync();
@@ -49,9 +52,9 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                     }
                 }
 
-                reportScans = RemoveDuplications(context, reportScans).ToList();
-                await context.FinancialReportTimeDataScans.AddRangeAsync(reportScans);
-                await context.SaveChangesAsync();
+                reportScans = RemoveDuplications(externalDataReadsContext, context, reportScans).ToList();
+                await externalDataReadsContext.FinancialReportTimeDataScans.AddRangeAsync(reportScans);
+                await externalDataReadsContext.SaveChangesAsync();
                 Console.WriteLine($"Saved {reportScans.Count} financial reports time date scan to database.");
             }
             catch (Exception e)
@@ -62,10 +65,11 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 
         }
 
-        private IEnumerable<FinancialReportTimeScan> RemoveDuplications(DatabaseContext context, List<FinancialReportTimeScan> newScans)
+        private IEnumerable<FinancialReportTimeScan> RemoveDuplications(ExternalDataReadsContext externalDataReadsContext, DatabaseContext context, 
+            List<FinancialReportTimeScan> newScans)
         {
             var freshFinancialReportTimeScanEntities = new List<FinancialReportTimeScan>();
-            var existedFinancialReportScans = context.FinancialReportTimeDataScans.ToList();
+            var existedFinancialReportScans = externalDataReadsContext.FinancialReportTimeDataScans.ToList();
             var companies = context.Companies.ToList();
 
             foreach (FinancialReportTimeScan scan in newScans)
@@ -74,28 +78,20 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                     r.ShortCompanyName == scan.ShortCompanyName && 
                     r.ReportDate == scan.ReportDate))
                 {
+                    //not found company for this report
                     continue;
                 }
-
-                var cleanedScan = AssignAlreadyInsertedCompany(companies, scan);
-                freshFinancialReportTimeScanEntities.Add(cleanedScan);
+                var relatedCompany = companies.FirstOrDefault(c => c.ShortName == scan.ShortCompanyName);
+                if (relatedCompany == null)
+                {
+                    Console.WriteLine($"Not found company {scan.ShortCompanyName} for financial scan.");
+                    continue;
+                }
+                scan.CompanyId = relatedCompany.Id;
+                freshFinancialReportTimeScanEntities.Add(scan);
             }
 
             return freshFinancialReportTimeScanEntities;
-        }
-
-        private static FinancialReportTimeScan AssignAlreadyInsertedCompany(List<Company> companies, FinancialReportTimeScan scan)
-        {
-            var financialReportValidScan = scan;
-            var relatedCompany = companies.FirstOrDefault(c => c.ShortName == scan.ShortCompanyName);
-            if (relatedCompany != null)
-            {
-                financialReportValidScan.Company = relatedCompany;
-            }
-
-
-
-            return financialReportValidScan;
         }
 
     }

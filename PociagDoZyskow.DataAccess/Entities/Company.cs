@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using PociagDoZyskow.DataAccess.Entities.Algorithms;
+using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
 
 namespace PociagDoZyskow.DataAccess.Entities
 {
@@ -16,11 +17,5 @@ namespace PociagDoZyskow.DataAccess.Entities
         public int ExchangeId { get; set; }
 
         public Exchange Exchange { get; set; }
-
-        public ICollection<CompanyDataScan> CompanyDataScans { get; set; }
-
-        public ICollection<AlgorithmResult> AlgorithmResults { get; set; }
-
-        public ICollection<FinancialReportTimeScan> FinancialReportTimeScans { get; set; }
     }
 }

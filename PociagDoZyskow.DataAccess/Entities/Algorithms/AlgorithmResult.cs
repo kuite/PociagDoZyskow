@@ -15,7 +15,5 @@ namespace PociagDoZyskow.DataAccess.Entities.Algorithms
         public bool IsBuy { get; set; }
 
         public DateTime CreatedOn { get; set; }
-
-        public Company Company { get; set; }
     }
 }

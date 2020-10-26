@@ -13,17 +13,14 @@ namespace PociagDoZyskow.DataAccess.Mapping.Algorithms
             builder.Property(p => p.Id)
                 .ValueGeneratedOnAdd();
 
-            builder
-                .HasOne(left => left.Company)
-                .WithMany(right => right.AlgorithmResults)
-                .HasForeignKey(foreign => foreign.CompanyId);
-
             builder.Property(p => p.Id).HasColumnName("Id");
             builder.Property(p => p.CompanyId).HasColumnName("CompanyId");
             builder.Property(p => p.AlgorithmName).HasColumnName("AlgorithmName");
             builder.Property(p => p.CreatedOn).HasColumnName("CreatedOn");
             builder.Property(p => p.ResultDescription).HasColumnName("ResultDescription");
             builder.Property(p => p.IsBuy).HasColumnName("IsBuy");
+
+            builder.ToTable("AlgorithmResults", "Algorithms");
         }
     }
 }

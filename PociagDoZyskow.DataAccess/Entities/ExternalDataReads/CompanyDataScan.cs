@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PociagDoZyskow.DataAccess.Entities
+namespace PociagDoZyskow.DataAccess.Entities.ExternalDataReads
 {
     public class CompanyDataScan
     {
@@ -27,7 +27,5 @@ namespace PociagDoZyskow.DataAccess.Entities
         public int TransactionsCount { get; set; }
 
         public int CompanyId { get; set; }
-
-        public Company Company { get; set; }
     }
 }

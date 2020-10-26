@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using PociagDoZyskow.DataAccess.Entities;
+using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
 using PociagDoZyskow.HistoricalDataSeeder.Factories.Interfaces;
 
 namespace PociagDoZyskow.HistoricalDataSeeder.Factories
@@ -35,6 +36,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Factories
             }
             else
             {
+                //TODO: Update company  
                 if (company.Ticker == null)
                 {
                     company.Ticker = report.CompanyTicker;
@@ -45,7 +47,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Factories
                 }
             }
 
-            reportEntity.Company = company;
+            reportEntity.CompanyId = company.Id;
             return reportEntity;
         }
     }

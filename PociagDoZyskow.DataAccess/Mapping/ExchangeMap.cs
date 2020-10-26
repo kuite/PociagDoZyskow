@@ -16,6 +16,21 @@ namespace PociagDoZyskow.DataAccess.Mapping
             builder.Property(p => p.Id).HasColumnName("Id");
             builder.Property(p => p.Name).HasColumnName("Name");
             builder.Property(p => p.ShortName).HasColumnName("ShortName");
+
+            builder.HasData(
+                new Exchange
+                {
+                    Id = 1,
+                    Name = "Gielda Papierow Wartosciowych",
+                    ShortName = "GPW"
+                },
+                new Exchange
+                {
+                    Id = 2,
+                    Name = "NewConnect",
+                    ShortName = "NC"
+                }
+            );
         }
     }
 }

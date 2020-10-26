@@ -43,9 +43,14 @@ W projekcie Algorithms trzymamy logike dla obliczeń.
 
 
 dotnet ef migrations add InitialCreate --project ../PociagDoZyskow.DataAccess -c DatabaseContext
+dotnet ef migrations add InitialCreate --project ../PociagDoZyskow.DataAccess -c AlgorithmContext
+dotnet ef migrations add InitialCreate --project ../PociagDoZyskow.DataAccess -c ExternalDataReadsContext
+
 dotnet ef database update --project ../PociagDoZyskow.DataAccess -c DatabaseContext
 
 
 
 - przy di context jako scoped
 - projekt infrastructure gdzie dołaczam wszystkich
+
+

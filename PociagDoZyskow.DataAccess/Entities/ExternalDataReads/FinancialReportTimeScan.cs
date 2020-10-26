@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace PociagDoZyskow.DataAccess.Entities
+namespace PociagDoZyskow.DataAccess.Entities.ExternalDataReads
 {
     public class FinancialReportTimeScan
     {
         public int Id { get; set; }
 
-        public string CompanyTicker { get; set; }
-
         public int CompanyId { get; set; }
+
+        public string CompanyTicker { get; set; }
 
         public string ShortCompanyName { get; set; }
 
@@ -17,7 +17,5 @@ namespace PociagDoZyskow.DataAccess.Entities
         public string ReportType { get; set; }
 
         public DateTime ReportDate { get; set; }
-
-        public Company Company { get; set; }
     }
 }
