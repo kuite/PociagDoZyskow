@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using PociagDoZyskow.DTO;
+using PociagDoZyskow.ExternalDataReader.QuotationsReaders.Interfaces;
 
 namespace PociagDoZyskow.ExternalDataReader.QuotationsReaders
 {
     public class NewConnectExternalDataReader : BaseQuotationsReader
     {
-        public override string QuotationShortName => "NV";
+        public override string QuotationShortName => "NC";
 
         public override string QuotationLink => "https://newconnect.pl/notowania=";
 

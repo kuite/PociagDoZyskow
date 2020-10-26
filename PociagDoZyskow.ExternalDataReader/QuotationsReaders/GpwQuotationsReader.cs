@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using HtmlAgilityPack;
 using PociagDoZyskow.DTO;
 using PociagDoZyskow.ExternalDataReader.Helpers;
+using PociagDoZyskow.ExternalDataReader.QuotationsReaders.Interfaces;
 
 namespace PociagDoZyskow.ExternalDataReader.QuotationsReaders
 {

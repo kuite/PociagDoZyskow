@@ -23,7 +23,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder
 
 
             Console.WriteLine("ProcessorsRunner ended");
-            Console.WriteLine("Press any key to exit");
+            Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }
     }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using PociagDoZyskow.Algorithms.DTO;
 
-namespace PociagDoZyskow.Algorithms.ReportsGenerator
+namespace PociagDoZyskow.Algorithms
 {
     public class VolumeBeforeFinancialReportsAlgorithm : BaseAlgorithm
     {

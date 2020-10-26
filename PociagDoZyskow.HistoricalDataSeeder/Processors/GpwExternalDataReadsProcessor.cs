@@ -29,7 +29,6 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 
                 Console.WriteLine($"Transforming quotations scans to database entities...");
                 var quotationsReader = new GpwQuotationsReader(client);
-                //var date = DateTime.Now.Subtract(TimeSpan.FromDays(175));
                 var date = DateTime.Now.Subtract(TimeSpan.FromDays(fromDaysAgo));
                 var processingDate = date.Date;
                 IMapper iMapper = config.CreateMapper();
@@ -37,7 +36,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                 var companies = context.Companies
                     .Include(c => c.Exchange)
                     .ToList();
-                var quotationFactory = new GpwCompanyDataScanFactory(iMapper);
+                var quotationFactory = new GpwCompanyDataScanEntityFactory(iMapper);
                 while (processingDate < DateTime.Now)
                 {
                     companies = context.Companies

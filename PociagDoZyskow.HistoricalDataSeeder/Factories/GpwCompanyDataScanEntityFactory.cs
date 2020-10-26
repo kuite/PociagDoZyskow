@@ -7,11 +7,11 @@ using PociagDoZyskow.HistoricalDataSeeder.Factories.Interfaces;
 
 namespace PociagDoZyskow.HistoricalDataSeeder.Factories
 {
-    public class GpwCompanyDataScanFactory : ICompanyDataScanFactory
+    public class GpwCompanyDataScanEntityFactory : ICompanyDataScanFactory
     {
         public IMapper _mapper { get; }
 
-        public GpwCompanyDataScanFactory(IMapper iMapper)
+        public GpwCompanyDataScanEntityFactory(IMapper iMapper)
         {
             _mapper = iMapper;
         }
