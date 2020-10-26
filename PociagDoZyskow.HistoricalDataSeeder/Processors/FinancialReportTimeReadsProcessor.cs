@@ -7,7 +7,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.DataAccess.Entities;
-using PociagDoZyskow.ExternalDataReader.Reports;
+using PociagDoZyskow.ExternalDataReader.ReportsReaders;
 using PociagDoZyskow.HistoricalDataSeeder.Factories;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
 
@@ -48,9 +48,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                         reportScans.Add(reportEntity);
                     }
                 }
-                Console.WriteLine($"Transformed reports newScans to database entities.");
 
-                Console.WriteLine("Prepare data to avoid duplications or data errors.");
                 reportScans = RemoveDuplications(context, reportScans).ToList();
                 await context.FinancialReportTimeDataScans.AddRangeAsync(reportScans);
                 await context.SaveChangesAsync();

@@ -19,7 +19,6 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
         {
             try
             {
-                Console.WriteLine("Start GpwExternalDataReadsProcessor");
                 var client = new WebClient();
                 var context = new DatabaseContext();
                 var config = new MapperConfiguration(cfg =>
@@ -27,7 +26,6 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                     cfg.CreateMap<DTO.CompanyDataScan, CompanyDataScan>().ReverseMap();
                 });
 
-                Console.WriteLine($"Transforming quotations scans to database entities...");
                 var quotationsReader = new GpwQuotationsReader(client);
                 var date = DateTime.Now.Subtract(TimeSpan.FromDays(fromDaysAgo));
                 var processingDate = date.Date;
@@ -45,11 +43,9 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                     var dailyQuotationReads =
                         (await quotationsReader.GetCompanyDailyDataScans(processingDate)).ToList();
                     
-                    Console.WriteLine("Map quotation reads to entities.");
                     var quotationEntities =
                         quotationFactory.GetCompanyDataScanEntity(companies, exchanges, dailyQuotationReads).ToList();
 
-                    Console.WriteLine("Prepare data to avoid duplications or data errors.");
                     var freshQuotationEntities =
                         RemoveFromAlreadyInsertedDataScans(context, quotationEntities).ToList();
 

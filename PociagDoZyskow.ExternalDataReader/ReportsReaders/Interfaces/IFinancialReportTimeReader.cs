@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using PociagDoZyskow.DTO;
 
-namespace PociagDoZyskow.ExternalDataReader.Reports.Interfaces
+namespace PociagDoZyskow.ExternalDataReader.ReportsReaders.Interfaces
 {
     public interface IFinancialReportTimeReader
     {

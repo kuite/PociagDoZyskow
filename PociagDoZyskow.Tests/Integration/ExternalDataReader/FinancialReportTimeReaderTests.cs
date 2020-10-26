@@ -1,5 +1,5 @@
-﻿using PociagDoZyskow.ExternalDataReader.Reports;
-using System.Net;
+﻿using System.Net;
+using PociagDoZyskow.ExternalDataReader.ReportsReaders;
 using Xunit;
 
 namespace PociagDoZyskow.Tests.Integration.ExternalDataReader

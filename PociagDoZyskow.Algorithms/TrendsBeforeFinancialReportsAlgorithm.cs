@@ -6,9 +6,9 @@ using PociagDoZyskow.Algorithms.DTO;
 
 namespace PociagDoZyskow.Algorithms
 {
-    public class VolumeBeforeFinancialReportsAlgorithm : BaseAlgorithm
+    public class TrendsBeforeFinancialReportsAlgorithm : BaseAlgorithm
     {
-        public override string AlgorithmName => "VolumeBeforeFinancialReports";
+        public override string AlgorithmName => "TrendsBeforeFinancialReports";
 
         public override Task<IEnumerable<AlgorithmResult>> GetResults(Configuration cfg)
         {
