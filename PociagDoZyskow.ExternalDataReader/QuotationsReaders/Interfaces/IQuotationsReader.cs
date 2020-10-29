@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using PociagDoZyskow.DTO;
 
-namespace PociagDoZyskow.ExternalDataReader.QuotationsReaders.Interfaces
+namespace PociagDoZyskow.ExternalDataHandler.QuotationsReaders.Interfaces
 {
-    public interface IExternalDataReader
+    public interface IExternalDataHandler
     {
         Task<IEnumerable<CompanyDataScan>> GetCompanyDailyDataScans(DateTime date);
     }

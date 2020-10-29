@@ -10,7 +10,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Factories
 {
     public class GpwCompanyDataScanEntityFactory : ICompanyDataScanFactory
     {
-        public IMapper _mapper { get; }
+        public IMapper _mapper;
 
         public GpwCompanyDataScanEntityFactory(IMapper iMapper)
         {

@@ -47,7 +47,8 @@ dotnet ef migrations add InitialCreate --project ../PociagDoZyskow.DataAccess -c
 dotnet ef migrations add InitialCreate --project ../PociagDoZyskow.DataAccess -c ExternalDataReadsContext
 
 dotnet ef database update --project ../PociagDoZyskow.DataAccess -c DatabaseContext
-
+dotnet ef database update --project ../PociagDoZyskow.DataAccess -c AlgorithmContext
+dotnet ef database update --project ../PociagDoZyskow.DataAccess -c ExternalDataReadsContext
 
 
 - przy di context jako scoped

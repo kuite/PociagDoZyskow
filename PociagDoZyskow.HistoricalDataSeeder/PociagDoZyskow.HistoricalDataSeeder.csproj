@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -11,11 +11,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.9" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PociagDoZyskow.DataAccess\PociagDoZyskow.DataAccess.csproj" />
-    <ProjectReference Include="..\PociagDoZyskow.ExternalDataReader\PociagDoZyskow.ExternalDataReader.csproj" />
+    <ProjectReference Include="..\PociagDoZyskow.ExternalDataReader\PociagDoZyskow.ExternalDataHandler.csproj" />
   </ItemGroup>
 
 </Project>

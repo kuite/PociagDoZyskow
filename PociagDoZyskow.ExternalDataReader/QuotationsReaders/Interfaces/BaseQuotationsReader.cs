@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using PociagDoZyskow.DTO;
 
-namespace PociagDoZyskow.ExternalDataReader.QuotationsReaders.Interfaces
+namespace PociagDoZyskow.ExternalDataHandler.QuotationsReaders.Interfaces
 {
-    public abstract class BaseQuotationsReader : IExternalDataReader
+    public abstract class BaseQuotationsReader : IExternalDataHandler
     {
         public abstract string QuotationShortName { get; }
         public abstract string QuotationLink { get; }

@@ -2,7 +2,7 @@
 using System;
 using OpenQA.Selenium.Support.UI;
 
-namespace PociagDoZyskow.ExternalDataReader.Helpers
+namespace PociagDoZyskow.ExternalDataHandler.Helpers
 {
     public static class SeleniumHelper
     {

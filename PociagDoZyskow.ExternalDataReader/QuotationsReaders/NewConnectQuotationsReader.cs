@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using PociagDoZyskow.DTO;
-using PociagDoZyskow.ExternalDataReader.QuotationsReaders.Interfaces;
+using PociagDoZyskow.ExternalDataHandler.QuotationsReaders.Interfaces;
 
-namespace PociagDoZyskow.ExternalDataReader.QuotationsReaders
+namespace PociagDoZyskow.ExternalDataHandler.QuotationsReaders
 {
-    public class NewConnectExternalDataReader : BaseQuotationsReader
+    public class NewConnectExternalDataHandler : BaseQuotationsReader
     {
         public override string QuotationShortName => "NC";
 

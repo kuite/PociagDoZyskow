@@ -8,7 +8,7 @@ namespace PociagDoZyskow.Algorithms
 {
     public class TrendsBeforeFinancialReportsAlgorithm : BaseAlgorithm
     {
-        public override string AlgorithmName => "TrendsBeforeFinancialReports";
+        public override string AlgorithmName => nameof(TrendsBeforeFinancialReportsAlgorithm);
 
         public override Task<IEnumerable<AlgorithmResult>> GetResults(Configuration cfg)
         {

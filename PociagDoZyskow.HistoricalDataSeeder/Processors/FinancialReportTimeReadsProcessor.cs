@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
-using PociagDoZyskow.DataAccess.Entities;
 using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
-using PociagDoZyskow.ExternalDataReader.ReportsReaders;
+using PociagDoZyskow.ExternalDataHandler.ReportsReaders;
 using PociagDoZyskow.HistoricalDataSeeder.Factories;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
 
 namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 {
-    public class FinancialReportTimeReadsProcessor : IDataSeedProcessor
+    public class FinancialReportTimeReadsProcessor : IProcessor
     {
         public async Task Start(int fromDayAgo)
         {

@@ -1,12 +1,12 @@
 using System;
 using System.Linq;
 using System.Net;
-using PociagDoZyskow.ExternalDataReader.QuotationsReaders;
+using PociagDoZyskow.ExternalDataHandler.QuotationsReaders;
 using Xunit;
 
-namespace PociagDoZyskow.Tests.Integration.ExternalDataReader
+namespace PociagDoZyskow.Tests.Integration.ExternalDataHandler
 {
-    public class GpwExternalDataReaderTests
+    public class GpwExternalDataHandlerTests
     {
         
         [Theory]

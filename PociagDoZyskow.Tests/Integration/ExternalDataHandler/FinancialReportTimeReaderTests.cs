@@ -1,8 +1,8 @@
 ﻿using System.Net;
-using PociagDoZyskow.ExternalDataReader.ReportsReaders;
+using PociagDoZyskow.ExternalDataHandler.ReportsReaders;
 using Xunit;
 
-namespace PociagDoZyskow.Tests.Integration.ExternalDataReader
+namespace PociagDoZyskow.Tests.Integration.ExternalDataHandler
 {
     public class FinancialReportTimeReaderTests
     {

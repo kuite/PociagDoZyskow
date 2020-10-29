@@ -8,56 +8,62 @@ using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.DataAccess.Entities;
 using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
-using PociagDoZyskow.ExternalDataReader.QuotationsReaders;
+using PociagDoZyskow.ExternalDataHandler.QuotationsReaders;
 using PociagDoZyskow.HistoricalDataSeeder.Factories;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
 
 namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 {
-    class GpwExternalDataReadsProcessor : IDataSeedProcessor
+    class GpwExternalDataReadsProcessor : IProcessor
     {
+        private readonly GpwQuotationsReader _gpwQuotationsReader;
+
+        private readonly GpwCompanyDataScanEntityFactory _gpwCompanyDataScanEntityFactory;
+
+        private readonly ExternalDataReadsContext _externalDataReadsContext; 
+
+        private readonly DatabaseContext _databaseContext;
+
+        public GpwExternalDataReadsProcessor(
+            GpwQuotationsReader gpwQuotationsReader,
+            GpwCompanyDataScanEntityFactory gpwCompanyDataScanEntityFactory,
+            ExternalDataReadsContext externalDataReadsContext, 
+            DatabaseContext databaseContext)
+        {
+            _gpwQuotationsReader = gpwQuotationsReader;
+            _gpwCompanyDataScanEntityFactory = gpwCompanyDataScanEntityFactory;
+            _externalDataReadsContext = externalDataReadsContext;
+            _databaseContext = databaseContext;
+        }
+
         public async Task Start(int fromDaysAgo)
         {
             try
             {
-                var client = new WebClient();
-                var externalDataReadsContext = new ExternalDataReadsContext();
-                var context = new DatabaseContext();
-                var config = new MapperConfiguration(cfg =>
-                {
-                    cfg.CreateMap<DTO.CompanyDataScan, CompanyDataScan>().ReverseMap();
-                });
-                var quotationsReader = new GpwQuotationsReader(client);
-                IMapper iMapper = config.CreateMapper();
-
                 var date = DateTime.Now.Subtract(TimeSpan.FromDays(fromDaysAgo));
                 var processingDate = date.Date;
-                var exchanges = context.Exchanges.ToList();
-                var companies = context.Companies
-                    .Include(c => c.Exchange)
-                    .ToList();
-                var quotationFactory = new GpwCompanyDataScanEntityFactory(iMapper);
+                var exchanges = _databaseContext.Exchanges.ToList();
                 while (processingDate < DateTime.Now)
                 {
                     var dailyQuotationReads =
-                        (await quotationsReader.GetCompanyDailyDataScans(processingDate)).ToList();
+                        (await _gpwQuotationsReader.GetCompanyDailyDataScans(processingDate)).ToList();
 
-                    var newCompanies = CreateCompanyForScans(context, dailyQuotationReads);
-                    await context.Companies.AddRangeAsync(newCompanies);
-                    await context.SaveChangesAsync();
+                    var newCompanies = CreateCompanyForScans(_databaseContext, dailyQuotationReads);
+                    await _databaseContext.Companies.AddRangeAsync(newCompanies);
+                    await _databaseContext.SaveChangesAsync();
 
-                    companies = context.Companies
+                    var companies = _databaseContext.Companies
                         .Include(c => c.Exchange)
                         .ToList();
 
                     var quotationEntities =
-                        quotationFactory.GetCompanyDataScanEntity(companies, exchanges, dailyQuotationReads).ToList();
+                        _gpwCompanyDataScanEntityFactory.GetCompanyDataScanEntity(companies, exchanges, dailyQuotationReads).ToList();
 
                     var freshQuotationEntities =
-                        RemoveFromAlreadyInsertedDataScans(externalDataReadsContext, quotationEntities).ToList();
+                        RemoveFromAlreadyInsertedDataScans(_externalDataReadsContext, quotationEntities).ToList();
 
-                    await externalDataReadsContext.CompanyDataScans.AddRangeAsync(freshQuotationEntities);
-                    await externalDataReadsContext.SaveChangesAsync();
+                    await _externalDataReadsContext.CompanyDataScans.AddRangeAsync(freshQuotationEntities);
+                    await _externalDataReadsContext.SaveChangesAsync();
                     Console.WriteLine($"Saved {freshQuotationEntities.Count} quotations from {processingDate.ToShortDateString()} day to database...");
                     processingDate = processingDate.AddDays(1);
 
@@ -73,11 +79,11 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
         private IEnumerable<Company> CreateCompanyForScans(DatabaseContext context, List<DTO.CompanyDataScan> dailyQuotationReads)
         {
             var companies = new List<Company>();
-            var exsitingCompanies = context.Companies.ToList();
+            var existingCompanies = context.Companies.ToList();
             foreach (DTO.CompanyDataScan scan in dailyQuotationReads)
             {
                 //TODO: Refactor to:  exchanges.FirstOrDefault(e => e.Companies.Any(r => r.Name == companyEntity.FullCompanyName));
-                var company = exsitingCompanies.FirstOrDefault(c => c.ShortName == scan.CompanyShortName);
+                var company = existingCompanies.FirstOrDefault(c => c.ShortName == scan.CompanyShortName);
                 var exchange = context.Exchanges.FirstOrDefault(e => e.ShortName == "GPW");
                 if (exchange == null)
                 {

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 using PociagDoZyskow.HistoricalDataSeeder.Processors;
+using static PociagDoZyskow.HistoricalDataSeeder.DependencyInjection.ServiceResolver;
 
 namespace PociagDoZyskow.HistoricalDataSeeder
 {
@@ -8,21 +10,18 @@ namespace PociagDoZyskow.HistoricalDataSeeder
     {
         static async Task Main(string[] args)
         {
+            var services = GetProvider();
+
             Console.WriteLine("Enter days to include company scans...");
             int intTemp = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine($"GpwExternalDataReadsProcessor start from {intTemp} days ago");
-            var gpwQuotationsProcessor = new GpwExternalDataReadsProcessor();
+            var gpwQuotationsProcessor = services.GetService<GpwExternalDataReadsProcessor>();
             await gpwQuotationsProcessor.Start(intTemp);
-            Console.WriteLine("GpwExternalDataReadsProcessor ended");
 
-            Console.WriteLine($"FinancialReportTimeReadsProcessor start");
-            var reportsProcessor = new FinancialReportTimeReadsProcessor();
-            await reportsProcessor.Start(0);
-            Console.WriteLine("FinancialReportTimeReadsProcessor ended");
+            var financialReportsProcessor = services.GetService<FinancialReportTimeReadsProcessor>();
+            await financialReportsProcessor.Start(0);
 
 
-            Console.WriteLine("ProcessorsRunner ended");
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }

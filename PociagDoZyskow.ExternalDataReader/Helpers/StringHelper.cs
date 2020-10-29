@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace PociagDoZyskow.ExternalDataReader.Helpers
+namespace PociagDoZyskow.ExternalDataHandler.Helpers
 {
     public static class StringHelper
     {
