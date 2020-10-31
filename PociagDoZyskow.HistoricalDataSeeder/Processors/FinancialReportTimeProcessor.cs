@@ -13,13 +13,14 @@ using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
 
 namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 {
-    public class FinancialReportTimeReadsProcessor : IProcessor
+    public class FinancialReportTimeProcessor : IProcessor
     {
         public async Task Start(int fromDayAgo)
         {
             try
             {
-                Console.WriteLine("Start FinancialReportTimeReadsProcessor");
+                //TODO: Refeactor this to be like GpwQuotationsDataProcessor
+                Console.WriteLine("Start FinancialReportTimeProcessor");
                 Console.WriteLine("Skipping use of fromDayAgo, as reading only visible financial reports.");
                 var client = new WebClient();
                 var reportReader = new FinancialReportTimeReader(client);
@@ -67,6 +68,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
         private IEnumerable<FinancialReportTimeScan> RemoveDuplications(ExternalDataReadsContext externalDataReadsContext, DatabaseContext context, 
             List<FinancialReportTimeScan> newScans)
         {
+            //TODO: will be in FinancialReportWriter
             var freshFinancialReportTimeScanEntities = new List<FinancialReportTimeScan>();
             var existedFinancialReportScans = externalDataReadsContext.FinancialReportTimeDataScans.ToList();
             var companies = context.Companies.ToList();

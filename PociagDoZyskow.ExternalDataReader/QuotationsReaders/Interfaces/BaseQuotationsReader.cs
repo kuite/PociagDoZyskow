@@ -5,11 +5,11 @@ using PociagDoZyskow.DTO;
 
 namespace PociagDoZyskow.ExternalDataHandler.QuotationsReaders.Interfaces
 {
-    public abstract class BaseQuotationsReader : IExternalDataHandler
+    public abstract class BaseQuotationsReader : IQuotationsReader
     {
         public abstract string QuotationShortName { get; }
         public abstract string QuotationLink { get; }
 
-        public abstract Task<IEnumerable<CompanyDataScan>> GetCompanyDailyDataScans(DateTime date);
+        public abstract Task<IEnumerable<CompanyDataScan>> GetQuotationDataScansForDate(DateTime date);
     }
 }

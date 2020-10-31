@@ -6,9 +6,12 @@ using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.ExternalDataHandler.QuotationsReaders;
+using PociagDoZyskow.ExternalDataHandler.QuotationsWriter;
 using PociagDoZyskow.HistoricalDataSeeder.Factories;
 using PociagDoZyskow.HistoricalDataSeeder.Processors;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
+using PociagDoZyskow.HistoricalDataSeeder.Services;
+using PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces;
 
 namespace PociagDoZyskow.HistoricalDataSeeder.DependencyInjection
 {
@@ -30,10 +33,12 @@ namespace PociagDoZyskow.HistoricalDataSeeder.DependencyInjection
             serviceProvider.AddScoped<DatabaseContext>();
             serviceProvider.AddScoped<AlgorithmContext>();
             serviceProvider.AddScoped<ExternalDataReadsContext>();
+            serviceProvider.AddScoped<ICompanyService, CompanyService>();
             serviceProvider.AddScoped<GpwQuotationsReader>();
+            serviceProvider.AddScoped<GpwQuotationsWriter>();
             serviceProvider.AddScoped<GpwCompanyDataScanEntityFactory>();
-            serviceProvider.AddTransient<FinancialReportTimeReadsProcessor>();
-            serviceProvider.AddTransient<GpwExternalDataReadsProcessor>();
+            serviceProvider.AddTransient<FinancialReportTimeProcessor>();
+            serviceProvider.AddTransient<GpwQuotationsDataProcessor>();
 
             var provider = serviceProvider.BuildServiceProvider();
             return provider;

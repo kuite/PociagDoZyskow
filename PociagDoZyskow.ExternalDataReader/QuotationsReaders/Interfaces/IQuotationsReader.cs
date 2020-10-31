@@ -5,8 +5,8 @@ using PociagDoZyskow.DTO;
 
 namespace PociagDoZyskow.ExternalDataHandler.QuotationsReaders.Interfaces
 {
-    public interface IExternalDataHandler
+    public interface IQuotationsReader
     {
-        Task<IEnumerable<CompanyDataScan>> GetCompanyDailyDataScans(DateTime date);
+        Task<IEnumerable<CompanyDataScan>> GetQuotationDataScansForDate(DateTime date);
     }
 }

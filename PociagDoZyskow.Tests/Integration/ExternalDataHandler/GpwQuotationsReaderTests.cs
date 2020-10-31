@@ -19,7 +19,7 @@ namespace PociagDoZyskow.Tests.Integration.ExternalDataHandler
             var gpwReader = new GpwQuotationsReader(webClient);
 
             //Act
-            var result = await gpwReader.GetCompanyDailyDataScans(date);
+            var result = await gpwReader.GetQuotationDataScansForDate(date);
             var companyDataScans = result.ToList();
             var selectedScan = companyDataScans.FirstOrDefault();
 

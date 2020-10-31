@@ -30,7 +30,7 @@ namespace PociagDoZyskow.ExternalDataHandler.QuotationsReaders
             _client = client;
         }
 
-        public override async Task<IEnumerable<CompanyDataScan>> GetCompanyDailyDataScans(DateTime date)
+        public override async Task<IEnumerable<CompanyDataScan>> GetQuotationDataScansForDate(DateTime date)
         {
             String formattedDate = date.ToString("dd-MM-yyyy");
             var filledUrl = String.Concat(QuotationLink, formattedDate);

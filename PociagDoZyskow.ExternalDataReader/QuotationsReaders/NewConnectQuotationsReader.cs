@@ -12,7 +12,7 @@ namespace PociagDoZyskow.ExternalDataHandler.QuotationsReaders
 
         public override string QuotationLink => "https://newconnect.pl/notowania=";
 
-        public override Task<IEnumerable<CompanyDataScan>> GetCompanyDailyDataScans(DateTime date)
+        public override Task<IEnumerable<CompanyDataScan>> GetQuotationDataScansForDate(DateTime date)
         {
             throw new NotImplementedException();
         }
