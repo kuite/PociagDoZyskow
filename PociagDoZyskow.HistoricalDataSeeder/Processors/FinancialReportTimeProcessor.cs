@@ -20,42 +20,42 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
             try
             {
                 //TODO: Refeactor this to be like GpwQuotationsDataProcessor
-                Console.WriteLine("Start FinancialReportTimeProcessor");
-                Console.WriteLine("Skipping use of fromDayAgo, as reading only visible financial reports.");
-                var client = new WebClient();
-                var reportReader = new FinancialReportTimeReader(client);
-                var publishedFinancialReports = await reportReader.GetPublishedFinancialReportTimeScans();
-                Console.WriteLine($"Read {publishedFinancialReports.Count()} published reports.");
-                var incomingFinancialReports = await reportReader.GetIncomingFinancialReportTimeScans();
-                Console.WriteLine($"Read {incomingFinancialReports.Count()} incoming reports.");
+                //Console.WriteLine("Start FinancialReportTimeProcessor");
+                //Console.WriteLine("Skipping use of fromDayAgo, as reading only visible financial reports.");
+                //var client = new WebClient();
+                //var reportReader = new FinancialReportTimeReader(client);
+                //var publishedFinancialReports = await reportReader.GetPublishedFinancialReportTimeScans();
+                //Console.WriteLine($"Read {publishedFinancialReports.Count()} published reports.");
+                //var incomingFinancialReports = await reportReader.GetIncomingFinancialReportTimeScans();
+                //Console.WriteLine($"Read {incomingFinancialReports.Count()} incoming reports.");
 
-                Console.WriteLine($"Transforming published reports newScans to database entities.");
-                var reportScans = new List<FinancialReportTimeScan>();
-                var context = new DatabaseContext();
-                var externalDataReadsContext = new ExternalDataReadsContext();
-                var config = new MapperConfiguration(cfg => {
-                    cfg.CreateMap<DTO.FinancialReportTimeScan, FinancialReportTimeScan>().ReverseMap();
-                });
-                IMapper iMapper = config.CreateMapper();
-                var financialReports = new List<DTO.FinancialReportTimeScan>();
+                //Console.WriteLine($"Transforming published reports newScans to database entities.");
+                //var reportScans = new List<FinancialReportTimeScan>();
+                //var context = new DatabaseContext();
+                //var externalDataReadsContext = new ExternalDataReadsContext();
+                //var config = new MapperConfiguration(cfg => {
+                //    cfg.CreateMap<DTO.FinancialReportTimeScan, FinancialReportTimeScan>().ReverseMap();
+                //});
+                //IMapper iMapper = config.CreateMapper();
+                //var financialReports = new List<DTO.FinancialReportTimeScan>();
 
-                financialReports.AddRange(publishedFinancialReports);
-                financialReports.AddRange(incomingFinancialReports);
-                var companies = await context.Companies.Include(c => c.Exchange).ToListAsync();
-                var financialReportFactory = new FinancialReportTimeScanEntityFactory(iMapper);
-                foreach (DTO.FinancialReportTimeScan financialReportTimeDataScan in financialReports)
-                {
-                    var reportEntity = financialReportFactory.GetFinancialReportTimeScanEntity(companies, financialReportTimeDataScan);
-                    if (reportEntity != null)
-                    {
-                        reportScans.Add(reportEntity);
-                    }
-                }
+                //financialReports.AddRange(publishedFinancialReports);
+                //financialReports.AddRange(incomingFinancialReports);
+                //var companies = await context.Companies.Include(c => c.Exchange).ToListAsync();
+                //var financialReportFactory = new FinancialReportTimeScanEntityFactory(iMapper);
+                //foreach (DTO.FinancialReportTimeScan financialReportTimeDataScan in financialReports)
+                //{
+                //    var reportEntity = financialReportFactory.GetFinancialReportTimeScanEntity(companies, financialReportTimeDataScan);
+                //    if (reportEntity != null)
+                //    {
+                //        reportScans.Add(reportEntity);
+                //    }
+                //}
 
-                reportScans = RemoveDuplications(externalDataReadsContext, context, reportScans).ToList();
-                await externalDataReadsContext.FinancialReportTimeDataScans.AddRangeAsync(reportScans);
-                await externalDataReadsContext.SaveChangesAsync();
-                Console.WriteLine($"Saved {reportScans.Count} financial reports time date scan to database.");
+                //reportScans = RemoveDuplications(externalDataReadsContext, context, reportScans).ToList();
+                //await externalDataReadsContext.FinancialReportTimeDataScans.AddRangeAsync(reportScans);
+                //await externalDataReadsContext.SaveChangesAsync();
+                //Console.WriteLine($"Saved {reportScans.Count} financial reports time date scan to database.");
             }
             catch (Exception e)
             {

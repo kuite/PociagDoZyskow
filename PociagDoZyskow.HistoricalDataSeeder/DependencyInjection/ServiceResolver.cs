@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Text;
 using AutoMapper;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.ExternalDataHandler.QuotationsReaders;
@@ -28,6 +30,14 @@ namespace PociagDoZyskow.HistoricalDataSeeder.DependencyInjection
             IMapper mapper = mapperConfig.CreateMapper();
             serviceProvider.AddSingleton(mapper);
 
+            // Build configuration
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetParent(AppContext.BaseDirectory).FullName)
+                .AddJsonFile("appsettings.json", false)
+                .Build();
+
+            serviceProvider.AddSingleton<IConfiguration>(configuration);
+
             serviceProvider.AddLogging();
             serviceProvider.AddScoped<WebClient>();
             serviceProvider.AddScoped<DatabaseContext>();
@@ -36,7 +46,6 @@ namespace PociagDoZyskow.HistoricalDataSeeder.DependencyInjection
             serviceProvider.AddScoped<ICompanyService, CompanyService>();
             serviceProvider.AddScoped<GpwQuotationsReader>();
             serviceProvider.AddScoped<GpwQuotationsWriter>();
-            serviceProvider.AddScoped<GpwCompanyDataScanEntityFactory>();
             serviceProvider.AddTransient<FinancialReportTimeProcessor>();
             serviceProvider.AddTransient<GpwQuotationsDataProcessor>();
 

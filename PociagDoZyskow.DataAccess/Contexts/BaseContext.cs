@@ -2,15 +2,21 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace PociagDoZyskow.DataAccess.Contexts
 {
     public class BaseContext : DbContext
     {
+        private readonly IConfiguration _configuration;
 
+        public BaseContext(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=PociagDoZyskow;Integrated Security=True");
+            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("database"));
         }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

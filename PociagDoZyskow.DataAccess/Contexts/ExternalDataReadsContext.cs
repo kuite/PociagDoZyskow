@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
 using PociagDoZyskow.DataAccess.Mapping.ExternalDataReads;
 
@@ -10,6 +11,10 @@ namespace PociagDoZyskow.DataAccess.Contexts
 
         public DbSet<FinancialReportTimeScan> FinancialReportTimeDataScans { get; set; }
 
+        public ExternalDataReadsContext(IConfiguration configuration) : base(configuration)
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CompanyDataScanMap());
@@ -17,5 +22,7 @@ namespace PociagDoZyskow.DataAccess.Contexts
 
             base.OnModelCreating(modelBuilder);
         }
+
+
     }
 }
