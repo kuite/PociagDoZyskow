@@ -46,12 +46,13 @@ dotnet ef migrations add InitialCreate --project ../PociagDoZyskow.DataAccess -c
 dotnet ef migrations add InitialCreate --project ../PociagDoZyskow.DataAccess -c AlgorithmContext
 dotnet ef migrations add InitialCreate --project ../PociagDoZyskow.DataAccess -c ExternalDataReadsContext
 
+Odpalić w projekcie głównym czyli PociagDoZyskow.HistoricalDataSeeder
 dotnet ef database update --project ../PociagDoZyskow.DataAccess -c DatabaseContext
 dotnet ef database update --project ../PociagDoZyskow.DataAccess -c AlgorithmContext
 dotnet ef database update --project ../PociagDoZyskow.DataAccess -c ExternalDataReadsContext
 
 
 - przy di context jako scoped
-- projekt infrastructure gdzie dołaczam wszystkich
+
 
 
