@@ -44,7 +44,6 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                     Console.WriteLine($"Saved {quotationReadEntities.Count()} quotations from {processingDate.ToShortDateString()} day to database...");
 
                     processingDate = processingDate.AddDays(1);
-
                 }
             }
             catch (Exception e)
