@@ -13,6 +13,8 @@ namespace PociagDoZyskow.ExternalDataHandler.QuotationsWriter
 {
     public class GpwQuotationsWriter : IQuotationsWriter
     {
+        private readonly string QuotationShortName = "GPW";
+
         private readonly ExternalDataReadsContext _externalDataReadsContext;
 
         private readonly DatabaseContext _databaseContext;
@@ -45,6 +47,11 @@ namespace PociagDoZyskow.ExternalDataHandler.QuotationsWriter
             var companies = _databaseContext.Companies
                 .Include(c => c.Exchange)
                 .ToList();
+            var exchange = await _databaseContext.Exchanges.FirstOrDefaultAsync(x => x.ShortName == QuotationShortName);
+            if (exchange == null)
+            {
+                throw new Exception($"Not found exchange {QuotationShortName}");
+            }
 
             foreach (var quotationScan in quotationScans)
             {
@@ -54,7 +61,14 @@ namespace PociagDoZyskow.ExternalDataHandler.QuotationsWriter
                 var company = companies.FirstOrDefault(c => c.ShortName == quotationScan.CompanyShortName);
                 if (company == null)
                 {
-                    throw new Exception($"Not found company for quotation scan");
+                    company = new Company
+                    {
+                        Exchange = exchange,
+                        ExchangeId = exchange.Id,
+                        ShortName = quotationScan.CompanyShortName
+                    };
+                    await _databaseContext.Companies.AddAsync(company);
+                    await _databaseContext.SaveChangesAsync();
                 }
                 var exist = scansFromSavingDay.Any(x => x.CompanyId == company.Id);
                 if (exist)
