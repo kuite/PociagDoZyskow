@@ -6,6 +6,8 @@ namespace PociagDoZyskow.Algorithms.DTO
 {
     public class StockMarketValue
     {
-        public decimal TotalTransactionVolumeStockCount { get; set; }
+        public decimal TotalTransactionValue { get; set; }
+
+        public decimal ChangePrice { get; set; }
     }
 }

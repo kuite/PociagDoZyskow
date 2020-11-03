@@ -16,7 +16,7 @@ namespace PociagDoZyskow.DataAccess.Contexts
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("database"));
+            optionsBuilder.UseSqlServer(_configuration["ConnectionStrings:database"]);
         }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
