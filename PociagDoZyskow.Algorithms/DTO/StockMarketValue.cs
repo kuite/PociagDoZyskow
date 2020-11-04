@@ -9,5 +9,7 @@ namespace PociagDoZyskow.Algorithms.DTO
         public decimal TotalTransactionValue { get; set; }
 
         public decimal ChangePrice { get; set; }
+
+        public DateTime ScanDateTime { get; set; }
     }
 }

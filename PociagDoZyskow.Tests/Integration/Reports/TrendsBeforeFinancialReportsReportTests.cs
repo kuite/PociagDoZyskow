@@ -5,12 +5,12 @@ using PociagDoZyskow.Algorithms.DTO;
 using PociagDoZyskow.DataAccess.Contexts;
 using Xunit;
 
-namespace PociagDoZyskow.Tests.Integration.Algorithms
+namespace PociagDoZyskow.Tests.Integration.Reports
 {
     public class TrendsBeforeFinancialReportsReportTests
     {
         [Fact]
-        public async void GetResultTest()
+        public async void GetFilledTemplateTest()
         {
             
             //Mock
@@ -30,7 +30,8 @@ namespace PociagDoZyskow.Tests.Integration.Algorithms
             var algorithm = new TrendsBeforeFinancialReportsAlgorithm(externalDataReadsContext, databaseContext);
 
             //Act
-            var results = await algorithm.GetResult(resultConfiguration);
+            var algorithmResults = await algorithm.GetResult(resultConfiguration);
+
 
             //Assert
         }

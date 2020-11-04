@@ -50,7 +50,8 @@ namespace PociagDoZyskow.Algorithms
                 new StockMarketValue
                 {
                     ChangePrice = x.ChangePrice,
-                    TotalTransactionValue = x.TotalTransactionVolumeStockCount
+                    TotalTransactionValue = x.TotalTransactionVolumeStockCount,
+                    ScanDateTime = x.ScanReferenceTime
                 });
 
             var result = new TrendsBeforeFinancialReportsAlgorithmResult
