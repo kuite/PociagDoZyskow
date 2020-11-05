@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.ExternalData
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.HistoricalDataSeeder", "PociagDoZyskow.HistoricalDataSeeder\PociagDoZyskow.HistoricalDataSeeder.csproj", "{2ADA3E7B-2D14-4C05-9EB4-6230A2E5BA07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PociagDoZyskow.Reports", "PociagDoZyskow.Reports\PociagDoZyskow.Reports.csproj", "{05D6CC6C-06D0-47E6-B39E-251BD1685FC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.EmailReports", "PociagDoZyskow.Reports\PociagDoZyskow.EmailReports.csproj", "{05D6CC6C-06D0-47E6-B39E-251BD1685FC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

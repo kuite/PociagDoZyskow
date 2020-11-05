@@ -7,8 +7,6 @@ namespace PociagDoZyskow.Algorithms.DTO
     {
         public string CompanyShortName { get; set; }
 
-        public string ResultDescription { get; set; }
-
         public DateTime FinancialReportTime { get; set; }
 
         public IEnumerable<StockMarketValue> StockMarketValues { get; set; }

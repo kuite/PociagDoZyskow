@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PociagDoZyskow.EmailReports.Factories.Interfaces;
+using PociagDoZyskow.EmailReports.Model;
 
-namespace PociagDoZyskow.Reports.Reports
+namespace PociagDoZyskow.EmailReports.Reports
 {
-    public abstract class BaseReport
+    public abstract class BaseReport<T>
     {
-        public abstract string TemplateName { get; }
+        protected ITemplateInfoFactory _templateInfoFactory;
 
-        public abstract string GetFilledTemplate();
-
-        protected string GetTemplate()
+        protected BaseReport(ITemplateInfoFactory templateInfoFactory)
         {
-            return "";
+            _templateInfoFactory = templateInfoFactory;
         }
+
+        public abstract string GetFilledTemplate(T algorithmResult);
     }
 }

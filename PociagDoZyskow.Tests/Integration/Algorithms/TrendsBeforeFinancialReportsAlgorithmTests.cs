@@ -16,7 +16,7 @@ namespace PociagDoZyskow.Tests.Integration.Algorithms
             //Mock
             var mockConfiguration = new Mock<IConfiguration>();
             mockConfiguration
-                .SetupGet(x => x[It.IsAny<string>()])
+                .SetupGet(x => x["ConnectionStrings:database"])
                 .Returns("Data Source=(local);Initial Catalog=PociagDoZyskow;Integrated Security=True");
             var configuration = mockConfiguration.Object;
             var resultConfiguration = new Configuration
