@@ -1,3 +1,4 @@
+using System.IO;
 using Microsoft.Extensions.Configuration;
 using Moq;
 using PociagDoZyskow.Algorithms;
@@ -14,7 +15,7 @@ namespace PociagDoZyskow.Tests.Integration.Reports
         [Fact]
         public async void GetFilledTemplateTest()
         {
-            
+            var templatePath = @"C:\Users\DELL\Desktop\template.html";
             //Mock
             var mockConfiguration = new Mock<IConfiguration>();
             mockConfiguration
@@ -26,7 +27,7 @@ namespace PociagDoZyskow.Tests.Integration.Reports
             var configuration = mockConfiguration.Object;
             var resultConfiguration = new Configuration
             {
-                CompanyShortName = "JSW",
+                CompanyShortName = "CCC",
                 DaysFromNowToInclude = 60
             };
 
@@ -40,7 +41,7 @@ namespace PociagDoZyskow.Tests.Integration.Reports
             var algorithmResults = await algorithm.GetResult(resultConfiguration);
             var filledReport = report.GetFilledTemplate(algorithmResults);
 
-
+            File.WriteAllText(templatePath, filledReport);
             //Assert
         }
     }

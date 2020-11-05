@@ -41,9 +41,12 @@ namespace PociagDoZyskow.Algorithms
                 throw new Exception($"Not found financial report for {cfg.CompanyShortName} company within {cfg.DaysFromNowToInclude} days from today.");
             }
             var startDate = companyReportTime.ReportDate.AddDays(-cfg.DaysFromNowToInclude);
+            var endDate = companyReportTime.ReportDate;
             var dailyQuotationScans = await _externalDataReadsContext.CompanyDataScans
-                .Where(x => x.CompanyId == company.Id && x.ScanReferenceTime > startDate)
-                .OrderBy(x => x.ScanReferenceTime)
+                .Where(x => x.CompanyId == company.Id && 
+                            x.ScanReferenceTime > startDate &&
+                            x.ScanReferenceTime <= endDate)
+                .OrderByDescending(x => x.ScanReferenceTime)
                 .ToListAsync();
 
             var stockMarketValues = dailyQuotationScans.Select(x => 
