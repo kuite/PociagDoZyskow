@@ -58,6 +58,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Services
                         ExchangeId = exchange.Id
                     };
                     await _databaseContext.AddAsync(newCompany);
+                    await _databaseContext.SaveChangesAsync();
                     companies.Add(newCompany);
                 }
             }

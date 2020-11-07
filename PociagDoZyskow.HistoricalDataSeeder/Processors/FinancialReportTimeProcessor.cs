@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using PociagDoZyskow.ExternalDataHandler.ReportsReaders;
 using PociagDoZyskow.ExternalDataHandler.ReportsWritter;
@@ -40,6 +41,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                 var relatedCompaniesEntities = await _financialReportService.SaveCompaniesToDatabase(relatedCompaniesDto, _exchangeShortName);
                 var reportReadEntities =
                         await _financialReportTimeWriter.SaveReportDataScansToDatabase(financialReports, relatedCompaniesEntities);
+                Console.WriteLine($"Saved {reportReadEntities.Count()} financial report time to database...");
             }
             catch (Exception e)
             {
