@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PociagDoZyskow.Algorithms\PociagDoZyskow.Algorithms.csproj" />
     <ProjectReference Include="..\PociagDoZyskow.ExternalDataReader\PociagDoZyskow.ExternalDataHandler.csproj" />
   </ItemGroup>
 

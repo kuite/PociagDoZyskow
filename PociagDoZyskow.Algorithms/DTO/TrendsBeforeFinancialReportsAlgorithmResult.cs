@@ -9,12 +9,8 @@ namespace PociagDoZyskow.Algorithms.DTO
 
         public string ResultDescription { get; set; }
 
-        public bool IsBuy { get; set; }
-
         public DateTime FinancialReportTime { get; set; }
 
         public IEnumerable<StockMarketValue> StockMarketValues { get; set; }
-
-        public DateTime CreatedOn { get; set; }
     }
 }

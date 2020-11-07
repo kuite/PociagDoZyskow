@@ -8,6 +8,6 @@ namespace PociagDoZyskow.Algorithms.Interfaces
     {
         public abstract string AlgorithmName { get; }
 
-        public abstract Task<IEnumerable<T>> GetResults(Configuration cfg);
+        public abstract Task<T> GetResult(Configuration cfg);
     }
 }
