@@ -23,6 +23,7 @@ namespace PociagDoZyskow.HtmlReportsGenerator.DependencyInjection
 
             serviceProvider.AddSingleton<IConfiguration>(configuration);
 
+            serviceProvider.AddScoped<IHtmlReportGeneratorProcessor, HtmlReportGeneratorProcessor>();
             //serviceProvider.AddLogging();
             //serviceProvider.AddScoped<WebClient>();
             //serviceProvider.AddScoped<DatabaseContext>();

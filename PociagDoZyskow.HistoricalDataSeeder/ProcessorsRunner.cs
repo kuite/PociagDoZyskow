@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
+using PociagDoZyskow.HistoricalDataSeeder.DependencyInjection;
 using PociagDoZyskow.HistoricalDataSeeder.Processors;
-using static PociagDoZyskow.HistoricalDataSeeder.DependencyInjection.ServiceResolver;
 
 namespace PociagDoZyskow.HistoricalDataSeeder
 {
@@ -10,7 +10,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder
     {
         static async Task Main(string[] args)
         {
-            var services = GetProvider();
+            var services = ServiceResolver.GetProvider();
 
             Console.WriteLine("Enter days to include company scans...");
             int fromDaysAgo = Convert.ToInt32(Console.ReadLine());

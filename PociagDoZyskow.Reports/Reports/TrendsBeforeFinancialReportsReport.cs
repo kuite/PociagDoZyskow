@@ -33,10 +33,10 @@ namespace PociagDoZyskow.HtmlReports.Reports
             foreach (var value in stockMarketValues)
             {
                 var change = value.ChangePrice >= 0 ? "green" : "red";
-                var sign = value.ChangePrice >= 0 ? "+" : string.Empty;
+                var sign = value.ChangePrice >= 0 ? "+" : "-";
                 var filledTemplate = $@"		
                 <div class=""timmeline-item"">
-		            <p class=""{change}"">{sign}{value.ChangePrice}</p>
+		            <p class=""{change}"">{sign}{Math.Abs(value.ChangePrice)}</p>
 		            <p>{value.TotalTransactionValue:N0}</p>
 		            <p class=""date"">{value.ScanDateTime.ToShortDateString()}</p>
 	            </div>";
