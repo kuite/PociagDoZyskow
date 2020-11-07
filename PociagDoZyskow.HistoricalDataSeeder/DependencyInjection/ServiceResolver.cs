@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.ExternalDataHandler.QuotationsReaders;
 using PociagDoZyskow.ExternalDataHandler.QuotationsWriter;
+using PociagDoZyskow.ExternalDataHandler.ReportsReaders;
+using PociagDoZyskow.ExternalDataHandler.ReportsWritter;
 using PociagDoZyskow.HistoricalDataSeeder.Factories;
 using PociagDoZyskow.HistoricalDataSeeder.Processors;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
@@ -44,8 +46,11 @@ namespace PociagDoZyskow.HistoricalDataSeeder.DependencyInjection
             serviceProvider.AddScoped<AlgorithmContext>();
             serviceProvider.AddScoped<ExternalDataReadsContext>();
             serviceProvider.AddScoped<ICompanyService, CompanyService>();
+            serviceProvider.AddScoped<IFinancialReportService, FinancialReportService>();
             serviceProvider.AddScoped<GpwQuotationsReader>();
             serviceProvider.AddScoped<GpwQuotationsWriter>();
+            serviceProvider.AddScoped<FinancialReportTimeReader>();
+            serviceProvider.AddScoped<FinancialReportTimeWriter>();
             serviceProvider.AddTransient<FinancialReportTimeProcessor>();
             serviceProvider.AddTransient<GpwQuotationsDataProcessor>();
 
