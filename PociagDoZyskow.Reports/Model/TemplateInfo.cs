@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PociagDoZyskow.EmailReports.Model
+namespace PociagDoZyskow.HtmlReports.Model
 {
     public class TemplateInfo
     {

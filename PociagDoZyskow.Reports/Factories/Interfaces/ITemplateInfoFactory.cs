@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using PociagDoZyskow.EmailReports.Model;
+using PociagDoZyskow.HtmlReports.Model;
 
-namespace PociagDoZyskow.EmailReports.Factories.Interfaces
+namespace PociagDoZyskow.HtmlReports.Factories.Interfaces
 {
     public interface ITemplateInfoFactory
     {

@@ -13,10 +13,10 @@ namespace PociagDoZyskow.HistoricalDataSeeder
             var services = GetProvider();
 
             Console.WriteLine("Enter days to include company scans...");
-            int intTemp = Convert.ToInt32(Console.ReadLine());
+            int fromDaysAgo = Convert.ToInt32(Console.ReadLine());
 
             var gpwQuotationsProcessor = services.GetService<GpwQuotationsDataProcessor>();
-            await gpwQuotationsProcessor.Start(intTemp);
+            await gpwQuotationsProcessor.Start(fromDaysAgo);
 
             var financialReportsProcessor = services.GetService<FinancialReportTimeProcessor>();
             await financialReportsProcessor.Start(0);

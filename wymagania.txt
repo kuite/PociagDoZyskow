@@ -30,7 +30,7 @@ https://www.money.pl/gielda/raporty/ -> zawiera archiwalne
 B) inwestycyjne:
 
 1. wykrywa trend wzrostu (preferujemy spolki kapitalizacja 10M + ?), interwał dzienny, posortowane dane: % pozytywnych sesji dziennych w okresach: tydzień, 3,6 1 miesiąc; wolumen dzienny na wykresie
-
+dodać EPS (earnings per share), P/E (price to earnings)
 
 
 

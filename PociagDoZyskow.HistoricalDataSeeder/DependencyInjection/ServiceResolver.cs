@@ -9,9 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.ExternalDataHandler.QuotationsReaders;
 using PociagDoZyskow.ExternalDataHandler.QuotationsWriter;
-using PociagDoZyskow.HistoricalDataSeeder.Factories;
 using PociagDoZyskow.HistoricalDataSeeder.Processors;
-using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
 using PociagDoZyskow.HistoricalDataSeeder.Services;
 using PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces;
 

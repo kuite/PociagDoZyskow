@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using PociagDoZyskow.Algorithms.DTO;
-using PociagDoZyskow.EmailReports.Factories.Interfaces;
-using PociagDoZyskow.EmailReports.Model;
+using PociagDoZyskow.HtmlReports.Factories.Interfaces;
+using PociagDoZyskow.HtmlReports.Model;
 
-namespace PociagDoZyskow.EmailReports.Reports
+namespace PociagDoZyskow.HtmlReports.Reports
 {
     public class TrendsBeforeFinancialReportsReport : BaseReport<TrendsBeforeFinancialReportsAlgorithmResult>
     {

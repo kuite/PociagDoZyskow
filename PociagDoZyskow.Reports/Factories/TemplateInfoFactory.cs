@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Microsoft.Extensions.Configuration;
-using PociagDoZyskow.EmailReports.Factories.Interfaces;
-using PociagDoZyskow.EmailReports.Model;
+using PociagDoZyskow.HtmlReports.Factories.Interfaces;
+using PociagDoZyskow.HtmlReports.Model;
 
-namespace PociagDoZyskow.EmailReports.Factories
+namespace PociagDoZyskow.HtmlReports.Factories
 {
     public class TemplateInfoFactory : ITemplateInfoFactory
     {

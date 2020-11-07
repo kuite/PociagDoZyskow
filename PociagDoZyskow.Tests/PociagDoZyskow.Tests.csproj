@@ -21,7 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PociagDoZyskow.Algorithms\PociagDoZyskow.Algorithms.csproj" />
     <ProjectReference Include="..\PociagDoZyskow.ExternalDataReader\PociagDoZyskow.ExternalDataHandler.csproj" />
-    <ProjectReference Include="..\PociagDoZyskow.Reports\PociagDoZyskow.EmailReports.csproj" />
+    <ProjectReference Include="..\PociagDoZyskow.Reports\PociagDoZyskow.HtmlReports.csproj" />
   </ItemGroup>
 
 </Project>

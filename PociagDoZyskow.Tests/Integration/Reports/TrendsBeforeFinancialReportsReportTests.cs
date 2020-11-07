@@ -4,8 +4,8 @@ using Moq;
 using PociagDoZyskow.Algorithms;
 using PociagDoZyskow.Algorithms.DTO;
 using PociagDoZyskow.DataAccess.Contexts;
-using PociagDoZyskow.EmailReports.Factories;
-using PociagDoZyskow.EmailReports.Reports;
+using PociagDoZyskow.HtmlReports.Factories;
+using PociagDoZyskow.HtmlReports.Reports;
 using Xunit;
 
 namespace PociagDoZyskow.Tests.Integration.Reports
