@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.DataAccess.Entities;
 using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
-using PociagDoZyskow.ExternalDataHandler.ReportsWritter.Interfaces;
+using PociagDoZyskow.Services.ReportsWritter.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PociagDoZyskow.ExternalDataHandler.ReportsWritter
+namespace PociagDoZyskow.Services.ReportsWritter
 {
     public class FinancialReportTimeWriter : IFinancialReportTimeWriter
     {

@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PociagDoZyskow.DataAccess\PociagDoZyskow.DataAccess.csproj" />
-    <ProjectReference Include="..\PociagDoZyskow.ExternalDataReader\PociagDoZyskow.ExternalDataHandler.csproj" />
+    <ProjectReference Include="..\PociagDoZyskow.ExternalDataReader\PociagDoZyskow.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,12 +1,12 @@
 using System;
 using System.Linq;
 using System.Net;
-using PociagDoZyskow.ExternalDataHandler.QuotationsReaders;
+using PociagDoZyskow.Services.QuotationsReaders;
 using Xunit;
 
-namespace PociagDoZyskow.Tests.Integration.ExternalDataHandler
+namespace PociagDoZyskow.Tests.Integration.Services
 {
-    public class GpwExternalDataHandlerTests
+    public class GpwServicesTests
     {
         
         [Theory]

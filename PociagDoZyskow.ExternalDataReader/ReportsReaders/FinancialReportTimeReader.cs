@@ -4,10 +4,10 @@ using System.Net;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using PociagDoZyskow.DTO;
-using PociagDoZyskow.ExternalDataHandler.Helpers;
-using PociagDoZyskow.ExternalDataHandler.ReportsReaders.Interfaces;
+using PociagDoZyskow.Services.Helpers;
+using PociagDoZyskow.Services.ReportsReaders.Interfaces;
 
-namespace PociagDoZyskow.ExternalDataHandler.ReportsReaders
+namespace PociagDoZyskow.Services.ReportsReaders
 {
     public class FinancialReportTimeReader : IFinancialReportTimeReader
     {

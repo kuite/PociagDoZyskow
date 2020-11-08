@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.DataAccess.Entities;
 using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
-using PociagDoZyskow.ExternalDataHandler.QuotationsWriter.Interfaces;
+using PociagDoZyskow.Services.QuotationsWriter.Interfaces;
 
-namespace PociagDoZyskow.ExternalDataHandler.QuotationsWriter
+namespace PociagDoZyskow.Services.QuotationsWriter
 {
     public class GpwQuotationsWriter : IQuotationsWriter
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using PociagDoZyskow.ExternalDataHandler.QuotationsReaders;
-using PociagDoZyskow.ExternalDataHandler.QuotationsWriter;
+using PociagDoZyskow.Services.QuotationsReaders;
+using PociagDoZyskow.Services.QuotationsWriter;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
 using PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces;
 

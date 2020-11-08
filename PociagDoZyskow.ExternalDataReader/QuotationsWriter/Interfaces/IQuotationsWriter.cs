@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using PociagDoZyskow.DataAccess.Entities;
 using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
 
-namespace PociagDoZyskow.ExternalDataHandler.QuotationsWriter.Interfaces
+namespace PociagDoZyskow.Services.QuotationsWriter.Interfaces
 {
     public interface IQuotationsWriter
     {

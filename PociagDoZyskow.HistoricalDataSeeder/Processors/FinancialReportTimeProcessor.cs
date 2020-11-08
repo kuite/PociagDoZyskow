@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using PociagDoZyskow.ExternalDataHandler.ReportsReaders;
-using PociagDoZyskow.ExternalDataHandler.ReportsWritter;
+using PociagDoZyskow.Services.ReportsReaders;
+using PociagDoZyskow.Services.ReportsWritter;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
 using PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces;
 

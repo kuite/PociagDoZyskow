@@ -4,10 +4,10 @@ using System.Net;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using PociagDoZyskow.DTO;
-using PociagDoZyskow.ExternalDataHandler.Helpers;
-using PociagDoZyskow.ExternalDataHandler.QuotationsReaders.Interfaces;
+using PociagDoZyskow.Services.Helpers;
+using PociagDoZyskow.Services.QuotationsReaders.Interfaces;
 
-namespace PociagDoZyskow.ExternalDataHandler.QuotationsReaders
+namespace PociagDoZyskow.Services.QuotationsReaders
 {
     public class GpwQuotationsReader : BaseQuotationsReader
     {

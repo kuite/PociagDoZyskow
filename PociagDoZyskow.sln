@@ -11,13 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Tests", "Poc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.DTO", "PociagDoZyskow.DTO\PociagDoZyskow.DTO.csproj", "{E65C4428-3055-4F36-B00B-277152449ACA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.ExternalDataHandler", "PociagDoZyskow.ExternalDataReader\PociagDoZyskow.ExternalDataHandler.csproj", "{F7565618-ED21-4704-A6D5-1B08E94E7EA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.Services", "PociagDoZyskow.ExternalDataReader\PociagDoZyskow.Services.csproj", "{F7565618-ED21-4704-A6D5-1B08E94E7EA6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.HistoricalDataSeeder", "PociagDoZyskow.HistoricalDataSeeder\PociagDoZyskow.HistoricalDataSeeder.csproj", "{2ADA3E7B-2D14-4C05-9EB4-6230A2E5BA07}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.HtmlReports", "PociagDoZyskow.Reports\PociagDoZyskow.HtmlReports.csproj", "{05D6CC6C-06D0-47E6-B39E-251BD1685FC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PociagDoZyskow.HtmlReportsGenerator", "PociagDoZyskow.HtmlReportGenerator\PociagDoZyskow.HtmlReportsGenerator.csproj", "{0429C175-AC70-417B-A7B6-99E2255BF90B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PociagDoZyskow.HtmlReportsGenerator", "PociagDoZyskow.HtmlReportGenerator\PociagDoZyskow.HtmlReportsGenerator.csproj", "{0429C175-AC70-417B-A7B6-99E2255BF90B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
