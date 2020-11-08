@@ -7,7 +7,7 @@ namespace PociagDoZyskow.ExternalDataHandler.Helpers
         public static string CleanString(this string input)
         {
             var replaced = input.Replace("\n", "").Replace("\r", "")
-                .Replace(" ", "").Trim();
+                .Replace(" ", "").Replace("#", "").Trim();
             return Regex.Replace(replaced, @"s", "");
         }
     }

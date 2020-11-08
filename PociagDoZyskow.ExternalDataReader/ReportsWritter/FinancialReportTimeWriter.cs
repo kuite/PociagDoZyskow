@@ -92,18 +92,6 @@ namespace PociagDoZyskow.ExternalDataHandler.ReportsWritter
                 //throw new Exception("Not found company for financialReportScan");
                 return null;
             }
-            else
-            {
-                //TODO: Update company  
-                if (company.Ticker == null)
-                {
-                    company.Ticker = report.CompanyTicker;
-                }
-                if (company.Name == null)
-                {
-                    company.Name = report.FullCompanyName;
-                }
-            }
 
             reportEntity.CompanyId = company.Id;
             return reportEntity;

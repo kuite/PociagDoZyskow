@@ -18,8 +18,8 @@ namespace PociagDoZyskow.ExternalDataHandler.ReportsReaders
             "https://www.money.pl/gielda/raporty/";
 
 
-        private readonly int TickerIndex = 0;
-        private readonly int ShortCompanyNameIndex = 1;
+        private readonly int ShortCompanyNameIndex = 0;
+        private readonly int TickerIndex = 1;
         private readonly int FullCompanyNameIndex = 2;
         private readonly int ReportDateIndex = 3;
         private readonly int ReportTypeNameIndex = 4;

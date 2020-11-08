@@ -41,6 +41,8 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                 var relatedCompaniesEntities = await _financialReportService.SaveCompaniesToDatabase(relatedCompaniesDto, _exchangeShortName);
                 var reportReadEntities =
                         await _financialReportTimeWriter.SaveReportDataScansToDatabase(financialReports, relatedCompaniesEntities);
+                var updatedCompanies = await _financialReportService.UpdateCompaniesFromReports(financialReports);
+                Console.WriteLine($"Updated {updatedCompanies.Count()} companies from financial reports.");
                 Console.WriteLine($"Saved {reportReadEntities.Count()} financial report time to database...");
             }
             catch (Exception e)

@@ -8,8 +8,12 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces
 {
     public interface ICompanyService
     {
-        IEnumerable<DTO.Company> CreateCompaniesFromQuotationsScans(IEnumerable<DTO.CompanyDataScan> dailyQuotationReads);
+        IEnumerable<DTO.Company> CreateCompaniesFromQuotationsScans(
+            IEnumerable<DTO.CompanyDataScan> dailyQuotationReads);
 
-        Task<IEnumerable<Company>> SaveCompaniesToDatabase(IEnumerable<DTO.Company> companiesDto, string exchangeShortName);
+        Task<IEnumerable<Company>> SaveCompaniesToDatabase(IEnumerable<DTO.Company> companiesDto,
+            string exchangeShortName);
+
+        Task<IEnumerable<Company>> UpdateMany(IEnumerable<Company> company);
     }
 }

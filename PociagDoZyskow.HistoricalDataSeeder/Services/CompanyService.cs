@@ -66,5 +66,10 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Services
 
             return companies;
         }
+
+        public Task<IEnumerable<Company>> UpdateMany(IEnumerable<Company> company)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

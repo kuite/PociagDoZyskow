@@ -6,7 +6,7 @@ using PociagDoZyskow.HistoricalDataSeeder.Processors;
 
 namespace PociagDoZyskow.HistoricalDataSeeder
 {
-    class ProcessorsRunner
+    class Program
     {
         static async Task Main(string[] args)
         {

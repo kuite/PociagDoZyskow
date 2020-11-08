@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using PociagDoZyskow.DataAccess.Entities;
+using PociagDoZyskow.DTO;
+using Company = PociagDoZyskow.DataAccess.Entities.Company;
+
 namespace PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces
 {
     public interface IFinancialReportService
@@ -8,5 +10,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces
         IEnumerable<DTO.Company> CreateCompaniesFromReportScans(IEnumerable<DTO.FinancialReportTimeScan> reportScans);
 
         Task<IEnumerable<Company>> SaveCompaniesToDatabase(IEnumerable<DTO.Company> companiesDto, string exchangeShortName);
+
+        Task<IEnumerable<Company>> UpdateCompaniesFromReports(IEnumerable<FinancialReportTimeScan> financialReports);
     }
 }
