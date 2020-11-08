@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace PociagDoZyskow.HtmlReportsGenerator.Factories.Interfaces
 {
-    public interface IHtmlReportGenerator
+    public interface IHtmlReportFactory
     {
-        Task<IEnumerable<string>> GetHtmlReports();
+        Task<IEnumerable<string>> CreateHtmlReports(int daysFromNowToIncludeReports, string exchangeShortName);
     }
 }

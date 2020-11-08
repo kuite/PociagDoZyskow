@@ -8,6 +8,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder
 {
     class Program
     {
+        // PROCESSORS RUNNER
         static async Task Main(string[] args)
         {
             var services = ServiceResolver.GetProvider();

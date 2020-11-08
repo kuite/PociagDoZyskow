@@ -14,8 +14,8 @@ namespace PociagDoZyskow.HtmlReportsGenerator
             Console.WriteLine("Enter days to include financial reports, eg. 10 means program will take financial reports up to 10 days from today");
             int fromDaysAgo = Convert.ToInt32(Console.ReadLine());
 
-            var htmlReportGeneratorProcessor = services.GetService<IHtmlReportGeneratorProcessor>();
-            await htmlReportGeneratorProcessor.ProcessReports(fromDaysAgo);
+            var htmlReportGeneratorProcessor = services.GetService<IHtmlReportGenerator>();
+            var newReports = await htmlReportGeneratorProcessor.GenerateReports(fromDaysAgo, "GPW");
         }
     }
 }

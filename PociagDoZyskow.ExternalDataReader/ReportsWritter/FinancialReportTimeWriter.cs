@@ -29,21 +29,21 @@ namespace PociagDoZyskow.ExternalDataHandler.ReportsWritter
 
         public async Task<IEnumerable<FinancialReportTimeScan>> SaveReportDataScansToDatabase(IEnumerable<DTO.FinancialReportTimeScan> reportScans, IEnumerable<Company> relatedCompaniesEntities)
         {
-            var newReportScans = new List<FinancialReportTimeScan>();
+            var savedReportScans = new List<FinancialReportTimeScan>();
             var companies = await _databaseContext.Companies.Include(c => c.Exchange).ToListAsync();
             foreach (DTO.FinancialReportTimeScan financialReportTimeDataScan in reportScans)
             {
                 var reportEntity = GetFinancialReportTimeScanEntity(companies, financialReportTimeDataScan);
                 if (reportEntity != null)
                 {
-                    newReportScans.Add(reportEntity);
+                    savedReportScans.Add(reportEntity);
                 }
             }
 
-            newReportScans = RemoveDuplications(_externalDataReadsContext, _databaseContext, newReportScans).ToList();
-            await _externalDataReadsContext.FinancialReportTimeDataScans.AddRangeAsync(newReportScans);
+            savedReportScans = RemoveDuplications(_externalDataReadsContext, _databaseContext, savedReportScans).ToList();
+            await _externalDataReadsContext.FinancialReportTimeDataScans.AddRangeAsync(savedReportScans);
             await _externalDataReadsContext.SaveChangesAsync();
-            return newReportScans;
+            return savedReportScans;
         }
 
         private IEnumerable<FinancialReportTimeScan> RemoveDuplications(ExternalDataReadsContext externalDataReadsContext, DatabaseContext context,

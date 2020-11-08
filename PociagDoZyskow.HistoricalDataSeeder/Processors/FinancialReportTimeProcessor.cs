@@ -39,11 +39,11 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 
                 var relatedCompaniesDto = _financialReportService.CreateCompaniesFromReportScans(financialReports);
                 var relatedCompaniesEntities = await _financialReportService.SaveCompaniesToDatabase(relatedCompaniesDto, _exchangeShortName);
-                var reportReadEntities =
+                var savedReportScans =
                         await _financialReportTimeWriter.SaveReportDataScansToDatabase(financialReports, relatedCompaniesEntities);
                 var updatedCompanies = await _financialReportService.UpdateCompaniesFromReports(financialReports);
                 Console.WriteLine($"Updated {updatedCompanies.Count()} companies from financial reports.");
-                Console.WriteLine($"Saved {reportReadEntities.Count()} financial report time to database...");
+                Console.WriteLine($"Saved {savedReportScans.Count()} financial report time to database.");
             }
             catch (Exception e)
             {

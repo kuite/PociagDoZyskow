@@ -41,7 +41,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                     var relatedCompaniesEntities = await _companyService.SaveCompaniesToDatabase(relatedCompaniesDto, ExchangeShortName);
                     var quotationReadEntities = 
                         await _gpwQuotationsWriter.SaveQuotationDataScansToDatabase(dailyQuotationReads, relatedCompaniesEntities);
-                    Console.WriteLine($"Saved {quotationReadEntities.Count()} quotations from {processingDate.ToShortDateString()} day to database...");
+                    Console.WriteLine($"Saved {quotationReadEntities.Count()} quotations from {processingDate.ToShortDateString()} day to database.");
 
                     processingDate = processingDate.AddDays(1);
                 }
