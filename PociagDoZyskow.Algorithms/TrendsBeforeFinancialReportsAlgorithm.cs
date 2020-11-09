@@ -24,7 +24,7 @@ namespace PociagDoZyskow.Algorithms
             _databaseContext = databaseContext;
         }
 
-        public override async Task<TrendsBeforeFinancialReportsAlgorithmResult> GetResult(Configuration cfg)
+        public override async Task<TrendsBeforeFinancialReportsAlgorithmResult> CalculateResult(Configuration cfg)
         {
             var company = _databaseContext.Companies.FirstOrDefault(x => x.ShortName == cfg.CompanyShortName);
             if (company == null)

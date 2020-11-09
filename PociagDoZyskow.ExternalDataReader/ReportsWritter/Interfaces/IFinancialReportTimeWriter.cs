@@ -3,7 +3,7 @@ using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PociagDoZyskow.Services.ReportsWritter.Interfaces
+namespace PociagDoZyskow.Services.ReportsWriter.Interfaces
 {
     public interface IFinancialReportTimeWriter
     {

@@ -30,7 +30,7 @@ namespace PociagDoZyskow.Tests.Integration.Algorithms
             var algorithm = new TrendsBeforeFinancialReportsAlgorithm(externalDataReadsContext, databaseContext);
 
             //Act
-            var results = await algorithm.GetResult(resultConfiguration);
+            var results = await algorithm.CalculateResult(resultConfiguration);
 
             //Assert
         }

@@ -2,9 +2,10 @@
 using System.Linq;
 using System.Threading.Tasks;
 using PociagDoZyskow.Services.QuotationsReaders;
-using PociagDoZyskow.Services.QuotationsWriter;
+using PociagDoZyskow.Services.WriteServices;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
 using PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces;
+using PociagDoZyskow.Services.Interfaces;
 
 namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 {
@@ -14,17 +15,18 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 
         private readonly GpwQuotationsReader _gpwQuotationsReader;
 
-        private readonly GpwQuotationsWriter _gpwQuotationsWriter;
+        private readonly GpwQuotationsWriter _gpwWriteServices;
 
         private readonly ICompanyService _companyService;
+        private readonly ICompanyCreateService _companyCreateService;
 
         public GpwQuotationsDataProcessor(
             GpwQuotationsReader gpwQuotationsReader,
-            GpwQuotationsWriter gpwQuotationsWriter, 
+            GpwQuotationsWriter gpwWriteServices, 
             ICompanyService companyService)
         {
             _gpwQuotationsReader = gpwQuotationsReader;
-            _gpwQuotationsWriter = gpwQuotationsWriter;
+            _gpwWriteServices = gpwWriteServices;
             _companyService = companyService;
         }
 
@@ -40,7 +42,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                     var relatedCompaniesDto = _companyService.CreateCompaniesFromQuotationsScans(dailyQuotationReads);
                     var relatedCompaniesEntities = await _companyService.SaveCompaniesToDatabase(relatedCompaniesDto, ExchangeShortName);
                     var quotationReadEntities = 
-                        await _gpwQuotationsWriter.SaveQuotationDataScansToDatabase(dailyQuotationReads, relatedCompaniesEntities);
+                        await _gpwWriteServices.SaveQuotationDataScansToDatabase(dailyQuotationReads, relatedCompaniesEntities);
                     Console.WriteLine($"Saved {quotationReadEntities.Count()} quotations from {processingDate.ToShortDateString()} day to database.");
 
                     processingDate = processingDate.AddDays(1);

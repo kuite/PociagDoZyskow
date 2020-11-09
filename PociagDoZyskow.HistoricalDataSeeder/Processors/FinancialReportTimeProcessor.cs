@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PociagDoZyskow.Services.ReportsReaders;
-using PociagDoZyskow.Services.ReportsWritter;
+using PociagDoZyskow.Services.ReportsWriter;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
 using PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces;
 

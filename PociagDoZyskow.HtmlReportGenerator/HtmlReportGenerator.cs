@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using PociagDoZyskow.DataAccess.Entities;
 using PociagDoZyskow.HtmlReportsGenerator.Factories.Interfaces;
+using PociagDoZyskow.Services.Interfaces;
+using PociagDoZyskow.Services.Interfaces.CRUD;
 
 namespace PociagDoZyskow.HtmlReportsGenerator
 {
     public class HtmlReportGenerator : IHtmlReportGenerator
     {
         private ITrendsBeforeFinancialReportsReportFactory _trendsBeforeFinancialReportsReportFactory;
+        private IReadService<Exchange> _getExchangeService;
 
         public HtmlReportGenerator(ITrendsBeforeFinancialReportsReportFactory trendsBeforeFinancialReportsReportFactory)
         {

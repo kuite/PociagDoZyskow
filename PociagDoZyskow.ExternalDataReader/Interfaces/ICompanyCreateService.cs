@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using PociagDoZyskow.DataAccess.Entities;
+using PociagDoZyskow.Services.Interfaces.CRUD;
 
-namespace PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces
+namespace PociagDoZyskow.Services.Interfaces
 {
-    public interface ICompanyService
+    public interface ICompanyCreateService : ICreateService
     {
         IEnumerable<DTO.Company> CreateCompaniesFromQuotationsScans(
             IEnumerable<DTO.CompanyDataScan> dailyQuotationReads);

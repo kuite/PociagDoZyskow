@@ -9,7 +9,7 @@ using PociagDoZyskow.DataAccess.Entities;
 using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
 using PociagDoZyskow.Services.QuotationsWriter.Interfaces;
 
-namespace PociagDoZyskow.Services.QuotationsWriter
+namespace PociagDoZyskow.Services.WriteServices
 {
     public class GpwQuotationsWriter : IQuotationsWriter
     {

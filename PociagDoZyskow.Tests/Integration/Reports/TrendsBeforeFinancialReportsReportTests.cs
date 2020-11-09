@@ -38,7 +38,7 @@ namespace PociagDoZyskow.Tests.Integration.Reports
             var report = new TrendsBeforeFinancialReportsReport(templateInfoFactory);
 
             //Act
-            var algorithmResults = await algorithm.GetResult(resultConfiguration);
+            var algorithmResults = await algorithm.CalculateResult(resultConfiguration);
             var filledReport = report.GetFilledTemplate(algorithmResults);
 
             File.WriteAllText(templatePath, filledReport);

@@ -31,7 +31,7 @@ namespace PociagDoZyskow.HtmlReportsGenerator.DependencyInjection
             //serviceProvider.AddScoped<ExternalDataReadsContext>();
             //serviceProvider.AddScoped<ICompanyService, CompanyService>();
             //serviceProvider.AddScoped<GpwQuotationsReader>();
-            //serviceProvider.AddScoped<GpwQuotationsWriter>();
+            //serviceProvider.AddScoped<GpwWriteServices>();
             //serviceProvider.AddTransient<FinancialReportTimeProcessor>();
             //serviceProvider.AddTransient<GpwQuotationsDataProcessor>();
 
