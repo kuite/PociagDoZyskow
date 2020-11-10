@@ -3,28 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PociagDoZyskow.Services.ReportsReaders;
-using PociagDoZyskow.Services.ReportsWriter;
 using PociagDoZyskow.HistoricalDataSeeder.Processors.Interfaces;
-using PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces;
+using PociagDoZyskow.Services.Interfaces;
 
 namespace PociagDoZyskow.HistoricalDataSeeder.Processors
 {
     public class FinancialReportTimeProcessor : IProcessor
     {
-        private const string _exchangeShortName = "GPW";
+        private const string ExchangeShortName = "GPW";
         private readonly FinancialReportTimeReader _financialReportTimeReader;
-        private readonly FinancialReportTimeWriter _financialReportTimeWriter;
-        private readonly IFinancialReportService _financialReportService;
+        private readonly ICreateFinancialTimeReportService _createFinancialTimeReportService;
+        private readonly ICreateCompanyService _createCompanyService;
 
         public FinancialReportTimeProcessor(
             FinancialReportTimeReader financialReportTimeReader,
-            FinancialReportTimeWriter financialReportTimeWriter,
-            IFinancialReportService financialReportService
-            )
+            ICreateFinancialTimeReportService createFinancialTimeReportService, 
+            ICreateCompanyService createCompanyService)
         {
             _financialReportTimeReader = financialReportTimeReader;
-            _financialReportTimeWriter = financialReportTimeWriter;
-            _financialReportService = financialReportService;
+            _createFinancialTimeReportService = createFinancialTimeReportService;
+            _createCompanyService = createCompanyService;
         }
 
         public async Task Start(int fromDaysAgo)
@@ -37,11 +35,11 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Processors
                 financialReports.AddRange(publishedFinancialReports);
                 financialReports.AddRange(incomingFinancialReports);
 
-                var relatedCompaniesDto = _financialReportService.CreateCompaniesFromReportScans(financialReports);
-                var relatedCompaniesEntities = await _financialReportService.SaveCompaniesToDatabase(relatedCompaniesDto, _exchangeShortName);
+                var relatedCompaniesDto = _createCompanyService.CreateCompaniesFromReportScans(financialReports);
+                var relatedCompaniesEntities = await _createCompanyService.SaveCompaniesToDatabase(relatedCompaniesDto, ExchangeShortName);
                 var savedReportScans =
-                        await _financialReportTimeWriter.SaveReportDataScansToDatabase(financialReports, relatedCompaniesEntities);
-                var updatedCompanies = await _financialReportService.UpdateCompaniesFromReports(financialReports);
+                        await _createFinancialTimeReportService.SaveReportDataScansToDatabase(financialReports, relatedCompaniesEntities);
+                var updatedCompanies = await _createCompanyService.UpdateCompaniesFromReports(financialReports);
                 Console.WriteLine($"Updated {updatedCompanies.Count()} companies from financial reports.");
                 Console.WriteLine($"Saved {savedReportScans.Count()} financial report time to database.");
             }

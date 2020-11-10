@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PociagDoZyskow.HtmlReportsGenerator
 {
-    public interface IHtmlReportGenerator
+    public interface IHtmlReportsGenerator
     {
         Task<IEnumerable<string>> GenerateReports(int daysFromNowToProcess, string exchangeShortName);
     }

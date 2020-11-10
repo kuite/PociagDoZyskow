@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.DataAccess.Entities;
 using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
-using PociagDoZyskow.Services.QuotationsWriter.Interfaces;
+using PociagDoZyskow.Services.Interfaces;
 
-namespace PociagDoZyskow.Services.WriteServices
+namespace PociagDoZyskow.Services.Implementations
 {
-    public class GpwQuotationsWriter : IQuotationsWriter
+    public class CreateCompanyDataScanService : ICreateCompanyDataScanService
     {
         private readonly string QuotationShortName = "GPW";
 
@@ -21,7 +21,7 @@ namespace PociagDoZyskow.Services.WriteServices
 
         private readonly IMapper _mapper;
 
-        public GpwQuotationsWriter(
+        public CreateCompanyDataScanService(
             ExternalDataReadsContext externalDataReadsContext, 
             DatabaseContext databaseContext, 
             IMapper mapper)

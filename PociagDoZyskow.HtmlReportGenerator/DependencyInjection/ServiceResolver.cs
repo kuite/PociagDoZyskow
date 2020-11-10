@@ -23,13 +23,13 @@ namespace PociagDoZyskow.HtmlReportsGenerator.DependencyInjection
 
             serviceProvider.AddSingleton<IConfiguration>(configuration);
 
-            serviceProvider.AddScoped<IHtmlReportGenerator, HtmlReportGenerator>();
+            serviceProvider.AddScoped<IHtmlReportsGenerator, HtmlReportsGenerator>();
             //serviceProvider.AddLogging();
             //serviceProvider.AddScoped<WebClient>();
             //serviceProvider.AddScoped<DatabaseContext>();
             //serviceProvider.AddScoped<AlgorithmContext>();
             //serviceProvider.AddScoped<ExternalDataReadsContext>();
-            //serviceProvider.AddScoped<ICompanyService, CompanyService>();
+            //serviceProvider.AddScoped<ICompanyService, CreateCompanyService>();
             //serviceProvider.AddScoped<GpwQuotationsReader>();
             //serviceProvider.AddScoped<GpwWriteServices>();
             //serviceProvider.AddTransient<FinancialReportTimeProcessor>();

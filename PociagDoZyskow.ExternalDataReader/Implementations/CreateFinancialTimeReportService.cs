@@ -1,23 +1,23 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.DataAccess.Entities;
 using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
-using PociagDoZyskow.Services.ReportsWriter.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using PociagDoZyskow.Services.Interfaces;
 
-namespace PociagDoZyskow.Services.ReportsWriter
+namespace PociagDoZyskow.Services.Implementations
 {
-    public class FinancialReportTimeWriter : IFinancialReportTimeWriter
+    public class CreateFinancialTimeReportService : ICreateFinancialTimeReportService
     {
         private readonly ExternalDataReadsContext _externalDataReadsContext;
         private readonly DatabaseContext _databaseContext;
         private readonly IMapper _mapper;
 
-        public FinancialReportTimeWriter(
+        public CreateFinancialTimeReportService(
             ExternalDataReadsContext externalDataReadsContext, 
             DatabaseContext databaseContext,
             IMapper mapper)

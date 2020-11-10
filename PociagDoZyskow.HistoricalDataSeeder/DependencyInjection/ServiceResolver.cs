@@ -6,12 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.Services.QuotationsReaders;
-using PociagDoZyskow.Services.WriteServices;
 using PociagDoZyskow.Services.ReportsReaders;
-using PociagDoZyskow.Services.ReportsWriter;
 using PociagDoZyskow.HistoricalDataSeeder.Processors;
-using PociagDoZyskow.HistoricalDataSeeder.Services;
-using PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces;
+using PociagDoZyskow.Services.Implementations;
+using PociagDoZyskow.Services.Interfaces;
 
 namespace PociagDoZyskow.HistoricalDataSeeder.DependencyInjection
 {
@@ -41,12 +39,11 @@ namespace PociagDoZyskow.HistoricalDataSeeder.DependencyInjection
             serviceProvider.AddScoped<DatabaseContext>();
             serviceProvider.AddScoped<AlgorithmContext>();
             serviceProvider.AddScoped<ExternalDataReadsContext>();
-            serviceProvider.AddScoped<ICompanyService, CompanyService>();
-            serviceProvider.AddScoped<IFinancialReportService, FinancialReportService>();
+            serviceProvider.AddScoped<ICreateCompanyService, CreateCompanyService>();
+            serviceProvider.AddScoped<ICreateCompanyDataScanService, CreateCompanyDataScanService>();
             serviceProvider.AddScoped<GpwQuotationsReader>();
-            serviceProvider.AddScoped<GpwQuotationsWriter>();
             serviceProvider.AddScoped<FinancialReportTimeReader>();
-            serviceProvider.AddScoped<FinancialReportTimeWriter>();
+            serviceProvider.AddScoped<ICreateFinancialTimeReportService, CreateFinancialTimeReportService>();
             serviceProvider.AddTransient<FinancialReportTimeProcessor>();
             serviceProvider.AddTransient<GpwQuotationsDataProcessor>();
 

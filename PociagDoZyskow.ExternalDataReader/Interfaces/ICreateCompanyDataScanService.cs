@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using PociagDoZyskow.DataAccess.Entities;
 using PociagDoZyskow.DataAccess.Entities.ExternalDataReads;
 
-namespace PociagDoZyskow.Services.QuotationsWriter.Interfaces
+namespace PociagDoZyskow.Services.Interfaces
 {
-    public interface IQuotationsWriter
+    public interface ICreateCompanyDataScanService
     {
         Task<IEnumerable<CompanyDataScan>> SaveQuotationDataScansToDatabase(IEnumerable<DTO.CompanyDataScan> quotationScans, IEnumerable<Company> relatedCompaniesEntities);
     }

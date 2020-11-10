@@ -9,12 +9,13 @@ using PociagDoZyskow.Services.Interfaces.CRUD;
 
 namespace PociagDoZyskow.HtmlReportsGenerator
 {
-    public class HtmlReportGenerator : IHtmlReportGenerator
+    public class HtmlReportsGenerator : IHtmlReportsGenerator
     {
         private ITrendsBeforeFinancialReportsReportFactory _trendsBeforeFinancialReportsReportFactory;
+
         private IReadService<Exchange> _getExchangeService;
 
-        public HtmlReportGenerator(ITrendsBeforeFinancialReportsReportFactory trendsBeforeFinancialReportsReportFactory)
+        public HtmlReportsGenerator(ITrendsBeforeFinancialReportsReportFactory trendsBeforeFinancialReportsReportFactory)
         {
             _trendsBeforeFinancialReportsReportFactory = trendsBeforeFinancialReportsReportFactory;
         }

@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PociagDoZyskow.DataAccess.Contexts;
 using PociagDoZyskow.DataAccess.Entities;
-using PociagDoZyskow.HistoricalDataSeeder.Services.Interfaces;
+using PociagDoZyskow.Services.Interfaces;
 
-namespace PociagDoZyskow.HistoricalDataSeeder.Services
+namespace PociagDoZyskow.Services.Implementations
 {
-    public class CompanyService : ICompanyService
+    public class CreateCompanyService : ICreateCompanyService
     {
         private readonly DatabaseContext _databaseContext;
 
-        public CompanyService(DatabaseContext databaseContext)
+        public CreateCompanyService(DatabaseContext databaseContext)
         {
             _databaseContext = databaseContext;
         }
@@ -26,6 +26,25 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Services
                 var company = new DTO.Company
                 {
                     ShortName = scan.CompanyShortName
+                };
+                companies.Add(company);
+            }
+
+            return companies;
+        }
+
+        public IEnumerable<DTO.Company> CreateCompaniesFromReportScans(IEnumerable<DTO.FinancialReportTimeScan> reportScans)
+        {
+            var companies = new List<DTO.Company>();
+            foreach (DTO.FinancialReportTimeScan scan in reportScans)
+            {
+                if (companies.Any(x => x.ShortName == scan.ShortCompanyName))
+                {
+                    continue;
+                }
+                var company = new DTO.Company
+                {
+                    ShortName = scan.ShortCompanyName
                 };
                 companies.Add(company);
             }
@@ -59,6 +78,7 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Services
                         ExchangeId = exchange.Id
                     };
                     await _databaseContext.AddAsync(newCompany);
+                    await _databaseContext.SaveChangesAsync();
                     companies.Add(newCompany);
                 }
             }
@@ -67,9 +87,32 @@ namespace PociagDoZyskow.HistoricalDataSeeder.Services
             return companies;
         }
 
-        public Task<IEnumerable<Company>> UpdateMany(IEnumerable<Company> company)
+        public async Task<IEnumerable<Company>> UpdateCompaniesFromReports(IEnumerable<DTO.FinancialReportTimeScan> financialReports)
         {
-            throw new NotImplementedException();
+            var companies = await _databaseContext.Companies.ToListAsync();
+            var updatedCompanies = new List<Company>();
+            foreach (var reportTimeScan in financialReports)
+            {
+                var relatedCompany = companies.FirstOrDefault(x => x.ShortName == reportTimeScan.ShortCompanyName);
+                if (relatedCompany == null)
+                {
+                    continue;
+                }
+
+                if (string.IsNullOrEmpty(relatedCompany.Ticker))
+                {
+                    relatedCompany.Ticker = reportTimeScan.CompanyTicker;
+                }
+                if (string.IsNullOrEmpty(relatedCompany.Name))
+                {
+                    relatedCompany.Name = reportTimeScan.FullCompanyName;
+                }
+                updatedCompanies.Add(relatedCompany);
+            }
+
+            _databaseContext.Companies.UpdateRange(updatedCompanies);
+            await _databaseContext.SaveChangesAsync();
+            return updatedCompanies;
         }
     }
 }
