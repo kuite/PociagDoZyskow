@@ -1,0 +1,74 @@
+
+<div class="single-bet-container">
+    <div class="bettitle" (click)="ToggleBetDetailsForm()">
+        <span class="title-text">{{Title}}</span>
+        <img class="arrow-down" src="assets/svg/arrow-down.svg" width="40px;" height="40px;">
+    </div>   
+    
+</div>
+<div class="playbet-panel" *ngIf="DisplayBetDetails" >
+    <div *ngFor="let opt of BetOptions" class="bet-option" (click)="ToggleBetActionForm(opt)" [ngClass]="{ 'bet-selected-course': opt.id == selectedBetOptionId, 'bet-unselected-course': opt.id != selectedBetOptionId }">
+        <p class="bet-title">
+            {{opt.optionText}}
+        </p>
+        <p class="bet-odd">
+            {{opt.odd | number : '1.2-2'}}
+        </p>
+    </div>
+</div>
+<div class="details-panel" *ngIf="DisplayBetActionForm && DisplayBetDetails">
+
+    <div class="action-div" *ngIf="DisplayPlayBetForm">
+        <div class="input-amount-div">
+
+            <p class="amount">Amount:</p>
+            <input-numeric-yp class="numeric-input" [(ngModel)]="ActiveAmount" [label]="'1 USD'" [numericType]="'natural'" (keyup)="InputAmountUpdated()">
+            </input-numeric-yp>
+
+
+            <div class="calculation">
+                <span style="color:#4dbd74;" class="show">
+                    Possible win: 
+                </span>
+                <span [ngClass]="{ 'show': ActiveAmount > 0, 'hide': !(ActiveAmount > 0)  }">
+                    {{ActiveAmount}} * {{ActiveCourse | number : '1.2-2'}} = {{ActiveCourse*ActiveAmount | number : '1.2-2'}} USD
+                </span>
+                <span [ngClass]="{ 'hide': ActiveAmount > 0, 'show': !(ActiveAmount > 0)  }">
+                    1 * {{ActiveCourse | number : '1.2-2'}} = {{ActiveCourse*1 | number : '1.2-2'}} USD
+                </span>
+            </div>
+        </div>
+        <div class="play-rules-parent">
+            <div class="create-btn play-btn" (click)="PlayBet()">Place bet</div>
+        </div>
+    </div>
+
+    <div class="action-div" *ngIf="DisplayBetActionForm && DisplayAdminBetForm">
+        <p class="amount">You are about mark <br> -> {{SelectedBetText}} <- <br>as won.</p>
+        <div class="input-comment-div">
+            <textarea class="comment-area" [(ngModel)]="Comment" placeholder="Leave comment (optional)" rows="6" cols="30">
+            </textarea>
+        </div>
+        <div class="action-buttons">
+            <div class="resolve-buttons">
+                <span class="inform-btn" (click)="CloseBet()">Close</span>
+            </div>
+            <div class="discard-buttons">
+                <span class="inform-btn" (click)="CloseBet()">Unresolved</span>
+            </div>
+        </div>
+        <!-- <div class="renew-bet-div">
+            <div><input class="renew-bet-btn" [(ngModel)]="_keepBetAfterClose" type="checkbox"> Automaticlly renew this bet after closing.</div>
+        </div> -->
+    </div>  
+
+    <div class="close-btn"  (click)="DiscardPlayBetForm()">
+        <img src="assets/svg/discard-white.svg">
+    </div> 
+
+</div>
+
+
+
+
+

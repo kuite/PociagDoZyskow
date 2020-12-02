@@ -1,0 +1,7 @@
+<div class="notification-container">
+    <div *ngFor="let msg of NotificationsLog">
+        <div class="notification-box">
+            <notify-message [message]="msg" [type]="NotificationType"></notify-message>
+        </div>
+    </div>
+</div>

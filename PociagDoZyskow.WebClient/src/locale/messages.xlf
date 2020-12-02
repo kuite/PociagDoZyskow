@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="register-create-title" datatype="html">
+        <source>Create new account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/register-modal/register-modal.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-accept-terms" datatype="html">
+        <source>I read and accept Terms and conditions.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/register-modal/register-modal.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-create-btn" datatype="html">
+        <source>Create Account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/register-modal/register-modal.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-welcome" datatype="html">
+        <source>Welcome back!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/login-modal/login-modal.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tournaments" datatype="html">
+        <source>Tournaments</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-tab" datatype="html">
+        <source>Cashier</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-tab" datatype="html">
+        <source>Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sign-out" datatype="html">
+        <source>
+            <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Sign out
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login" datatype="html">
+        <source>Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register" datatype="html">
+        <source>
+          Join now
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer-about" datatype="html">
+        <source>About us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/footer/footer.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer-terms" datatype="html">
+        <source>Terms and conditions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/footer/footer.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-confirm" datatype="html">
+        <source>
+        Your email was successfulys verified.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        You can login now.
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/register-confirm/register-confirm.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-overview-title" datatype="html">
+        <source>
+                Overview
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-overview-content" datatype="html">
+        <source>
+                <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+                    YouPlay.bet is platform that host tournaments for classic games.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    We have tournaments with money entry as well as free to join with prizes.
+                    We want create community that appriciate old school games.
+                    Join our discord to be up to date with tournaments. 
+                    <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>https://discord.gg/NUZGY5w<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+                <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-contribute-title" datatype="html">
+        <source>
+                Contribute
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-contribute-content" datatype="html">
+        <source>
+                    If you want to organize your tournaments, feel free to do so.
+                    You can ask us to add any game, we will consider every request. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    If you like contribute to prizes, this is our BTC address: 32YdknZ6hitHttoYhU5dHvL8hrFeyQSfQE
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-contact-title" datatype="html">
+        <source>
+                Contact us
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-balance" datatype="html">
+        <source>Balance: <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-buy-coins" datatype="html">
+        <source>Add funds:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-sell-coins" datatype="html">
+        <source>Withdraw:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-payment-details" datatype="html">
+        <source>Payment details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-continue" datatype="html">
+        <source>
+              Continue
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-use-code" datatype="html">
+        <source>
+            Use code
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-cash-out" datatype="html">
+        <source>
+            Cash out
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-invalid-code" datatype="html">
+        <source>Invalid depo code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-history-title" datatype="html">
+        <source>Transfers history</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-history-amount" datatype="html">
+        <source>Amount</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-history-type" datatype="html">
+        <source>Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-history-status" datatype="html">
+        <source>Status</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="esports-join-youplay" datatype="html">
+        <source>JOIN YouPlay.bet eSports</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/esports/esports.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="esports-info" datatype="html">
+        <source>
+            Compete with best players in YouPlay series.
+            Play any time you want in our money tournaments and leagues.
+            If you want host your own tournament, you can do it right here.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/esports/esports.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="esports-next-events" datatype="html">
+        <source>NEXT EVENTS:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/esports/esports.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.alert.close" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <source>Previous month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <source>Next month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <source>Select month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <source>Select year</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <source>««</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <source>First</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <source>«</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <source>»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <source>»»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <source>Last</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{getPercentValue()}}"/>%</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <source>Increment hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <source>HH</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <source>Hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <source>Decrement hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <source>Increment minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <source>MM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <source>Minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <source>Decrement minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <source>Increment seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <source>SS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <source>Seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <source>Decrement seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <source>PM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.AM" datatype="html">
+        <source>AM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-join-now" datatype="html">
+        <source>JOIN NOW</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-info" datatype="html">
+        <source>
+              Play in our tournaments in chess, Fifa 19, Quake Champions,
+              Dota 2, CS:GO, Starcraft, Heroes III and more.
+              Win real money in free and money tournaments. You can cashout right away.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+              If you don&apos;t have an account:
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-create-account" datatype="html">
+        <source>
+            Create account
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-browse-tournaments" datatype="html">
+        <source>
+            Browse all events:
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-find-tournaments" datatype="html">
+        <source>
+              Find eSports tournaments
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-howworks-title" datatype="html">
+        <source>HOW IT WORKS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-howworks-text" datatype="html">
+        <source>
+            If you want to play in our tournaments, you need to <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+            1. Have account on youplay.bet <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+            2. Find tournament you want to play then join it <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+            3. Join discord <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>https://discord.gg/NUZGY5w<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+              and make sure you are ONLINE few minutes before tournament starts <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+            GL &amp; HF
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-featured-event" datatype="html">
+        <source>FEATURED EVENT:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-ownership" datatype="html">
+        <source>
+          Platforma jest własnością Heliodo Sp.z o.o. ul. Żelazna 67/13, 00-871 Warszawa <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          NIP: 5252651403
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-title" datatype="html">
+        <source>
+                Terms Of Service
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-acceptance-title" datatype="html">
+        <source>
+                1. ACCEPTANCE OF TERMS text hardcoded in html
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-acceptance-text" datatype="html">
+        <source>
+                    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>1.1 Overview<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    The following terms of service govern all use by General Users (as defined below), non-Tournament Organizers (as defined below), or 
+                    visitors of (a) the youplay.bet websites, domains, and applications (including all webpages, subdomains and subparts therein 
+                    contained, mobile applications, collectively, the &quot;Site&quot;), (b) any and all services available on or through the Site or otherwise 
+                    provided by youplay.bet, and (c) all Software (as defined below) (collectively, the &quot;Services&quot;). The Services are owned and operated 
+                    by youplay.bet (“The Company”). The Services are offered subject to your acceptance without modification of all of the terms and 
+                    conditions contained herein and all other operating rules, policies and procedures that may be published from time to time on the 
+                    Site by The Company. If you object to anything in these terms of service or the Privacy Policy, you are not permitted to use the 
+                    Services. By using or accessing any part of the Services, you acknowledge that (a) you are at least 13 years of age, (b) you have 
+                    not been previously banned, blocked, or suspended from the Services, and (c) you have read, understood, and agree to be bound by 
+                    these terms of service.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    THESE TERMS OF SERVICE INCLUDE (A) AN ARBITRATION PROVISION FOR USERS LOCATED IN THE UNITED STATES; (B) A WAIVER OF RIGHTS TO BRING 
+                    A CLASS ACTION AGAINST THE COMPANY FOR USERS LOCATED IN THE UNITED STATES; (C) CERTAIN DISCLAIMERS OF WARRANTIES ON BEHALF OF THE 
+                    COMPANY; (D) CERTAIN LIMITATIONS OF LIABILITY FOR THE BENEFIT OF THE COMPANY; AND (E) A RELEASE BY YOU OF ALL CLAIMS FOR DAMAGE 
+                    AGAINST THE COMPANY ARISING OUT OF DISPUTES BETWEEN YOU AND THIRD PARTIES IN CONNECTION WITH YOUR USE OF THE SERVICES. BY USING ANY 
+                    OF THE SERVICES, YOU AGREE TO THESE PROVISIONS. 
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>1.2 Modification<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    The Company reserves the right, at its sole discretion, to modify or replace any of the terms or conditions of these Terms of Service 
+                    (or any of the agreements that make up these Terms of Service) at any time (collectively, “Modifications”). Modifications to these 
+                    Terms of Service will be posted to the youplay.bet website with a change to the &quot;Updated” date at the top of these Terms of Service. 
+                    In certain circumstances The Company may provide you with additional notice of such Modifications, via email or with in-Service 
+                    notifications. Modifications will be effective thirty (30) days following the &quot;Updated” date or such other date as communicated in 
+                    any other notice to you, except that changes addressing new functions of the Services or which do not impose any additional burdens 
+                    or obligations on you will be effective immediately. It is your responsibility to check these Terms of Service periodically for 
+                    Modifications. Your continued use of the Services following the effectiveness of any Modifications to these Terms of Service 
+                    constitutes acceptance of those Modifications as well. If any Modification to these Terms of Service is not acceptable to you, you 
+                    must cease accessing, browsing and otherwise using the Services. Other than as set forth in this paragraph, these Terms of Service 
+                    may only be modified through a written agreement, signed by you and an authorized officer of The Company.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>1.3 Language<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    The Company may translate these terms of service, Privacy Policy or any other operating rules, policies and procedures that may be 
+                    published from time to time on the Site into other languages for your convenience. The English language version of each of these 
+                    documents is the version that governs your use of the Services and in the event of any conflict between the English language version 
+                    and a translated version, the English language version will control.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-use-title" datatype="html">
+        <source>
+                2. YOUR USE OF THE SERVICES
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-use-text" datatype="html">
+        <source>
+                    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>2.1 The Services<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    The Company hereby grants you a non-exclusive, non-transferable, non-sublicensable right to access and use the Services solely for the 
+                    purposes of browsing the Site, and searching for, viewing, registering for, and interacting with, an event that is registered on the 
+                    Site, in each case (i) in compliance with these terms of service, and (ii) to the extent permitted under all applicable laws and 
+                    regulations (foreign and domestic). Notwithstanding the foregoing, you shall not, and shall not permit anyone else to, directly or 
+                    indirectly: (i) modify, reproduce or otherwise create derivatives of any part of the Services or Site Content (as defined below); 
+                    (ii) reverse engineer, disassemble, decompile or otherwise attempt to discover the source code or structure, sequence and organization 
+                    of all or any part of the Services (except that this restriction shall not apply to the limited extent restrictions on reverse 
+                    engineering are prohibited by applicable local law); (iii) rent, lease, resell, distribute or use the Services for timesharing, 
+                    service bureau, or commercial purposes; (iv) remove or alter any proprietary notices or labels on or in the Services or Site Content; 
+                    (v) engage in any activity that interferes with or disrupts the Services; or (vi) engage in any fraudulent activity or activity that 
+                    facilitates fraud.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>2.2 Software<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    If you are allowed to download or use any Software in connection with the Services, The Company hereby grants you a personal, 
+                    non-transferable, non-sublicensable, revocable, non-exclusive license to use the Software solely for your internal use in 
+                    connection with the Services, and only in accordance with these terms of service and the written instructions/directions (if any) 
+                    provided by The Company in conjunction with the Software. For purposes of these terms of service, &quot;Software&quot; shall mean any and all 
+                    software that is available on or through the Site or otherwise provided by The Company, including without limitation The Company’s 
+                    mobile applications. For clarity, the Software will be deemed a part of the &quot;Services&quot; hereunder.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="venue-title" datatype="html">
+        <source>
+                3. VENUE
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="venue-text" datatype="html">
+        <source>
+                    The Services are a platform for enabling connections between General Users and Tournament Organizers, but The Company is not 
+                    responsible for the performance of Tournament Organizers, nor does it have control over the quality, timing, legality, failure 
+                    to provide, or any other aspect whatsoever of the services they provide, nor of the integrity, responsibility or any of the 
+                    actions or omissions whatsoever of any Tournament Organizers. When interacting with other General Users and Tournament Organizers, 
+                    you should exercise caution and common sense to protect your personal safety and property, just as you would when interacting with 
+                    other persons whom you don’t know. The Company is not responsible for the conduct or performance, whether online or offline, of any 
+                    user of the Services.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-payment-title" datatype="html">
+        <source>
+                4. PAYMENT
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-payment-text" datatype="html">
+        <source>
+                    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>4.1 Independent Relationship of Payment Services<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> The Company provides a platform by which payments can be 
+                    used to join events present on the Site. These payments are transacted through online payment services such as Stripe, Paypal, 
+                    or other third party payment services. Payments may also be arranged directly with Tournament Organizers. 
+                    Tournament Organizers and General Users sending payments affect the applicable monetary payment transaction through 
+                    the payment service, and are bound by the applicable terms of use governing the payment service.
+                    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>4.2 Disputes and Refunds<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> If you are a General User and you wish to request a refund or initiate a dispute regarding payment 
+                    in connection with an event listed on the Site, you should contact the applicable Tournament Organizer directly. It is the 
+                    responsibility of a Tournament Organizer to communicate its refund policy to General Users sending payments and to issue 
+                    refunds as required via the Site, payment service, or otherwise. If a General User desires to request a refund, they must 
+                    request the refund from the Tournament Organizer. All communications or disputes regarding refunds are between the Tournament 
+                    Organizer and General User initiating payment and The Company will not be responsible or liable in any way for refunds, errors 
+                    in issuing refunds, or lack of refunds in connection with the Services. All communications and disputes regarding chargebacks 
+                    and refunds are between the Tournament Organizer and General User initiating payment and The Company will not be responsible or 
+                    liable in any way for chargebacks in connection with a General User’s use of the Services.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-privacy-title" datatype="html">
+        <source>
+                5. PRIVACY POLICY &amp; DATA CONSENT
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-privacy-text" datatype="html">
+        <source>
+                    Your privacy is important to The Company. Please see our Privacy Policy for information relating to how we collect, 
+                    use, and disclose your personal information. The Company does not control and shall not be responsible for the acts 
+                    of you or any other users (whether Tournament Organizers, General Users, visitors, or otherwise) of the Services.
+                    All data we store is avaliable in your Profile page. 
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-obligations-title" datatype="html">
+        <source>
+                6. YOUR SIGN-UP OBLIGATIONS
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">149</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-obligations-text" datatype="html">
+        <source>
+                    To sign-up as a registered user of the Services, whether as a Tournament Organizer, General User, or other, you agree to: 
+                    (a) provide true, accurate, current and complete information about yourself as prompted by the Site registration form 
+                    (the &quot;Registration Data&quot;) and (b) maintain and promptly update the Registration Data to keep it true, accurate, current and 
+                    complete. If you provide any information that is untrue, inaccurate, not current or incomplete, or The Company has 
+                    reasonable grounds to suspect that such information is untrue, inaccurate, not current or incomplete, The Company has the 
+                    right to suspend or terminate all of your accounts and refuse any and all of your current or future use of the Services 
+                    (or any portion thereof).
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-accsecurity-title" datatype="html">
+        <source>
+                7. ACCOUNT, PASSWORD, AND SECURITY
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-accsecurity-text" datatype="html">
+        <source>
+                    As part of the Site registration process, you will provide a login email address and create a password, 
+                    which together form an account. You are responsible for maintaining the confidentiality of the password, 
+                    and are fully responsible for all activities that occur under your account, including, without limitation, 
+                    all actions by sub-users registered under your account. You agree to (a) immediately notify The Company of any 
+                    unauthorized use of your password or account or any other breach of security, and (b) ensure that you exit 
+                    from your account at the end of each session. The Company cannot and will not be liable for any loss, 
+                    damage or other liability arising from your failure to comply with this Section or from any unauthorized 
+                    access to or use of your account. In the event of any dispute between two or more parties as to account 
+                    ownership, you agree that The Company shall be the sole arbiter of such dispute in its sole discretion 
+                    and that The Company’s decision (which may include termination or suspension of any account subject to dispute) 
+                    shall be final and binding on all parties.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-content-title" datatype="html">
+        <source>
+                8. CONTENT
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">187</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-content-text" datatype="html">
+        <source>
+                    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>8.1 Site Content<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> You agree that all material, including without limitation information, data, software, text, design 
+                    elements, graphics, images and other content (collectively, &quot;Content&quot;), contained in or delivered via the Services or otherwise 
+                    made available by The Company in connection with the Services (collectively, &quot;Site Content&quot;) is protected by copyrights, 
+                    trademarks, service marks, trade secrets or other intellectual property and other proprietary rights and laws. The Company may 
+                    own the Site Content or portions of the Site Content may be made available to The Company through arrangements with third parties. 
+                    Except as expressly authorized by The Company in writing or in connection with your use of the intended functionality of the 
+                    Services, you agree not to sell, license, rent, modify, distribute, copy, reproduce, transmit, publicly display, publicly perform, 
+                    publish, adapt, edit or create derivative works of any Site Content, or post any Site Content on any other web site or in a 
+                    networked computer environment for any purpose. Reproducing, copying or distributing any Site Content for any other purpose 
+                    is strictly prohibited without the express prior written permission of The Company. You shall use the Site Content only for 
+                    purposes that are permitted by these terms of service and any applicable laws and regulations (foreign and domestic). 
+                    Any rights not expressly granted herein are reserved.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>8.2 Your Content.<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> You acknowledge and agree that if you contribute, provide, or make available any content to the 
+                    Site (&quot;Your Content&quot;), you hereby grant to The Company a non-exclusive, worldwide, perpetual, irrevocable, royalty-free, 
+                    transferable, sublicensable (through multiple tiers) right and license to use, reproduce, adapt, modify, distribute, translate, 
+                    publish, create derivative works based on, perform, display, and otherwise exploit Your Content, in whole or in part, 
+                    in any media now known or hereafter developed, for any purpose whatsoever. You represent and warrant that you have all the rights, 
+                    power and authority necessary to grant the foregoing license, and that all Your Content (i) does not infringe, violate, 
+                    misappropriate or otherwise conflict with the rights of any third party, and (ii) complies with all applicable laws and regulations 
+                    (foreign and domestic). In addition, Your Content must be accurate and truthful. The Company reserves the right to remove any of 
+                    Your Content from the Site at any time if The Company believes in its sole discretion that it does not comply with these terms of 
+                    service. In addition, you agree that The Company may use your name, Gamertag (if provided) and logo (whether or not you have made 
+                    it available through the Site) for the purpose of identifying you as an existing or past user of The Company both on the Site and 
+                    in marketing and promotional materials.
+                    <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+                    <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>8.3 Streaming Content<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> The Company provides a platform by which live and pre-recorded videos of video game related 
+                    activities can be streamed or otherwise broadcasted to viewers. These broadcasts are transacted through online streaming services 
+                    such as Twitch, YouTube, or other third party streaming services. Tournament Organizers and General Users broadcast content through 
+                    these streaming services, and are bound by the applicable terms of use governing these streaming services.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-disclaimer-title" datatype="html">
+        <source>
+                9. DISCLAIMER OF WARRANTIES
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">227</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-disclaimer-text" datatype="html">
+        <source>      
+                    The Services are provided “as is” without warranties of any kind, either expressed or implied, including, but not limited to, 
+                    the implied warranties of merchantability and fitness for a particular purpose, and non-infringement. The entire risk as to 
+                    the quality and performance of the Services is with you. The Company does not represent or warrant that content or 
+                    materials provided through the Services are accurate, complete, reliable, current, or error-free. The Company is not 
+                    responsible for typographical errors or omissions relating to text, video, or photography. The Company does not represent 
+                    or warrant that the Services are free of viruses or other harmful components and, therefore, you should use an industry 
+                    recognized software to detect and remove viruses from any download. No advice or information, whether oral or written, 
+                    obtained by you from The Company or through the Services shall create any warranty not expressly stated herein.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">231</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

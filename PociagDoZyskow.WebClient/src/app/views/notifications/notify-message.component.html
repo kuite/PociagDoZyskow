@@ -1,0 +1,42 @@
+<!-- <div *ngIf="IsVisible" class="message-container" [ngClass]="{ 'notify-success': IsMsgSuccess, 'notify-error': IsMsgError, 'notify-inform': IsMsgInform }">
+    <div [ngClass]="{ 'label-success': IsMsgSuccess, 'label-error': IsMsgError, 'label-inform': IsMsgInform }">
+        {{NotificationLabel}}
+    </div>
+    <div class="message-div">
+        <div class="message">
+            {{Message}}
+        </div>
+        <div (click)="CloseMessage()" class="message-close-box"><div class="message-close">&times;</div></div>
+    </div>
+</div> -->
+
+<div *ngIf="IsVisible">
+
+<div *ngIf="IsMsgSuccess" class="Message Message--green">
+    <div class="Message-body">
+        <p>{{NotificationLabel}}</p>
+        <p>{{Message}}</p>
+    </div>
+    <!-- <div (click)="CloseMessage()" class="message-close-box"><div class="message-close">&times;</div></div> -->
+    <img (click)="CloseMessage()" class="exit-btn" src="assets/svg/discard-white.svg" width="25" height="25">
+</div>
+
+<div *ngIf="IsMsgInform" class="Message">
+    <div class="Message-body">
+        <p>{{NotificationLabel}}</p>
+        <p>{{Message}}</p>
+    </div>
+    <!-- <div (click)="CloseMessage()" class="message-close-box"><div class="message-close">&times;</div></div> -->
+    <img (click)="CloseMessage()" class="exit-btn" src="assets/svg/discard-white.svg" width="25" height="25">
+</div>
+
+<div *ngIf="IsMsgError" class="Message Message--red">
+    <div class="Message-body">
+        <p>{{NotificationLabel}}</p>
+        <p>{{Message}}</p>
+    </div>
+    <!-- <div (click)="CloseMessage()" class="message-close-box"><div class="message-close">&times;</div></div> -->
+    <img (click)="CloseMessage()" class="exit-btn" src="assets/svg/discard-white.svg" width="25" height="25">
+</div>
+
+</div>

@@ -1,0 +1,18 @@
+<div class="bracket-title">Rounds: (read from left to right)</div>
+<div class="matches-list">
+	<div *ngFor="let stage of Stages" class="stage"> 
+		<div *ngFor="let match of StagesMatches[stage]" >
+			<div class="match">
+				<div *ngIf="match.players[0] != null">{{match.players[0].inGameUsername}} </div>
+				<div *ngIf="match.players[0] == null">EMPTY SLOT</div>
+				<span class="font"> - </span>
+				<div *ngIf="match.players[1] != null">{{match.players[1].inGameUsername}} </div>
+				<div *ngIf="match.players[1] == null">EMPTY SLOT</div>
+			</div>
+			<div class="winner-info">Winner: 
+				<span *ngIf="match.winnerUsername != null" class="winner-info">{{match.winnerUsername}}</span>
+			</div>
+		</div>
+	</div>
+	
+</div>

@@ -1,0 +1,365 @@
+
+
+.section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+}
+
+.money-input{
+    margin-bottom: 15px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 35px;  
+}
+
+.sub-section {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.balance {
+    color: #4dbd74;
+    display: inline;
+}
+
+.info-font {
+    margin-left: 15px;
+    font-size: 20px;
+    color: #d39f2e;
+}
+
+.hint {
+    color: #e4e7ea;
+    line-height: 35px;
+    width: 150px;
+}
+
+.input-disabled {
+    display: block;
+    width: 100%;
+    height: calc(2.0625rem + 2px);
+    padding: .375rem .75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    margin-top: 0px;
+    color: #e4e7ea;
+    background-color: #515b65;
+    background-clip: padding-box;
+    border: 1px solid #23282c;
+    // border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+//---------------------
+
+.cashier-main-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    color: #acacac;
+}
+
+.cashier-container {
+    background-color: #393c46;
+    width: 100%;
+    max-width: 900px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.input-div-form {
+    width: 400px;
+}
+
+
+
+.invalid-input-border {
+    border: 1px solid red;
+    border-radius: 10rem;
+}
+
+.coin-payment-form {
+    background-color: white;
+}
+
+.USD-usd-ratio-info {
+    font-size: 20px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.balance-small {
+    margin-left: 15px;
+}
+
+.deposit-btc-item {
+    width:350px;
+    flex: 0 0 50%;
+    margin-bottom: 16px;
+}
+
+
+.input-USD-amount {
+    max-width: 150px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #5c6873;
+    background-color: #e4e7ea;
+    background-clip: padding-box;
+    border: 1px solid #e4e7ea;
+    border-radius: 1em;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-promo-code {
+    max-width: 150px;
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #5c6873;
+    background-color: #e4e7ea;
+    background-clip: padding-box;
+    border: 1px solid #e4e7ea;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-cashout-amount {
+    max-width: 150px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #5c6873;
+    background-color: #e4e7ea;
+    background-clip: padding-box;
+    border: 1px solid #e4e7ea;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+.crypto-payment-form {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    max-width: 550px;
+}
+
+
+.btn-close-form {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    color: #f86c6b;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.header-payment-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.label-font {
+    //font-family: 'HKGrotesk', 'arial', sans-serif;
+    font-size: 18px;
+    color: #acacac;
+}
+
+.label-box {
+    min-width: 130px;
+    margin-bottom: 0px;
+}
+
+.input-box {
+    margin-left: 5px;
+    min-width: 130px;
+    width: 100%;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid #4dbd74;
+    color: #4dbd74;
+    text-align: center;
+    border-radius: 0.25rem;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.amount-form {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.adress-form {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.copy-button {
+    width: 80px;
+    height: 35px;
+    color: white;
+    background-color: #5c6873;
+    border: none;
+    cursor: pointer;
+}
+
+.qrcode-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.qrcode-image {
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+
+.qr-code {
+    width: 300px;
+    height: 300px;
+}
+
+.transactions-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.transactions-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.transactions-header-item {
+    color: #e4e7ea;
+    width: 33%;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.transaction-item {
+    color: #e4e7ea;
+    width: 33%;
+    text-align: center;
+    margin-bottom: 8px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.deposit-history-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.transactions-div {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-btc {
+    border-radius: 16px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.img-visa {
+
+    border-radius: 16px;
+    margin: 15px;
+}
+
+.input-form {
+    margin-bottom: 20px; 
+    max-width: 600px;
+    width: 100%;
+}
+
+
+.btc-form {
+    margin-bottom: 20px; 
+    // max-width: 300px;
+    width: 100%;
+    margin: auto;
+}
+
+.cashout-form > input {
+    margin-bottom: 16px;
+}
+
+.wallet-address-input {
+    max-width: 300px;
+    width: 100%;
+}
+
+.coming-soon {
+    color: #acacac;
+    font-size: 20px;
+    // text-align: center;
+}
+
+input {
+    border-radius: 1em;
+}
+
+.transfers-header {
+    margin-left: 30px;
+}
+
+.error-msg {
+    color: red;
+    font-size: 14px;
+    width: 100%;
+}
+
+.sub-section-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+

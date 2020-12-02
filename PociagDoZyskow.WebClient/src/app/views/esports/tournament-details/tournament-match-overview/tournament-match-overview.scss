@@ -1,0 +1,58 @@
+.match-row {
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #e4e7ea;
+    background-color: #393c46;
+    border-color: #e4e7ea;
+    border: 0.1px solid;
+}
+
+.arrow-down {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0%, -50%);
+}
+
+.single-match-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.header-match {
+    display: flex;
+}
+
+.action-buttons {
+    flex-direction: row;
+    display: flex;
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+.result-button {
+    border-color: #e4e7ea;
+    border: 0.1px solid;
+    cursor: pointer;
+    padding: 1px;
+    flex: 1;
+    text-align: center;
+}
+
+.unresolved-button {
+    line-height: 60px;
+}
+
+.title {
+    margin: 0px;
+    padding-left: 5px; 
+    min-width: 200px;
+}

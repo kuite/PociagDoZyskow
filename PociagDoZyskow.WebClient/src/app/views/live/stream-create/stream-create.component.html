@@ -1,0 +1,75 @@
+<div class="create-stream-main">
+    <div class="create-stream-box">
+
+        <div class="create-stream-card">
+            
+            <div class="header">
+                <div>
+                    <p class="title font-title">CREATE STREAM</p>
+                </div>
+            
+                <div class="close-btn-container"  (click)="GoToLive()">
+                    <a>
+                        <img class="close-btn" src="assets/svg/discard-white.svg">
+                    </a>
+                </div>
+           
+            </div>
+
+            <div class="box-item">
+                <p class="box-item-title font">
+                    Paste link to live stream
+                    <span class="font" style="font-size: 12px;">YouTube or Twitch</span>
+                </p>
+                
+                <div class="input-form-box"> 
+
+                    <input-text-yp class="input-material" [(ngModel)]="Url" [label]="'https://...'"></input-text-yp>
+                </div>
+            </div>
+
+            <div class="box-item">
+                <p class="box-item-title font">Title</p>
+                <div class="input-form-box">
+
+                    <input-text-yp class="input-material" [(ngModel)]="Title" [label]="'Title'"></input-text-yp>
+                </div>
+            </div>
+
+            <div class="box-item">
+                <div class="box-item-title font">
+                    <div>Description</div>
+                    <div class="description-lenght-counter">{{DescriptionCount}}/255</div>
+                </div>
+                <div class="input-form-box">
+                    <textarea class="description-area" [(ngModel)]="Description" (input)="ValidateDescription()" rows="6" cols="30">
+                    </textarea>
+                </div>
+
+            </div>
+
+
+            <div *ngIf="!isUrlValid" class="error-item">
+                <div class="error-msg">Your link is not valid.</div>
+            </div>
+
+            <div *ngIf="!isTitleValid" class="error-item">
+                <div class="error-msg">Title is empty.</div>
+            </div>
+
+            <div *ngIf="!isDescriptionValid" class="error-item">
+                <div class="error-msg">Description.</div>
+            </div>
+
+
+
+            <div class="button-item">
+                <button class="create-btn" (click)="CreateStream()">Start stream</button>
+            </div>
+            
+        </div>
+
+
+    </div>
+</div>
+<!-- przerob to na podobienstwo filmik z yts,  -->

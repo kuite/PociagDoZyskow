@@ -1,0 +1,219 @@
+
+
+.course-span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 75px;
+    //font-family: 'HKGrotesk', 'arial', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #e4e7ea;
+}
+
+
+.header-newbet-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+.btn-close-form {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.title-input {
+    width: 400px;
+    margin-top: 20px;
+    padding-right: 15px;
+}
+
+.course-slider {
+    width: 300px;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.cta-buttons-newbet-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.renew-bet {
+    color: #e4e7ea;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.renew-bet > input {
+    width: 20px;
+}
+
+.input-bet-title {
+    display: flex;
+    justify-content: center;
+}
+
+.input-bet {
+    margin-left: 10px; 
+    //height: 40px;
+    // color: white;
+    // background-color: transparent;
+    // border: 0px solid black;
+}
+
+// .input-bet:focus {
+//     //border: none;
+// }
+
+.input-title {
+    //color: #999 !important;
+    height: 38px;
+    border-radius: 19px;
+}
+
+.input-option {
+    margin-left: 15px;
+}
+
+
+.bet-option-title {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #e4e7ea;
+    margin-right: 20px;
+}
+
+.bet-option-course {
+    display: flex;
+
+}
+
+.bet-odd {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #ffdf1b;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.play-btn {
+    color: #4dbd74;
+    border-color: #4dbd74;
+}
+
+.option-row {
+    display: flex;
+    max-width: 385px;
+    justify-content: space-between;
+    width: 100%;
+    color: #999;
+}
+
+.add-option-block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    //margin-top: 30px;
+    max-width:400px;
+    width: 100%;
+    color: #999;
+}
+
+.error-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.error-msg {
+    color: #e34234;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.playbet-button {
+    height: 55px;
+    width: 100px;
+    border-radius: 10rem;
+    margin-top: 10px;
+}
+
+.discardbet-button {
+    height: 45px;
+    width: 90px;
+    border: 1px solid #f86c6b;
+    color: #f86c6b;
+    border-radius: 4px;
+    background-color: transparent;
+    margin-top: 10px;
+}
+
+.description-input {
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.course-input {
+    margin-left: 15px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 100px;
+    border-radius: 18px;
+}
+
+.add-option-img {
+    // width: 30px; 
+    // height: 30px;
+    margin-top: 30px;
+}
+
+.newbet-form-title {
+    width: 90%;
+    vertical-align: middle;
+    color: white;
+    background-color: #393c46;
+    line-height: 40px;
+    font-size: 22px;
+}
+
+
+.newbet-container {
+    display: flex;
+    flex-direction: column;
+    background-color:#393c46;
+    align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+    .add-option-block {
+        flex-direction: column;
+    }
+}

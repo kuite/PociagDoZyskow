@@ -1,0 +1,81 @@
+<div class="stream-watch-main">
+    <div class="header-container">
+        <a class="go-back-btn" (click)="GoToLive()">
+            <img class="go-back-icon" src="assets/svg/left-arrow-thin.svg">
+        </a>
+        <p *ngIf="IsAuthor" class="author-info">Your income from current stream: {{AuthorCommission | number : '1.2-2'}} USD</p>
+        <div class="stream-buttons">
+            <div class="create-btn" (click)="ToggleStream()">Show/Hide stream</div>
+            <div *ngIf="IsAuthor" class="create-btn play-btn" (click)="EndStream()">End stream</div>
+        </div>
+        <p *ngIf="!IsAuthor" class="author-info">
+            Host: {{AuthorUsername}}</p>
+    </div>
+    
+    
+    <div class="top-section-container"> 
+        <div *ngIf="DisplayStream" class="stream-container">
+            <iframe [src]="StreamUrl" sandbox="allow-scripts allow-same-origin allow-presentation" style="visibility:hidden;" onload="this.style.visibility = 'visible';"
+                class="vid-container" frameborder="0" allowfullscreen></iframe>
+            <!-- <p class="author-info">{{Viewers}} viewers online</p> -->
+        </div>
+        <p *ngIf="DisplayStream" class="author-info">{{Description}}</p>
+        <div *ngIf="DisplayStream" class="chat-container">
+            <div class="toggle-chat-btn create-btn" (click)="ToggleChat()" [ngClass]="{ 'chat-btn-expanded': chatExpanded, 'chat-btn-collapsed': !chatExpanded }">
+                {{expandBtnMsg}}
+            </div>
+            <chat [chatId]="this.ActiveStreamId" class="chat chat-collapsed" [ngClass]="{ 'chat-expanded': chatExpanded, 'chat-collapsed': !chatExpanded }">
+
+            </chat>
+            <div class="toggle-chat-btn create-btn"  (click)="ToggleChat()">
+                {{expandBtnMsg}}
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="bets-container">
+        <div *ngIf="DisplayNewBetOpenForm" class="newbet-form">
+            <betopen-new-form class="">
+            </betopen-new-form>
+        </div>
+        <div class="cta-container">
+            <div class="tabs-container">
+                <div id="open-bets" class="tab selected-tab" (click)="SelectOpenBets()" [ngClass]="{ 'selected-tab': isOpenBetsSelected, 'unselected-tab': !isOpenBetsSelected  }">Open Bets</div>
+                <div id="my-bets" class="tab unselected-tab" (click)="SelectMyBets()" [ngClass]="{ 'selected-tab': isBetsPlayedSelected, 'unselected-tab': !isBetsPlayedSelected  }">My Bets</div>
+            </div>
+            <div style="padding-bottom: 5px;">
+                <div *ngIf="IsAuthor" class="create-btn play-btn" (click)="ShowNewBetOpenForm()">Add Bet</div>
+            </div>
+        </div>
+
+        <div class="open-bets-container" *ngIf="isOpenBetsSelected">
+            <div class="openbets-header">
+                <!-- <p class="options-tag font">1 <span style="font-size: 14px;">x</span> 2</p> -->
+                <p class="event-tag font">Description</p>
+            </div>
+            <div *ngIf="BetsOpen != null && BetsOpen.length == 0">
+                <div *ngIf="!IsAuthor" class="no-bets-info">There are no bets open. Ask admin to add any.</div>
+                <div *ngIf="IsAuthor" class="no-bets-info">There are no bets open now. You can add them, click 'Add Bet' button.</div>
+            </div>
+            <div>
+                <betopen-overview *ngFor="let bo of BetsOpen"
+                    [bet]="bo" [isbetAuthor]="IsAuthor">
+                </betopen-overview>
+            </div>
+        </div>
+        <div class="my-bets-container" *ngIf="isBetsPlayedSelected">
+            <div class="openbets-header">
+                <p class="item-tag font">Choice</p>
+                <p class="title-tag font">Odd</p>
+                <p class="item-tag font">USD</p>
+                <p class="item-tag font">Status</p>
+            </div>
+            <betplayed-overview *ngFor="let bp of BetsPlayed"
+                [bet]="bp">
+            </betplayed-overview>
+        </div>
+    </div>
+
+
+</div>

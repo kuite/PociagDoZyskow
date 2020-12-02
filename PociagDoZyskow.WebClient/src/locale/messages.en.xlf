@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="register-create-title" datatype="html">
+        <target>Create new account</target>
+        <source>Create new account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/register-modal/register-modal.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-create-btn" datatype="html">
+        <target>Create Account</target>
+        <source>Create Account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/register-modal/register-modal.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-welcome" datatype="html">
+        <target>Welcome back!</target>
+        <source>Welcome back!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/login-modal/login-modal.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="header-usermenu" datatype="html">
+        <target>User menu</target>
+        <source>User menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tournaments" datatype="html">
+        <target>Tournaments</target>
+        <source>Tournaments</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home" datatype="html">
+        <target>Home</target>
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-tab" datatype="html">
+        <target>Cashier</target>
+        <source>Cashier</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="profile-tab" datatype="html">
+        <target>Profile</target>
+        <source>Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sign-out" datatype="html">
+        <target>
+          <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Sign out
+        </target>
+        <source>
+          <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Sign out
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login" datatype="html">
+        <target>Login</target>
+        <source>Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register" datatype="html">
+        <target>
+          Join now
+        </target>
+        <source>
+          Join now
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/header/header.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer-about" datatype="html">
+        <target>About us</target>
+        <source>About us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/footer/footer.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer-terms" datatype="html">
+        <target>Terms and conditions</target>
+        <source>Terms and conditions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/footer/footer.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-accept-terms" datatype="html">
+        <target>
+          I read and accept Terms and conditions.
+        </target>
+        <source>
+          I read and accept
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/register-confirm/register-confirm.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register-confirm" datatype="html">
+        <target>
+        Your email was successfulys verified.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        You can login now.
+        </target>
+        <source>
+        Your email was successfulys verified.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        You can login now.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/register-confirm/register-confirm.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-overview-title" datatype="html">
+        <target>
+          Overview
+        </target>
+        <source>
+          Overview
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-overview-content" datatype="html">
+        <target>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+            YouPlay.bet is platform that host tournaments for classic games.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+            We have tournaments with money entry as well as free to join with prizes.
+            We were heavy active players CS 1.5 and 1.6, Warcraft 3. After long time since then, 
+            we decided to launch this project.
+            We want create community around old school games.
+            Join our discord to be up to date with tournaments. 
+            <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>https://discord.gg/NUZGY5w<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+        </target>
+        <source>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+            YouPlay.bet is platform that host tournaments for classic games.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+            We have tournaments with money entry as well as free to join with prizes.
+            We want create community around old school games.
+            Join our discord to be up to date with tournaments. 
+            <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>https://discord.gg/NUZGY5w<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-about-title" datatype="html">
+        <target>
+          About us
+        </target>
+        <source>
+          About us
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-about-content" datatype="html">
+        <target>
+          YouPlay is a brand managed by team in Gdansk, Poland. 
+          Our registered address is Gdansk, Wilenska 53a 80-215, Poland.
+          We are group of friends that like to play games since we rember. We were 
+          heavy active players CS 1.5 and 1.6, Warcraft 3. After long time since then, 
+          we decided to launch this project. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          If you want leave any feedback, feel free to do so via email support@youplay.bet              
+        </target>
+        <source>
+          YouPlay is a brand managed by team in Gdansk, Poland. 
+          Our registered address is Gdansk, Wilenska 53a 80-215, Poland.
+          We are group of friends that like to play games since we rember. We were 
+          heavy active players CS 1.5 and 1.6, Warcraft 3. After long time since then, 
+          we decided to launch this project. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          If you want leave any feedback, feel free to do so via email support@youplay.bet              
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-contribute-title" datatype="html">
+        <target>
+          Contribute
+        </target>
+        <source>
+          Contribute
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-contribute-content" datatype="html">
+        <target>
+          If you want to organize your tournaments, feel free to do so.
+          You can ask us to add any game, we will consider every request. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          If you like contribute to prizes, this is our BTC address: 32YdknZ6hitHttoYhU5dHvL8hrFeyQSfQE
+        </target>
+        <source>
+          If you want to organize your tournaments, feel free to do so.
+          You can ask us to add any game, we will consider every request. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          If you like contribute to prizes, this is our BTC address: 32YdknZ6hitHttoYhU5dHvL8hrFeyQSfQE
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-contact-title" datatype="html">
+        <target>
+          Contact us
+        </target>
+        <source>
+          Contact us
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/about/about.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-balance" datatype="html">
+        <target>Balance: <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> </target>
+        <source>Balance: <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-buy-coins" datatype="html">
+        <target>Add funds:</target>
+        <source>Buy YouPlay coins</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-sell-coins" datatype="html">
+        <target>Withdraw:</target>
+        <source>Withdraw</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-payment-details" datatype="html">
+        <target>Payment details</target>
+        <source>Payment details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-use-code" datatype="html">
+        <target>
+          Use code
+        </target>
+        <source>
+          Use code
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-cash-out" datatype="html">
+        <target>
+          Cash out
+        </target>
+        <source>
+          Cash out
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-continue" datatype="html">
+        <target>Continue</target>
+        <source>Continue</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-invalid-code" datatype="html">
+        <target>Invalid depo code</target>
+        <source>Invalid depo code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-history-title" datatype="html">
+        <target>Transfers history</target>
+        <source>Transfers history</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-history-amount" datatype="html">
+        <target>Amount</target>
+        <source>Amount</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-history-type" datatype="html">
+        <target>Type</target>
+        <source>Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cashier-history-status" datatype="html">
+        <target>Status</target>
+        <source>Status</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/cashier/cashier.component.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="esports-join-youplay" datatype="html">
+        <target>JOIN YouPlay.bet eSports</target>
+        <source>JOIN YouPlay.bet eSports</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/esports/esports.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="esports-info" datatype="html">
+        <target>
+          Compete with best players in YouPlay series.
+          Play any time you want in our money tournaments and leagues.
+          If you want host your own tournament, you can do it right here.
+        </target>
+        <source>
+          Compete with best players in YouPlay series.
+          Play any time you want in our money tournaments and leagues.
+          If you want host your own tournament, you can do it right here.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/esports/esports.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="esports-next-events" datatype="html">
+        <target>NEXT EVENTS:</target>
+        <source>NEXT EVENTS:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/esports/esports.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.alert.close" datatype="html">
+        <target>Close</target>
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <target>Previous</target>
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <target>Next</target>
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <target>Previous month</target>
+        <source>Previous month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <target>Next month</target>
+        <source>Next month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <target>Select month</target>
+        <source>Select month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <target>Select year</target>
+        <source>Select year</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <target>««</target>
+        <source>««</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <target>First</target>
+        <source>First</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <target>«</target>
+        <source>«</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <target>Previous</target>
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <target>»</target>
+        <source>»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <target>Next</target>
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <target>»»</target>
+        <source>»»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <target>Last</target>
+        <source>Last</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <target><x id="INTERPOLATION" equiv-text="{{getPercentValue()}}"/>%</target>
+        <source><x id="INTERPOLATION" equiv-text="{{getPercentValue()}}"/>%</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <target>Increment hours</target>
+        <source>Increment hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <target>HH</target>
+        <source>HH</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <target>Hours</target>
+        <source>Hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <target>Decrement hours</target>
+        <source>Decrement hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <target>Increment minutes</target>
+        <source>Increment minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <target>MM</target>
+        <source>MM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <target>Minutes</target>
+        <source>Minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <target>Decrement minutes</target>
+        <source>Decrement minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <target>Increment seconds</target>
+        <source>Increment seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <target>SS</target>
+        <source>SS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <target>Seconds</target>
+        <source>Seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <target>Decrement seconds</target>
+        <source>Decrement seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <target>PM</target>
+        <source>PM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.AM" datatype="html">
+        <target>AM</target>
+        <source>AM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../node_modules/@ng-bootstrap/ng-bootstrap/ng-bootstrap.d.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-create-tournament" datatype="html">
+        <target>
+          Create tournament
+        </target>
+        <source>
+          Create tournament
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-create-event-info" datatype="html">
+        <target>
+          If you want create tournament by yourself, you can do it. We advise to read manual before that. You can find it on discord.
+        </target>
+        <source>
+          If you want create tournament by yourself, you can do it. We advise to read manual before that.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-join-now" datatype="html">
+        <target>
+          JOIN NOW
+        </target>
+        <source>
+          JOIN NOW
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-info" datatype="html">
+        <target>
+          Play in our tournaments in chess, Fifa 19, Quake Champions,
+          Dota 2, CS:GO, Starcraft, Heroes III and more.
+          Win real money in free and pay tournaments. You can cashout right away.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          If you don&apos;t have an account:
+        </target>
+        <source>
+          Play in our tournaments in chess, Fifa 19, Quake Champions,
+          Dota 2, CS:GO, Starcraft, Heroes III and more.
+          Win real money in free and money tournaments. You can cashout right away.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          If you don&apos;t have an account:
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-find-tournaments" datatype="html">
+        <target>
+          Find eSports tournaments
+        </target>
+        <source>
+          Find eSports tournaments
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-create-account" datatype="html">
+        <target>
+          Create account
+        </target>
+        <source>
+          Create account
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-browse-tournaments" datatype="html">
+        <target>
+          Browse all events:
+        </target>
+        <source>
+          Browse all events:
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-howworks-title" datatype="html">
+        <target>HOW IT WORKS</target>
+        <source>HOW IT WORKS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-howworks-text" datatype="html">
+        <target>
+          If you want to play in our tournaments, you need to <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          1. Have account on youplay.bet <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          2. Find tournament you want to play then join it <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          3. Join discord <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>https://discord.gg/NUZGY5w<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+            and make sure you are ONLINE few minutes before tournament starts <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          GL &amp; HF
+        </target>
+        <source>
+          If you want to play in our tournaments, you need to <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          1. Have account on youplay.bet <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          2. Find tournament you want to play then join it <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          3. Join discord <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>https://discord.gg/NUZGY5w<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+            and make sure you are ONLINE few minutes before tournament starts <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          GL &amp; HF
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home-featured-event" datatype="html">
+        <target>FEATURED EVENT:</target>
+        <source>FEATURED EVENT:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/home/home.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-ownership" datatype="html">
+        <target>
+          Ownership of the youplay.bet is WOJCIECH MOSTOWSKI. ul. Wileńska 53 a/8, 80-215 Gdańsk <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          (polish company indentification number) NIP: 9571096995
+        </target>
+        <source>
+          Platforma jest własnością Heliodo Sp.z o.o. ul. Żelazna 67/13, 00-871 Warszawa <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          NIP: 5252651403
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-title" datatype="html">
+        <target>
+          Terms Of Service
+        </target>
+        <source>
+          Terms Of Service
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-acceptance-title" datatype="html">
+        <target>
+          1. ACCEPTANCE OF TERMS
+        </target>
+        <source>
+          1. ACCEPTANCE OF TERMS
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-acceptance-text" datatype="html">
+        <target>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>1.1 Overview<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          The following terms of service govern all use by General Users (as defined below), non-Tournament Organizers (as defined below), or 
+          visitors of (a) the youplay.bet websites, domains, and applications (including all webpages, subdomains and subparts therein 
+          contained, mobile applications, collectively, the "Site"), (b) any and all services available on or through the Site or 
+          otherwise provided by youplay.bet, and (c) all Software (as defined below) (collectively, the "Services"). The Services 
+          are owned and operated by youplay.bet (“The Company”). The Services are offered subject to your acceptance without modification 
+          of all of the terms and conditions contained herein and all other operating rules, policies and procedures that may be 
+          published from time to time on the Site by The Company. If you object to anything in these terms of service or the Privacy 
+          Policy, you are not permitted to use the 
+          Services. By using or accessing any part of the Services, you acknowledge that (a) you are at least 13 years of age, (b) you have 
+          not been previously banned, blocked, or suspended from the Services, and (c) you have read, understood, and agree to be bound by 
+          these terms of service. The most important principle is common sense and all matters will be handled based on common sense.
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          THESE TERMS AND CONDITIONS OF SERVICES CONTAIN ARBITRATION REGULATIONS FOR USERS IN EUROPE (INCLUDING POLAND),
+          UNITED STATES; CONTINUING YOU AGREE WITH THESE TERMS.
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>1.2 Modification<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          The Company reserves the right, at its sole discretion, to modify or replace any of the terms or conditions of these Terms of Service 
+          (or any of the agreements that make up these Terms of Service) at any time (collectively, “Modifications”). Modifications to these 
+          Terms of Service will be posted to the youplay.bet website with a change to the "Updated” date at the top of these Terms of Service. 
+          In certain circumstances The Company may provide you with additional notice of such Modifications, via email or with in-Service 
+          notifications. Modifications will be effective thirty (30) days following the "Updated” date or such other date as communicated in 
+          any other notice to you, except that changes addressing new functions of the Services or which do not impose any additional burdens 
+          or obligations on you will be effective immediately. It is your responsibility to check these Terms of Service periodically for 
+          Modifications. Your continued use of the Services following the effectiveness of any Modifications to these Terms of Service 
+          constitutes acceptance of those Modifications as well. If any Modification to these Terms of Service is not acceptable to you, you 
+          must cease accessing, browsing and otherwise using the Services. Other than as set forth in this paragraph, these Terms of Service 
+          may only be modified through a written agreement, signed by you and an authorized officer of The Company.
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>1.3 Language<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          The Company may translate these terms of service, Privacy Policy or any other operating rules, policies and procedures that may be 
+          published from time to time on the Site into other languages for your convenience. The English language version of each of these 
+          documents is the version that governs your use of the Services and in the event of any conflict between the English language version 
+          and a translated version, the English language version will control.
+        </target>
+        <source>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>1.1 Overview<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          The following terms of service govern all use by General Users (as defined below), non-Tournament Organizers (as defined below), or 
+          visitors of (a) the youplay.bet websites, domains, and applications (including all webpages, subdomains and subparts therein 
+          contained, mobile applications, collectively, the "Site"), (b) any and all services available on or through the Site or 
+          otherwise provided by youplay.bet, and (c) all Software (as defined below) (collectively, the "Services"). The Services 
+          are owned and operated by youplay.bet (“The Company”). The Services are offered subject to your acceptance without modification 
+          of all of the terms and conditions contained herein and all other operating rules, policies and procedures that may be 
+          published from time to time on the Site by The Company. If you object to anything in these terms of service or the Privacy 
+          Policy, you are not permitted to use the 
+          Services. By using or accessing any part of the Services, you acknowledge that (a) you are at least 13 years of age, (b) you have 
+          not been previously banned, blocked, or suspended from the Services, and (c) you have read, understood, and agree to be bound by 
+          these terms of service.
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          THESE TERMS OF SERVICE INCLUDE (A) AN ARBITRATION PROVISION FOR USERS LOCATED IN THE UNITED STATES; (B) A WAIVER OF RIGHTS TO BRING 
+          A CLASS ACTION AGAINST THE COMPANY FOR USERS LOCATED IN THE UNITED STATES; (C) CERTAIN DISCLAIMERS OF WARRANTIES ON BEHALF OF THE 
+          COMPANY; (D) CERTAIN LIMITATIONS OF LIABILITY FOR THE BENEFIT OF THE COMPANY; AND (E) A RELEASE BY YOU OF ALL CLAIMS FOR DAMAGE 
+          AGAINST THE COMPANY ARISING OUT OF DISPUTES BETWEEN YOU AND THIRD PARTIES IN CONNECTION WITH YOUR USE OF THE SERVICES. BY USING ANY 
+          OF THE SERVICES, YOU AGREE TO THESE PROVISIONS. 
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>1.2 Modification<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          The Company reserves the right, at its sole discretion, to modify or replace any of the terms or conditions of these Terms of Service 
+          (or any of the agreements that make up these Terms of Service) at any time (collectively, “Modifications”). Modifications to these 
+          Terms of Service will be posted to the youplay.bet website with a change to the "Updated” date at the top of these Terms of Service. 
+          In certain circumstances The Company may provide you with additional notice of such Modifications, via email or with in-Service 
+          notifications. Modifications will be effective thirty (30) days following the "Updated” date or such other date as communicated in 
+          any other notice to you, except that changes addressing new functions of the Services or which do not impose any additional burdens 
+          or obligations on you will be effective immediately. It is your responsibility to check these Terms of Service periodically for 
+          Modifications. Your continued use of the Services following the effectiveness of any Modifications to these Terms of Service 
+          constitutes acceptance of those Modifications as well. If any Modification to these Terms of Service is not acceptable to you, you 
+          must cease accessing, browsing and otherwise using the Services. Other than as set forth in this paragraph, these Terms of Service 
+          may only be modified through a written agreement, signed by you and an authorized officer of The Company.
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>1.3 Language<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          The Company may translate these terms of service, Privacy Policy or any other operating rules, policies and procedures that may be 
+          published from time to time on the Site into other languages for your convenience. The English language version of each of these 
+          documents is the version that governs your use of the Services and in the event of any conflict between the English language version 
+          and a translated version, the English language version will control.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-use-title" datatype="html">
+        <target>
+          2. YOUR USE OF THE SERVICES
+        </target>
+        <source>
+          2. YOUR USE OF THE SERVICES
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-use-text" datatype="html">
+        <target>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>2.1 The Services<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          The Company hereby grants you a non-exclusive, non-transferable, non-sublicensable right to access and use the Services solely for the 
+          purposes of browsing the Site, and searching for, viewing, registering for, and interacting with, an event that is registered on the 
+          Site, in each case (i) in compliance with these terms of service, and (ii) to the extent permitted under all applicable laws and 
+          regulations (foreign and domestic). Notwithstanding the foregoing, you shall not, and shall not permit anyone else to, directly or 
+          indirectly: (i) modify, reproduce or otherwise create derivatives of any part of the Services or Site Content (as defined below); 
+          (ii) reverse engineer, disassemble, decompile or otherwise attempt to discover the source code or structure, sequence and organization 
+          of all or any part of the Services (except that this restriction shall not apply to the limited extent restrictions on reverse 
+          engineering are prohibited by applicable local law); (iii) rent, lease, resell, distribute or use the Services for timesharing, 
+          service bureau, or commercial purposes; (iv) remove or alter any proprietary notices or labels on or in the Services or Site Content; 
+          (v) engage in any activity that interferes with or disrupts the Services; or (vi) engage in any fraudulent activity or activity that 
+          facilitates fraud.
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>2.2 Software<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          If you are allowed to download or use any Software in connection with the Services, The Company hereby grants you a personal, 
+          non-transferable, non-sublicensable, revocable, non-exclusive license to use the Software solely for your internal use in 
+          connection with the Services, and only in accordance with these terms of service and the written instructions/directions (if any) 
+          provided by The Company in conjunction with the Software. For purposes of these terms of service, "Software" shall mean any and all 
+          software that is available on or through the Site or otherwise provided by The Company, including without limitation The Company’s 
+          mobile applications. For clarity, the Software will be deemed a part of the "Services" hereunder.
+        </target>
+         <source>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>2.1 The Services<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          The Company hereby grants you a non-exclusive, non-transferable, non-sublicensable right to access and use the Services solely for the 
+          purposes of browsing the Site, and searching for, viewing, registering for, and interacting with, an event that is registered on the 
+          Site, in each case (i) in compliance with these terms of service, and (ii) to the extent permitted under all applicable laws and 
+          regulations (foreign and domestic). Notwithstanding the foregoing, you shall not, and shall not permit anyone else to, directly or 
+          indirectly: (i) modify, reproduce or otherwise create derivatives of any part of the Services or Site Content (as defined below); 
+          (ii) reverse engineer, disassemble, decompile or otherwise attempt to discover the source code or structure, sequence and organization 
+          of all or any part of the Services (except that this restriction shall not apply to the limited extent restrictions on reverse 
+          engineering are prohibited by applicable local law); (iii) rent, lease, resell, distribute or use the Services for timesharing, 
+          service bureau, or commercial purposes; (iv) remove or alter any proprietary notices or labels on or in the Services or Site Content; 
+          (v) engage in any activity that interferes with or disrupts the Services; or (vi) engage in any fraudulent activity or activity that 
+          facilitates fraud.
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>2.2 Software<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          If you are allowed to download or use any Software in connection with the Services, The Company hereby grants you a personal, 
+          non-transferable, non-sublicensable, revocable, non-exclusive license to use the Software solely for your internal use in 
+          connection with the Services, and only in accordance with these terms of service and the written instructions/directions (if any) 
+          provided by The Company in conjunction with the Software. For purposes of these terms of service, "Software" shall mean any and all 
+          software that is available on or through the Site or otherwise provided by The Company, including without limitation The Company’s 
+          mobile applications. For clarity, the Software will be deemed a part of the "Services" hereunder.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="venue-title" datatype="html">
+        <target>
+            3. VENUE
+        </target>
+        <source>
+            3. VENUE
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="venue-text" datatype="html">
+        <target>
+            The Services are a platform for enabling connections between General Users and Tournament Organizers, but The Company is not 
+            responsible for the performance of Tournament Organizers, nor does it have control over the quality, timing, legality, failure 
+            to provide, or any other aspect whatsoever of the services they provide, nor of the integrity, responsibility or any of the 
+            actions or omissions whatsoever of any Tournament Organizers. When interacting with other General Users and Tournament Organizers, 
+            you should exercise caution and common sense to protect your personal safety and property, just as you would when interacting with 
+            other persons whom you don’t know. The Company is not responsible for the conduct or performance, whether online or offline, of any 
+            user of the Services.
+        </target>
+        <source>
+            The Services are a platform for enabling connections between General Users and Tournament Organizers, but The Company is not 
+            responsible for the performance of Tournament Organizers, nor does it have control over the quality, timing, legality, failure 
+            to provide, or any other aspect whatsoever of the services they provide, nor of the integrity, responsibility or any of the 
+            actions or omissions whatsoever of any Tournament Organizers. When interacting with other General Users and Tournament Organizers, 
+            you should exercise caution and common sense to protect your personal safety and property, just as you would when interacting with 
+            other persons whom you don’t know. The Company is not responsible for the conduct or performance, whether online or offline, of any 
+            user of the Services.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-payment-title" datatype="html">
+        <target>
+            4. PAYMENT
+        </target>
+        <source>
+            4. PAYMENT
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-payment-text" datatype="html">
+        <target>
+            <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>4.1 Independent Relationship of Payment Services<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> 
+            The Company provides a platform by which payments can be 
+            used to join events present on the Site. These payments are transacted through online payment services such as Stripe, Paypal, 
+            or other third party payment services. Payments must not be arranged directly with Tournament Organizers. 
+            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+            <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>4.2 Disputes and Refunds<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> 
+            If you are in cash and want to eat something
+            in connection with an event listed on the Website, 
+            write to support@youplay.bet or at Discord to the tournament organizer.
+        </target>
+        <source>
+            <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>4.1 Independent Relationship of Payment Services<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> The Company provides a platform by which payments can be 
+            used to join events present on the Site. These payments are transacted through online payment services such as Stripe, Paypal, 
+            or other third party payment services. Payments may also be arranged directly with Tournament Organizers. 
+            Tournament Organizers and General Users sending payments affect the applicable monetary payment transaction through 
+            the payment service, and are bound by the applicable terms of use governing the payment service.
+            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+            <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>4.2 Disputes and Refunds<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> If you are a General User and you wish to request a refund or initiate a dispute regarding payment 
+            in connection with an event listed on the Site, you should contact the applicable Tournament Organizer directly. It is the 
+            responsibility of a Tournament Organizer to communicate its refund policy to General Users sending payments and to issue 
+            refunds as required via the Site, payment service, or otherwise. If a General User desires to request a refund, they must 
+            request the refund from the Tournament Organizer. All communications or disputes regarding refunds are between the Tournament 
+            Organizer and General User initiating payment and The Company will not be responsible or liable in any way for refunds, errors 
+            in issuing refunds, or lack of refunds in connection with the Services. All communications and disputes regarding chargebacks 
+            and refunds are between the Tournament Organizer and General User initiating payment and The Company will not be responsible or 
+            liable in any way for chargebacks in connection with a General User’s use of the Services.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-privacy-title" datatype="html">
+        <target>
+            5. PRIVACY POLICY &amp; DATA CONSENT
+        </target>
+        <source>
+            5. PRIVACY POLICY &amp; DATA CONSENT
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-privacy-text" datatype="html">
+        <target>
+          All informations we have of You is gathered in "Profile" page. We do not share with anybody informations we have about you.
+          We will required to fill Personal data in order to make withdraws. We are obliged to share data with authorities on request.
+        </target>
+        <source>
+          Your privacy is important to The Company. Please see our Privacy Policy for information relating to how we collect, 
+          use, and disclose your personal information. The Company does not control and shall not be responsible for the acts 
+          of you or any other users (whether Tournament Organizers, General Users, visitors, or otherwise) of the Services.
+          All data we store is avaliable in your Profile page. 
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-obligations-title" datatype="html">
+        <target>
+          6. YOUR SIGN-UP OBLIGATIONS
+        </target>
+        <source>
+          6. YOUR SIGN-UP OBLIGATIONS
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-obligations-text" datatype="html">
+        <target>
+          To sign-up as a registered user of the Services, whether as a Tournament Organizer, General User, or other, you agree to: 
+          (a) provide true, accurate, current and complete information about yourself as prompted by the Site registration form 
+          (the "Registration Data") and (b) maintain and promptly update the Registration Data to keep it true, accurate, current and 
+          complete. If you provide any information that is untrue, inaccurate, not current or incomplete, or The Company has 
+          reasonable grounds to suspect that such information is untrue, inaccurate, not current or incomplete, The Company has the 
+          right to suspend or terminate all of your accounts and refuse any and all of your current or future use of the Services 
+          (or any portion thereof).
+        </target>
+        <source>
+          To sign-up as a registered user of the Services, whether as a Tournament Organizer, General User, or other, you agree to: 
+          (a) provide true, accurate, current and complete information about yourself as prompted by the Site registration form 
+          (the "Registration Data") and (b) maintain and promptly update the Registration Data to keep it true, accurate, current and 
+          complete. If you provide any information that is untrue, inaccurate, not current or incomplete, or The Company has 
+          reasonable grounds to suspect that such information is untrue, inaccurate, not current or incomplete, The Company has the 
+          right to suspend or terminate all of your accounts and refuse any and all of your current or future use of the Services 
+          (or any portion thereof).
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">148</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-accsecurity-title" datatype="html">
+        <target>
+            7. ACCOUNT, PASSWORD, AND SECURITY
+        </target>
+        <source>
+            7. ACCOUNT, PASSWORD, AND SECURITY
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">161</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-accsecurity-text" datatype="html">
+        <target>
+          As part of the Site registration process, you will provide a login email address and create a password, 
+          which together form an account. You are responsible for maintaining the confidentiality of the password, 
+          and are fully responsible for all activities that occur under your account, including, without limitation, 
+          all actions by sub-users registered under your account. You agree to (a) immediately notify The Company of any 
+          unauthorized use of your password or account or any other breach of security, and (b) ensure that you exit 
+          from your account at the end of each session. The Company cannot and will not be liable for any loss, 
+          damage or other liability arising from your failure to comply with this Section or from any unauthorized 
+          access to or use of your account. In the event of any dispute between two or more parties as to account 
+          ownership, you agree that The Company shall be the sole arbiter of such dispute in its sole discretion 
+          and that The Company’s decision (which may include termination or suspension of any account subject to dispute) 
+          shall be final and binding on all parties.
+        </target>
+        <source>
+          As part of the Site registration process, you will provide a login email address and create a password, 
+          which together form an account. You are responsible for maintaining the confidentiality of the password, 
+          and are fully responsible for all activities that occur under your account, including, without limitation, 
+          all actions by sub-users registered under your account. You agree to (a) immediately notify The Company of any 
+          unauthorized use of your password or account or any other breach of security, and (b) ensure that you exit 
+          from your account at the end of each session. The Company cannot and will not be liable for any loss, 
+          damage or other liability arising from your failure to comply with this Section or from any unauthorized 
+          access to or use of your account. In the event of any dispute between two or more parties as to account 
+          ownership, you agree that The Company shall be the sole arbiter of such dispute in its sole discretion 
+          and that The Company’s decision (which may include termination or suspension of any account subject to dispute) 
+          shall be final and binding on all parties.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-content-title" datatype="html">
+        <target>
+            8. CONTENT
+        </target>
+        <source>
+            8. CONTENT
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-content-text" datatype="html">
+        <target>
+            <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>8.1 Site Content<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> You agree that all material, including without limitation information, data, software, text, design 
+            elements, graphics, images and other content (collectively, "Content"), contained in or delivered via the Services or otherwise 
+            made available by The Company in connection with the Services (collectively, "Site Content") is protected by copyrights, 
+            trademarks, service marks, trade secrets or other intellectual property and other proprietary rights and laws. The Company may 
+            own the Site Content or portions of the Site Content may be made available to The Company through arrangements with third parties. 
+            Except as expressly authorized by The Company in writing or in connection with your use of the intended functionality of the 
+            Services, you agree not to sell, license, rent, modify, distribute, copy, reproduce, transmit, publicly display, publicly perform, 
+            publish, adapt, edit or create derivative works of any Site Content, or post any Site Content on any other web site or in a 
+            networked computer environment for any purpose. Reproducing, copying or distributing any Site Content for any other purpose 
+            is strictly prohibited without the express prior written permission of The Company. You shall use the Site Content only for 
+            purposes that are permitted by these terms of service and any applicable laws and regulations (foreign and domestic). 
+            Any rights not expressly granted herein are reserved.
+            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        </target>
+        <source>
+            <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>8.1 Site Content<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> You agree that all material, including without limitation information, data, software, text, design 
+            elements, graphics, images and other content (collectively, "Content"), contained in or delivered via the Services or otherwise 
+            made available by The Company in connection with the Services (collectively, "Site Content") is protected by copyrights, 
+            trademarks, service marks, trade secrets or other intellectual property and other proprietary rights and laws. The Company may 
+            own the Site Content or portions of the Site Content may be made available to The Company through arrangements with third parties. 
+            Except as expressly authorized by The Company in writing or in connection with your use of the intended functionality of the 
+            Services, you agree not to sell, license, rent, modify, distribute, copy, reproduce, transmit, publicly display, publicly perform, 
+            publish, adapt, edit or create derivative works of any Site Content, or post any Site Content on any other web site or in a 
+            networked computer environment for any purpose. Reproducing, copying or distributing any Site Content for any other purpose 
+            is strictly prohibited without the express prior written permission of The Company. You shall use the Site Content only for 
+            purposes that are permitted by these terms of service and any applicable laws and regulations (foreign and domestic). 
+            Any rights not expressly granted herein are reserved.
+            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+            <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>8.2 Your Content.<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> You acknowledge and agree that if you contribute, provide, or make available any content to the 
+            Site ("Your Content"), you hereby grant to The Company a non-exclusive, worldwide, perpetual, irrevocable, royalty-free, 
+            transferable, sublicensable (through multiple tiers) right and license to use, reproduce, adapt, modify, distribute, translate, 
+            publish, create derivative works based on, perform, display, and otherwise exploit Your Content, in whole or in part, 
+            in any media now known or hereafter developed, for any purpose whatsoever. You represent and warrant that you have all the rights, 
+            power and authority necessary to grant the foregoing license, and that all Your Content (i) does not infringe, violate, 
+            misappropriate or otherwise conflict with the rights of any third party, and (ii) complies with all applicable laws and regulations 
+            (foreign and domestic). In addition, Your Content must be accurate and truthful. The Company reserves the right to remove any of 
+            Your Content from the Site at any time if The Company believes in its sole discretion that it does not comply with these terms of 
+            service. In addition, you agree that The Company may use your name, Gamertag (if provided) and logo (whether or not you have made 
+            it available through the Site) for the purpose of identifying you as an existing or past user of The Company both on the Site and 
+            in marketing and promotional materials.
+            <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+            <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>8.3 Streaming Content<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/> The Company provides a platform by which live and pre-recorded videos of video game related 
+            activities can be streamed or otherwise broadcasted to viewers. These broadcasts are transacted through online streaming services 
+            such as Twitch, YouTube, or other third party streaming services. Tournament Organizers and General Users broadcast content through 
+            these streaming services, and are bound by the applicable terms of use governing these streaming services.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">186</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-disclaimer-title" datatype="html">
+        <target>
+          9. DISCLAIMER OF WARRANTIES
+        </target>
+        <source>
+          10. DISCLAIMER OF WARRANTIES
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">260</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terms-disclaimer-text" datatype="html">
+        <target>      
+            Services are provided "as is" without any guarantee of infallibility. That the whole function would improve, responsibility
+            also is on the user. The payment is the responsibility of the company, all complaints regarding these and not only, please contact support@youplay.bet
+        </target>
+        <source>      
+            The Services are provided “as is” without warranties of any kind, either expressed or implied, including, but not limited to, 
+            the implied warranties of merchantability and fitness for a particular purpose, and non-infringement. The entire risk as to 
+            the quality and performance of the Services is with you. The Company does not represent or warrant that content or 
+            materials provided through the Services are accurate, complete, reliable, current, or error-free. The Company is not 
+            responsible for typographical errors or omissions relating to text, video, or photography. The Company does not represent 
+            or warrant that the Services are free of viruses or other harmful components and, therefore, you should use an industry 
+            recognized software to detect and remove viruses from any download. No advice or information, whether oral or written, 
+            obtained by you from The Company or through the Services shall create any warranty not expressly stated herein.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/views/terms-and-rules/terms.component.ts</context>
+          <context context-type="linenumber">264</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

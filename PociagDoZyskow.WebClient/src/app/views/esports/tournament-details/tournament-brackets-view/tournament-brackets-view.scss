@@ -1,0 +1,57 @@
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.match {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-color: #e4e7ea;
+  border: 0.1px solid;
+  padding: 1px;
+  text-align: center;
+  color: #e4e7ea;
+  font-size: 18px;
+  width: 200px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 15px;
+
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bracket-title {
+  color: #e4e7ea;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.winner-info {
+  color: #e4e7ea;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.matches-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.subtitle-header {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  font-size: 24px;
+  color: #e4e7ea;
+}

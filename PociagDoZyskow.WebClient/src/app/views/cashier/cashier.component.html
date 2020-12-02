@@ -1,0 +1,147 @@
+<div class="cashier-main-div">
+  <div class="info-card cashier-main-div">
+
+    <div class="section">
+
+      <div class="sub-section">
+        <div class="info-font" i18n="@@cashier-balance">Balance: <br> </div>
+        <div class="USD-usd-ratio-info">
+            <p class="balance">1</p> USD = <p class="balance">10</p> YouPlay coin
+        </div>
+        <div class="USD-usd-ratio-info">
+          <p class="balance">{{AvailableAmount | number : '1.2-2'}}</p> USD =
+          <p class="balance">{{AvailableAmount*10 | number : '1.2-2'}}</p> YPC
+        </div>
+      </div>
+        
+      <div class="sub-section-div">
+        <div class="sub-section">
+          <p class="info-font" i18n="@@cashier-buy-coins">Add funds:</p>
+          <input-numeric-yp [(ngModel)]="USDAmount" class="input money-input" [label]="'min. 10 USD'" [numericType]="'double'"></input-numeric-yp>
+          <div class="error-label" *ngIf="!ValidBuyAmount">Invalid amount.</div>
+          <img class="img-btc" (click)="ToggleBuyWithBtcForm()" src="assets/img/btc_accepted.png" width="190" height="60">
+          <img class="img-visa" (click)="ToggleBuyVisaInput()" src="assets/img/pay_with_card.png"  width="190" height="60">
+          <img class="img-btc" (click)="ToggleDepoCodeInput()" src="assets/img/depo-code-payment.png"  width="190" height="60">
+        </div>
+
+        <div class="sub-section">
+          <p class="info-font" i18n="@@cashier-sell-coins">Withdraw:</p>
+          <input-numeric-yp [(ngModel)]="CashoutAmount" class="input money-input" [label]="'min. 20 USD'" [numericType]="'double'"></input-numeric-yp>
+          <p class="error-label" *ngIf="!ValidCashoutAmount">Invalid amount.</p>
+          <img class="img-btc" (click)="ToggleCashoutBtcInput()" src="assets/img/btc_accepted.png" width="190" height="60">
+          <img class="img-visa" (click)="ToggleCashoutVisaInput()" src="assets/img/pay_with_card.png" width="190" height="60">
+        </div>
+      </div>
+    
+    </div>
+    
+    <div #DoDepositSection class="section">
+
+      <div *ngIf="BuyTokensBtcVisible" class="input-form">
+
+        <div  class="btc-form">  
+
+            <!-- <input-text-yp  class="input" [(ngModel)]="BonusCode" [label]="'Bonus Code'"></input-text-yp> -->
+            <p>Before going to next step, please be sure that you have BTC ready. You need to send given amount of BTC to given address.</p>
+
+            <button id="crypto-pay-btn" type="button" class="btn btn-block btn-success btn-green-full" (click)="CreateBtcDeposit()">
+              Continue
+            </button>
+
+        </div>
+        
+  
+        <div class="btc-deposit-panel" *ngIf="IsDepositMade">
+          <div class="header-payment-form">
+              <div class="modal-title" i18n="@@cashier-payment-details">Payment details</div>
+          </div>
+          <div class="amount-form">
+            <h6 class="hint">BTC amount: </h6>
+            <input class="input-disabled" [(ngModel)]="AmountBtc" name="input-USD" value={{AvailableAmount}}
+              required>
+            <button class="copy-button" (click)="CopyToClipboard(AmountBtc)">Copy</button>
+          </div>
+  
+          <div class="adress-form">
+            <h6 class="hint">Address: </h6>
+            <input type="tel" class="input-disabled" [(ngModel)]="Address" name="input-USD" value={{AvailableAmount}}
+              required>
+            <button class="copy-button" (click)="CopyToClipboard(Address)">Copy</button>
+          </div>
+  
+          <div class="qrcode-form">
+            <label class="label-box label-font">QR Code: </label>
+            <div class="qrcode-image"><img src="{{QrCode}}" class="qr-code"></div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div *ngIf="BuyTokensVisaVisible" class="input-form">
+          <p>All transactions are secure and encrypted. We do not save credit card data.</p>
+          <div class="btc-form">
+            <input-numeric-yp  class="input" [(ngModel)]="CreditCardNum" [label]="'Card number'"></input-numeric-yp>
+            <div class="multiple-input">
+                <input-text-yp  class="input input-medium" [(ngModel)]="CardHolderName" [label]="'Card holder'"></input-text-yp>
+                <input-text-yp  class="input input-medium" [(ngModel)]="CardExpirationMmYy" [label]="'MM / YY'"></input-text-yp>
+                <input-numeric-yp  class="input input-small" [(ngModel)]="CVV" [label]="'CVV'"></input-numeric-yp>
+            </div>
+            <button id="crypto-pay-btn" type="button" class="btn btn-block btn-success btn-green-full" (click)="UseDepoCode()" i18n="@@cashier-continue">
+              Continue
+            </button>
+          </div>
+      </div>
+
+      <div *ngIf="DepoCodeDepositVisible" class="input-form">
+        <div class="btc-form">
+
+          <input-text-yp  class="input" [(ngModel)]="DepoCode" [label]="'Depo Code'"></input-text-yp>
+
+          <button id="crypto-pay-btn" type="button" class="btn btn-block btn-success btn-green-full" (click)="UseDepoCode()" i18n="@@cashier-use-code">
+            Use code
+          </button>
+        </div>
+
+      </div>
+
+      <div *ngIf="CashoutBtcVisible" class="input-form">
+        <div class="btc-form">
+          <input-text-yp id="wallet" class="input" [(ngModel)]="UserBTCWalletAddress" [label]="'Your BTC wallet address'"></input-text-yp>
+          <div class="error-label" *ngIf="!ValidAddress">Invalid BTC address (should be 34 characters).</div>
+
+          <button id="" type="button" class="btn btn-block btn-success btn-green-full" (click)="CreateBtcWithdraw()" i18n="@@cashier-cash-out">
+            Cash out
+          </button>
+        </div>
+      </div>
+  
+  
+      <div *ngIf="CashoutVisaVisible">
+        <div class="coming-soon">
+          Coming soon
+        </div>
+      </div>
+
+      <div *ngIf="!ValidDepoCode" class="error-msg" i18n="@@cashier-invalid-code">Invalid depo code</div>
+    </div>
+
+
+    <div class="section">
+      <div class="info-font transfers-header" i18n="@@cashier-history-title">Transfers history</div>
+      <div class="transactions-div">
+        <div class="transactions-header">
+          <div class="transactions-header-item" i18n="@@cashier-history-amount">Amount</div>
+          <div class="transactions-header-item" i18n="@@cashier-history-type">Type</div>
+          <div class="transactions-header-item" i18n="@@cashier-history-status">Status</div>
+        </div>
+        <div class="transaction" *ngFor="let transferForm of UserMoneyForms">
+          <div class="transaction-item">{{transferForm.amountUsd}} USD</div>
+          <div class="transaction-item">{{transferForm.type}}</div>
+          <div class="transaction-item">{{transferForm.status}}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

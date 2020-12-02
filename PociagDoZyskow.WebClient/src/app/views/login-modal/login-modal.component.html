@@ -1,0 +1,35 @@
+<button hidden="true" data-toggle="modal" (click)="loginUserModal.show()" ></button>
+<button hidden="true" (click)="loginUserModal.hide()" ></button>
+<div bsModal #loginUserModal="bs-modal" (onHidden)="onHideModal()" tabindex="-1" class="modal fade" role="dialog" aria-labelledby="loginUserModalLabel"
+  aria-hidden="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" i18n="@@login-welcome">Welcome back!</h3>
+        <button type="button" class="close" (click)="loginUserModal.hide()" >
+            <img class="btn-close-formnavbar-brand-full" src="assets/svg/discard-white.svg" width="30" height="40">
+        </button>
+      </div>
+
+      <div class="card-body p-4">
+
+        <input-text-yp id="username" class="title-input" [(ngModel)]="Username" (keyup.enter)="GoToNextInput($event)" [label]="'Username'"></input-text-yp>
+
+
+        <input-text-yp id="password" class="password-input-text" [(ngModel)]="Password" (keyup.enter)="login()" [label]="'Password'" [ispassword]=true></input-text-yp>
+
+        <div *ngIf="ErrorMessage" class="error-label">{{ErrorMessage}}</div>
+
+        <button id="login-btn" type="button" class="btn btn-block btn-success btn-green-full" (click)="login()">
+          Login <i *ngIf="IsLoging" class="fa fa-spinner fa-spin"></i>
+        </button>
+
+      </div>
+
+
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

@@ -1,0 +1,190 @@
+<div class="main-div">
+    <div class="title-container">
+        <p class="title font-bright tournament-title">
+            {{Title}}
+        </p>
+    </div>
+    <div class="info-card tournament-info-container">
+        <div class="tabs-container">
+            <div class="tab" (click)="ShowGeneralView()" [ngClass]="{ 'selected-tab': GeneralViewActive, 'unselected-tab': !GeneralViewActive }">General</div>
+            <div class="tab" *ngIf="Format != 'FFA'" (click)="ShowMatchesView()" [ngClass]="{ 'selected-tab': MatchesViewActive, 'unselected-tab': !MatchesViewActive }">Matches</div>
+            <!-- <div class="tab" *ngIf="Format == 'PointsBasedPairing'" (click)="ShowMatchesView()" [ngClass]="{ 'selected-tab': MatchesViewActive, 'unselected-tab': !MatchesViewActive }">Matches</div> -->
+            <div class="tab" (click)="ShowParticipantsView()" [ngClass]="{ 'selected-tab': ParticipantsViewActive, 'unselected-tab': !ParticipantsViewActive }">Participants</div>
+            <div class="tab" (click)="ShowPrizesView()" [ngClass]="{ 'selected-tab': PrizesViewActive, 'unselected-tab': !PrizesViewActive }">Prizes</div>
+            <div class="tab" (click)="ShowResultsView()" [ngClass]="{ 'selected-tab': ResultsViewActive, 'unselected-tab': !ResultsViewActive }">Results</div>
+        </div>
+
+        <img *ngIf="GeneralViewActive" class="game-logo" src="{{TournamentBannerPath}}">
+        <img class="exit-btn" routerLink="/esports" src="assets/svg/discard-white.svg" width="160" height="160">
+        
+        <div *ngIf="GeneralViewActive" class="general-view">
+
+            <div class="start-time-div">
+                <div *ngIf="TimeLeftInDays >= 1" class="start-time-label">Start in {{TimeLeftInDays}} days</div>
+                <div *ngIf="TimeLeftInHours >= 1 && TimeLeftInDays < 1" class="start-time-label">Start in  {{TimeLeftInHours}} hours</div>
+                <div *ngIf="TimeLeftInMinutes > 0 && TimeLeftInHours<1" class="start-time-label">Start in  {{TimeLeftInMinutes}} minutes</div>
+                <div *ngIf="TimeLeftInMinutes < 0.1 && !IsClosedTournament" class="start-time-label">In progress</div>
+                <div *ngIf="IsClosedTournament" class="start-time-label">Closed</div>
+            </div>
+
+
+            <div class="subtitle font-bright players-joined-label">
+                {{CountParticipants}} Players joined
+            </div>
+            <div class="btn-dropdown-wrapper" *ngIf="IsParticipant && IsOpenTournament" (click)="ToggleLeaveForm()">
+                <div class="create-btn btn-action">
+                    Leave Tournament
+                </div>
+                <img class="arrow-down" src="assets/svg/arrow-down.svg" width="40px;" height="40px;">
+            </div>
+
+
+            <div *ngIf="DisplayLeaveForm" class="font-bright">Do you want leave tournament? Buy-in will be credited back to your account.</div>
+            <button class="btn btn-block btn-success btn-green-full btn-submit" *ngIf="DisplayLeaveForm" (click)="LeaveTournament()">
+                Submit
+            </button>
+    
+            <div class="btn-dropdown-wrapper" *ngIf="!IsParticipant && !IsAdmin && IsOpenTournament" (click)="ToggleCheckinForm()">
+                <div class="create-btn btn-action">
+                    Join Tournament
+                </div>
+                <img class="arrow-down" src="assets/svg/arrow-down.svg" width="40px;" height="40px;">
+            </div>
+
+            <div *ngIf="DisplayCheckinForm" class="font-bright">
+                Please checkin form below
+                <input-text-yp class="input result-input" [(ngModel)]="InGameUsername" [label]="'in game username'"></input-text-yp>
+                <div *ngFor="let field of RequiredFields">
+                    <input-text-yp  class="input result-input" [(ngModel)]="RequiredInfoFields[field]" [label]="field"></input-text-yp>
+                </div>
+                <div class="error-label" *ngIf="DisplayFillFormNotification">Fill all required fields.</div>
+                <div>
+                    <button class="btn btn-block btn-success btn-green-full btn-submit" (click)="JoinEvent()">
+                        Submit
+                    </button>
+                </div>
+                <br> 
+            </div>
+    
+            <div *ngIf="IsAdmin && !IsOpenTournament" class="create-btn central-btn" (click)="ToggleResultsForm()">
+                Fill results
+            </div>   
+            <div *ngIf="DisplayResultsForm" class="font-bright">
+                <div *ngFor="let result of TempResults">
+                    <div class="signle-result-wrapper">
+                        <p class="result-place-label">{{result.tournamentStanding}}. </p>
+                        <input-text-yp class="input result-input" [(ngModel)]="result.inGameUsername"></input-text-yp>
+                    </div>
+                </div>
+    
+                <div class="error-label" *ngIf="DisplayFillResultsNotification">Fill all place paying.</div>
+                <div>
+                    <button class="btn btn-block btn-success btn-green-full btn-submit" (click)="UpdateResults()">
+                        Submit
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="IsSiteAdmin" (click)="DeleteTournament()">
+                <div class="create-btn btn-action">
+                    Delete Tournament
+                </div>
+            </div>
+            <div class="details-info-container">
+                <div class="subtitle font-bright">
+                    <div class="section-header">Details: </div>
+                    <div class="title-name">Entry:</div> {{Buyin*10}} YPC ({{Buyin}} USD)<br>
+                    <div *ngIf="IsMoneyTournament"><div class="title-name">Total prize pool:</div> {{TotalMoneyPool*10  | number : '1.2-2'}} YPC ({{TotalMoneyPool  | number : '1.2-2'}} USD)<br></div>
+                    <div class="title-name">Platform:</div> {{Platform}} <br>
+                    <div class="title-name">Game:</div> {{Category}} <br>
+                    <div class="title-name">Format:</div> {{Format}} <br>
+                    <div class="title-name">Owner:</div> {{AdminUsername}} <br>
+                    <div class="title-name">Start date & time:</div> <br>
+                    {{StartTime | date:'yyyy-MM-dd'}} 
+                    {{StartTime | date:'HH:mm:ss'}}, {{Timezone}}<br>
+                </div>
+                
+            </div>
+
+            <div class="subtitle font-bright">
+                <div class="section-header">Description: </div>
+                {{Description}}
+            </div>
+            <div class="subtitle font-bright">
+                <div class="section-header">Rules: </div>
+                {{Rules}} <br>
+            </div>
+            <div class="subtitle font-bright">
+                <div class="section-header">Contact: </div>
+                {{Contact}} <br>
+            </div>        
+            
+            
+        </div>
+
+        <div *ngIf="MatchesViewActive" class="view">
+            <div *ngIf="IsOpenTournament" class="subtitle font-bright">
+                There are no matches yet.
+            </div>
+            <div *ngIf="IsParticipant && CurrentUserMatch != null" class="subtitle font-bright">
+                You current match: <br>
+                <match-overview class="" [isAdmin]="IsAdmin" [match]="CurrentUserMatch">
+                </match-overview> 
+                <div class="hint">Please contact your opponent on discord, play against him, then contact admin with result.</div>
+            </div>
+            <!-- <div *ngIf="IsParticipant && CurrentUserMatch != null" class="horizontal-line"></div> -->
+            <div *ngIf="IsAdmin">
+                <div class="subtitle font-bright" *ngFor="let stage of Stages">
+                    Round {{stage}}: <br>
+                    <match-overview *ngFor="let match of StagesMatches[stage]" class="" [isAdmin]="IsAdmin" [match]="match">
+                    </match-overview>
+                </div>
+            </div>
+            <tournament-brackets-view *ngIf="!IsOpenTournament" [tournament]="Tournament"></tournament-brackets-view>
+            
+        </div>
+
+        <div *ngIf="ParticipantsViewActive" class="view">
+            <div class="subtitle font-bright">
+                <div>Username / in game name:</div>
+                <div *ngFor="let p of Participants; let i = index;">
+                    {{i+1}}. {{p.username}} / {{p.inGameUsername}}
+                </div>
+            </div>
+        </div>     
+        
+        <div *ngIf="PrizesViewActive" class="view">
+            <div class="subtitle font-bright">
+                <div *ngIf="IsOpenTournament">(full prizes after registration closed)</div> 
+                <div *ngFor="let p of Prizes">
+                    {{p.tournamentStanding}}. {{(p.poolPercentageReward * TotalMoneyPool) | number : '1.2-2'}} USD
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="ResultsViewActive" class="view">
+            <div class="subtitle font-bright">
+                <div>Results: </div>
+                <div *ngIf="DisplayResults">
+                    <div *ngFor="let result of Results">
+                        <div  class="result-info">
+                            {{result.tournamentStanding}}. {{result.inGameUsername}} / {{result.username}} / {{result.wonAmount}} USD
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="DisplayCurrentStandings">
+                        Full results will be avaliable when tournament ends.
+                    <div *ngFor="let player of Participants">
+                        <div  class="result-info">
+                            {{player.inGameUsername}} / {{player.points}}
+                        </div>
+                    </div>
+                </div>
+                <!-- <div *ngIf="IsOpenTournament">
+                    Results will be avaliable when tournament ends.
+                </div> -->
+            </div> 
+        </div>     
+
+    </div>
+
+</div>

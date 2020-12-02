@@ -1,0 +1,43 @@
+
+<div class="single-match-container">
+    <div class="header-match">
+        <div class="match-row" (click)="ToggleMatchForm()">
+            <!-- <span *ngIf="match.players[0] != null" class="font">{{match.players[0].username}} - {{match.players[1].username}}</span> -->
+            <div>
+                <span *ngIf="match.players[0] == null" class="font">TBA</span>
+                <span *ngIf="match.players[0] != null" class="font">{{match.players[0].inGameUsername}}</span>
+                <span class="font"> - </span>
+                <span *ngIf="match.players[1] == null" class="font">TBA</span>
+                <span *ngIf="match.players[1] != null" class="font">{{match.players[1].inGameUsername}}</span>
+            </div>
+            
+            <img *ngIf="isAdmin" class="arrow-down" src="assets/svg/arrow-down.svg" width="40px;" height="40px;">
+        </div>
+        <div class="font title"> Winner: {{match.winnerUsername}}</div>
+    </div>
+
+    <div *ngIf="DisplayMatchForm && isAdmin">
+        <!-- <div class="font title"> Winner: {{match.winnerUsername}}</div> -->
+        <div class="action-buttons">
+            <div class="result-button" (click)="SubmitMatchWinner(match.players[0])">
+                {{match.players[0].username}} <br>
+                {{match.players[0].inGameUsername}} 
+            </div>
+            <div class="result-button" (click)="SubmitMatchWinner(match.players[1])">
+                {{match.players[1].username}} <br>
+                {{match.players[1].inGameUsername}} 
+            </div>
+            <div class="result-button unresolved-button" (click)="SubmitMatchWinner()">
+                Unresolved
+            </div>
+        </div>
+        
+    
+    </div>
+    
+</div>
+
+
+
+
+

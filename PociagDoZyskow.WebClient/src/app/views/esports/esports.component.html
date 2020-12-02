@@ -1,0 +1,43 @@
+<div class="main-div">
+    <div class="wrapper-info">
+  
+      <!-- <div class="info-card-title">
+        <p class="font-bright title" i18n="@@esports-join-youplay">JOIN YouPlay.bet eSports</p>
+      </div> -->
+  
+  
+      <div class="info-card filter-card">
+        
+        <p class="subtitle font-bright" >Filters:</p>
+        <div class="filters-container">
+            <select (change)="FilterWithGame($event.target.value)" class="text-dropdown multirow-dropdown">
+                <option value="" hidden>Game</option>
+                <option *ngFor="let game of GameCategories" value={{game}}>
+                    {{game}}
+                </option>
+            </select>
+            <select (change)="FilterWitStatus($event.target.value)" class="text-dropdown multirow-dropdown">
+                <option value="" hidden>Status</option>
+                <option *ngFor="let s of Statuses" value={{s}}>
+                    {{s}}
+                </option>
+            </select>
+        </div>
+        <div class="create-btn" (click)="ApplyFilter()" i18n="@@esports-apply-filters">
+            Apply
+        </div>
+      </div>
+
+    <div class="info-card-title">
+      <p class="font-bright title" i18n="@@esports-next-events">NEXT EVENTS:</p>
+    </div>
+
+      <div class="events-container">
+        <tournament-overview *ngFor="let ev of Events" class="event" [tournament]="ev">
+        </tournament-overview>
+      </div>
+    
+
+
+  
+    </div>

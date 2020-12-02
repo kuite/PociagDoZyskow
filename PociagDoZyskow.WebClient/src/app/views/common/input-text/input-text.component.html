@@ -1,0 +1,12 @@
+
+
+
+<div class ="text">
+    <div class="group" *ngIf="!IsPassword">      
+        <input [(ngModel)]="value" class="input-material" placeholder="{{label}}" required>
+    </div>
+
+    <div class="group" *ngIf="IsPassword">
+        <input type="password" [(ngModel)]="value" class="input-material input-password" placeholder="{{label}}" required>
+    </div>
+</div>

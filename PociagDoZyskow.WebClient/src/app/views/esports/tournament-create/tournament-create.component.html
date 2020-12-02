@@ -1,0 +1,155 @@
+
+
+
+<div class="main-div">
+        <div class="info-card">
+    
+            <div class="create-tournament-content">
+                
+                <div class="header">
+                    <div>
+                        <p class="title font-title">CREATE TOURNAMENT</p>
+                    </div>
+                
+                    <div class="close-btn-container" >
+                        <a>
+                            <img class="close-btn" routerLink="/esports" src="assets/svg/discard-white.svg">
+                        </a>
+                    </div>
+               
+                </div>
+    
+                <div class="input-row-section">
+                    <p class="input-row-title font">
+                        Tournament title:
+                        <!-- <span class="font" style="font-size: 12px;">YouTube or Twitch</span> -->
+                    </p>
+                    
+                    <div class="input-row-box"> 
+    
+                        <input-text-yp class="input input-big" [(ngModel)]="Title" [label]="'Lichess youplay.bet arena'"></input-text-yp>
+                    </div>
+                </div>
+
+                <div class="multiple-input">
+                    <div class="input-container">
+                        <p class="input-row-title font">
+                            Entry (USD)
+                        </p>
+                        <div class="input-row-box"> 
+                            <input-numeric-yp [(ngModel)]="Buyin" class="input input-small" [numericType]="'double'"></input-numeric-yp>
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <p class="input-row-title font">
+                            Added pool (USD)
+                        </p>
+                        <div class="input-row-box"> 
+                            <input-numeric-yp [(ngModel)]="AddedPoolFromAdmin" class="input input-small" [label]="'0'" [numericType]="'double'"></input-numeric-yp>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="input-row-title font">
+                    <input class="chkbx-terms" type="checkbox" [(ngModel)]="IsBuyinAddedToPool">
+                    Is buyin added to pool
+                </div>
+                
+
+                <div class="input-row-section multiple-input">
+
+                        <input-text-yp class="input input-medium" [(ngModel)]="Platform" [label]="'Platform / Region'"></input-text-yp>
+
+
+                        <select (change)="ChangeGame($event.target.value)" class="text-dropdown multirow-dropdown">
+                            <option value="" hidden>Game</option>
+                            <option *ngFor="let game of GameCategories" value={{game}}>
+                                {{game}}
+                            </option>
+                        </select>
+
+                        <select (change)="ChangeFormat($event.target.value)" class="text-dropdown multirow-dropdown">
+                            <option value="" hidden>Format</option>
+                            <option *ngFor="let format of TournamentFormat" value={{format}}>
+                                {{format}}
+                            </option>
+                        </select>
+
+                </div>
+
+
+                <div class="input-row-section">
+                    <p class="input-row-title font">
+                        Max rounds limit
+                    </p>
+                    
+                    <div class="input-row-box"> 
+                        <input-numeric-yp [(ngModel)]="MaxRounds" class="input input-small" [label]="'0'" [numericType]="'double'"></input-numeric-yp>
+                    </div>
+                </div>
+
+                <div class="input-row-section">
+                    <p class="input-row-title font">
+                        Start date and time (your local time)
+                    </p>
+                    
+                    <div class="input-time-box"> 
+                        <input type="date" class="input-medium" [ngModel] ="StartDate | date:'yyyy-MM-dd'" (ngModelChange)="StartDate = $event">
+                        <!-- <input type="date" placeholder="{{StartDate}}" [(ngModel)]="StartDate" class="date-picker" (click)="d.toggle()" ngbDatepicker #d="ngbDatepicker">  -->
+                        <div class="time-picker-main">
+
+                            <select (change)="SetHours($event.target.value)" class="time-dropdown multirow-dropdown">
+                                <option value="" hidden>hours</option>
+                                <option *ngFor="let hour of Hours" value={{hour}}>
+                                    {{hour}}
+                                </option>
+                            </select>
+
+                            <select (change)="SetMinutes($event.target.value)" class="time-dropdown multirow-dropdown">
+                                <option value="" hidden>minutes</option>
+                                <option *ngFor="let minute of Minutes" value={{minute}}>
+                                    {{minute}}
+                                </option>
+                            </select>
+
+                            <!-- <input class="" [(ngModel)]="Timezone" name="timezone" disabled required> -->
+                        
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="input-row-section">
+                        <div class="input-row-title font">
+                            <div>Description</div>
+                            <!-- <div class="description-lenght-counter">{{DescriptionCount}}/255</div> -->
+                        </div>
+                        <div class="input-row-box">
+                            <textarea class="description-area input-big" [(ngModel)]="Description" rows="8" cols="30">
+                            </textarea>
+                        </div>
+        
+                </div>
+
+                <div class="input-row-section">
+                    <p class="input-row-title font">
+                        Rules
+                    </p>
+                    
+                    <div class="input-row-box"> 
+                        <textarea class="description-area input-big" [(ngModel)]="Rules" rows="8" cols="30">
+                        </textarea>
+                    </div>
+                </div>
+
+    
+                <div class="button-item">
+                    <button class="create-btn" (click)="CreateTournament()">Create tournament</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,339 @@
+.stream-watch-main {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.bets-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 40px;
+    min-height: 500px;
+}
+
+
+.newbet-form {
+    margin-bottom: 5px; //dfdf
+    margin-top: 15px;
+}
+
+
+.header-container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    flex-direction: column;
+}
+
+.vid-container {
+    min-height: 400px;
+    width: 100%;
+    height: 100%;
+    // min-width: 300px;
+}
+
+.go-back-div {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+
+.options-tag {
+    width: 34%;
+    text-align: center;
+    font-size: 22px;
+}
+
+.event-tag {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+}
+
+.item-tag {
+    text-align: center;
+    font-size: 22px;
+    width: 20%;
+}
+
+.title-tag {
+    flex-grow: 2;
+    text-align: center;
+    font-size: 22px;
+}
+
+.font {
+    //font-family: 'HKGrotesk', 'arial', sans-serif;
+    font-size: 18px;
+    color: #e4e7ea;
+}
+
+.openbets-header {
+    display: flex;
+    flex-direction: row;
+    height: 35px;
+    vertical-align: middle;
+    line-height: 35px;
+    // width: 20%;
+    
+    // background-color: #393c46;
+    background-color: #3e3e3e;
+    box-shadow: rgba(0, 0, 0, 0.16) 5px 5px;
+}
+
+.go-back-btn {
+    max-width: 70px;
+    cursor: pointer;
+}
+
+.top-section-container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    flex-direction: row;
+}
+
+.stream-chat-admin-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.stream-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    min-width: 300px;
+    height: 450px;
+}
+
+// .chat-container {
+//     display: flex;
+//     flex-direction: column;
+//     max-width: 100%;
+//     height: 100%;
+// }
+
+.chat-admin-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    height: 300px;
+}
+
+.chat-admin {
+    height: 100%;
+}
+
+.chat {
+    // height: 420px;
+    height: 340px;
+}
+
+.cta-container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.tabs-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 42px;
+}
+
+.tab {
+    background-color: #3e3e3e;
+    padding: 0 8px;
+    margin-right: 3px;
+    transition: .13s;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 22px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.16) 5px 5px;
+    color: #e4e7ea;
+    box-shadow: none;
+}
+
+.no-bets-info {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.play-btn {
+    color: #4dbd74;
+    border-color: #4dbd74;
+}
+
+// .show-hide-btn {
+//     max-width: 100px !important;
+//     font-size: 14px !important;
+//     max-height: 50px;
+//     margin-bottom: 0px !important;
+//     margin-top: 10px !important;
+//     // position: absolute;
+//     // left: 0px;
+//     // margin-top: 50px;
+// }
+
+.green-btn {
+    color: #4dbd74;
+    background-color: transparent;
+    background-image: none;
+    border-color: #4dbd74;
+}
+
+.stream-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+// .admin-action-btn {
+//     cursor: pointer;
+//     font-size: 18px;
+//     text-align: center;
+//     white-space: nowrap;
+//     cursor: pointer;
+//     vertical-align: middle;
+//     line-height: 40px;
+//     border-radius: 10rem;
+//     width: 185px;
+//     padding: 5px;
+// }
+
+.stream-title {
+    font-size: 24px;
+    align-self: right;
+}
+
+.selected-tab {
+    border-top: solid 2px #4dbd74;
+}
+
+.go-back-icon {
+    width: 70px;
+    height: 35px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.author-info {
+    margin-bottom: 0px;
+    //font-family: 'HKGrotesk', 'arial', sans-serif;
+    font-size: 21px;
+    color: #e4e7ea;
+    margin-bottom: 3px;
+    margin: 5px;
+    padding: 5px;
+    max-width: 1400px;
+    min-width: 250px;
+    width: 100%;
+    align-self: baseline;
+}
+
+.toggle-chat-btn {
+    visibility: hidden;
+    margin: 3px;
+}
+
+.chat-btn-expanded {
+    visibility: visible;
+    // width: 100%;
+    // height: 5%;
+    // text-align: center;
+}
+
+.chat-btn-collapsed {
+    height: 0px;
+    display: none;
+}
+
+// @media only screen and (min-width: 1000px) {
+//     .toggle-chat-btn {
+//         display: none;
+//     }
+
+//     .chat {
+//         min-height: 400px;
+//     }
+// }
+
+// @media only screen and (max-width: 1000px) {
+    .top-section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stream-container {
+        flex-direction: column;
+        width: 100%;
+        min-width: 250px;
+    }
+
+    .chat-container {
+        display: flex;
+        max-width: 700px;
+        width: 100%;
+        min-height: 60px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-self: baseline;
+    }
+
+    // .author-info {
+    //     max-width: 700px;
+    //     min-width: 250px;
+    //     width: 100%;
+    // }
+
+    .chat {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 14px;
+    }
+
+    .chat-expanded {
+        height: 100%;
+        // min-height: 340px;
+    }
+
+    .chat-collapsed {
+        display: none;
+    }
+
+    .toggle-chat-btn {
+        visibility: visible;
+        // width: 100%;
+        // max-width: 295px;
+        // height: 50px;
+        // text-align: center;
+        // line-height: 50px;
+        margin-bottom: 5px;
+    }
+// }
+
+@media only screen and (max-width: 600px) {
+    .stream-container {
+        height: 380px;
+    }
+}

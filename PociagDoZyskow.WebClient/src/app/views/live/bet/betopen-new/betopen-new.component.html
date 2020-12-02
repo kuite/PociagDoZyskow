@@ -1,0 +1,45 @@
+<div class="newbet-container">
+    
+    <div class="header-newbet-form">
+        <span class="newbet-form-title">Add bet</span>
+        <div class="btn-close-form"  (click)="CancellForm()">
+            <img src="assets/svg/discard-white.svg">
+        </div>
+    </div>
+
+    <input-text-yp class="title-input" [(ngModel)]="Title" [label]="'Bet title'"></input-text-yp>
+
+    <div class="add-option-block">
+        <!-- <img src="assets/img/add.png" class="add-option-img" (click)="AddOption()"> -->
+        <div class="orange-round-btn add-option-img" (click)="AddOption()">+</div>
+        <input-text-yp [(ngModel)]="NewOptionText" class="description-input" [label]="'bet option text'"></input-text-yp>
+        <input-numeric-yp [(ngModel)]="NewOptionOdd" class="course-input" [label]="''" [numericType]="'double'"></input-numeric-yp>
+    </div>
+    
+    <div *ngFor="let option of BetOptions" class="option-row">
+        <p class="bet-option-title">
+            {{option.optionText}}
+        </p>
+        <div class="bet-option-course">
+            <!-- <img src="assets/img/minus-button.png" style="width: 22px; height: 22px;" (click)="DecrementBetOptionOdd(option.optionText)"> -->
+            <div class="orange-square-btn" (click)="DecrementBetOptionOdd(option.optionText)">-</div>
+            <p class="bet-odd">
+                {{option.odd | number : '1.2-2'}} <!-- obok tego trzeba dodac przyciski +/- -->
+            </p>
+            <!-- <img src="assets/img/add.png" style="width: 22px; height: 22px;" (click)="IncrementBetOptionOdd(option.optionText)"> -->
+            <div class="orange-square-btn" (click)="IncrementBetOptionOdd(option.optionText)">+</div>
+        </div>
+    </div>
+
+    <div class="add-option-block">
+        <button id="playbet-btn" type="button" class="create-btn play-btn" (click)="CreateNewBetOpen()">
+            Submit
+        </button>
+    </div>
+
+</div>
+
+
+
+
+

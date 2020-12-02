@@ -1,0 +1,52 @@
+<div class="main-div">
+  <div class="wrapper-info">
+
+    <div class="info-card-title">
+      <p class="font-bright title">HOST LIVE STREAM</p>
+      <!-- <p class="font-bright subtitle">and get paid</p> -->
+    </div>
+
+
+    <div class="info-card">
+      <p class="subtitle font-bright">You can connect your live stream (youtube, twitch)
+        with betting online. Link your stream and start adding bets. Then, when you close bet, you get commision from it.</p>
+      <div *ngIf="IsLogged" class="create-btn">
+        <div (click)="GoToBetStreams()">
+          Create bet stream
+        </div>
+      </div>
+      <div *ngIf="!IsLogged" class="create-btn" (click)="ShowRegisterModal()">
+          Join now
+      </div>
+ 
+    </div>
+
+  </div>
+
+  <div *ngIf="StreamsOnPage == null" class="no-streams-info">
+    <h2 class="font-bright title">There are no active streams right now. Create your bet stream or visit us later.</h2>
+  </div>
+  <div *ngIf="StreamsOnPage != null && StreamsOnPage.length > 0" class="streams-div">
+      <div *ngIf="PageCount > 1" class="pagination">
+          <div (click)="ChangePage(-1)">
+            <img class="arrow"  src="assets/svg/left-arrow-thin.svg">
+          </div>
+          <div class="font-bright" style="font-size: 24px;">{{PageIndex + 1}}/{{PageCount}}</div>
+          <div (click)="ChangePage(1)">
+              <img class="right arrow"  src="assets/svg/left-arrow-thin.svg">
+          </div>
+      </div>
+      <stream-overview *ngFor="let stream of StreamsOnPage" class="" [stream]="stream">
+      </stream-overview>
+      <div *ngIf="PageCount > 1" class="pagination">
+        <div (click)="ChangePage(-1)">
+          <img class="arrow"  src="assets/svg/left-arrow-thin.svg">
+        </div>
+        <div class="font-bright" style="font-size: 24px;">{{PageIndex + 1}}/{{PageCount}}</div>
+        <div (click)="ChangePage(1)">
+            <img class="right arrow"  src="assets/svg/left-arrow-thin.svg">
+        </div>
+      </div>
+  </div>
+
+</div>

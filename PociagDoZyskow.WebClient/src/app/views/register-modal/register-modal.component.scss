@@ -1,0 +1,47 @@
+.incorrect-input-group {
+    width:100%;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.incorrect-input {
+    color:#e34234; 
+    //font-family: 'HKGrotesk', 'arial', sans-serif;
+    font-size: 18px;
+    width: 100%; 
+    text-align:center;
+    margin-bottom: 5px;
+}
+
+.chkbx-terms {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.terms {
+    display: flex;
+    font-size: 18px;
+    color: #e4e7ea;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.terms-message {
+    margin: 10px;
+}
+
+.terms-link {
+    text-decoration: underline;
+    color: #e4e7ea;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 321px) {
+    .chkbx-terms {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}

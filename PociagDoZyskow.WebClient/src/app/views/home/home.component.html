@@ -1,0 +1,57 @@
+
+<div class="main-div">
+
+  <div class="wrapper-info">
+      <div class="info-card-title">
+        <p class="font-bright title"  i18n="@@home-join-now">JOIN NOW</p>
+      </div>
+      <div class="info-card">
+          <p class="promo-text subtitle font-bright" i18n="@@home-info">
+              Play in our tournaments in chess, Fifa 19, Quake Champions,
+              Dota 2, CS:GO, Starcraft, Heroes III and more.
+              Win real money in free and money tournaments. You can cashout right away.<br>
+              If you don't have an account:
+          </p>
+          <div class="create-btn" (click)="ShowRegisterModal()" i18n="@@home-create-account">
+            Create account
+          </div>
+          <p class="promo-text subtitle font-bright" i18n="@@home-browse-tournaments">
+            Browse all events:
+          </p>
+          <div class="create-btn" (click)="GoToEsports()" i18n="@@home-find-tournaments">
+              Find eSports tournaments
+          </div>
+          <p class="promo-text subtitle font-bright" i18n="@@home-create-event-info">
+              If you want create tournament by yourself, you can do it. We advise to read manual before that.
+            </p>
+          <div class="create-btn" (click)="GoToCreateTournament()" i18n="@@home-create-tournament">
+              Create tournament
+          </div>
+      </div>
+
+      <div class="info-card-title">
+        <p class="font-bright title" i18n="@@home-howworks-title">HOW IT WORKS</p>
+      </div>
+      <div class="info-card">
+          <p class="subtitle font-bright" i18n="@@home-howworks-text">
+            If you want to play in our tournaments, you need to <br>
+            1. Have account on youplay.bet <br>
+            2. Find tournament you want to play then join it <br>
+            3. Join discord <a class="link" target="_blank" href="https://discord.gg/NUZGY5w">https://discord.gg/NUZGY5w</a>
+              and make sure you are ONLINE few minutes before tournament starts <br>
+            GL & HF
+          </p>
+      </div>
+      
+      <div class="info-card-title">
+          <p class="font-bright title" i18n="@@home-featured-event">FEATURED EVENT:</p>
+          <tournament-overview *ngFor="let ev of FeaturedTournaments" class="" [tournament]="ev">
+          </tournament-overview>
+      </div>
+  
+  </div>
+
+</div>
+
+  
+  <!-- Everyone that joins before  1.01.2019 will have better commission from streams. -->

@@ -1,0 +1,65 @@
+<header class="yp-header">
+
+
+  <div class="app-header">
+    <div class="navbar-nav">
+      <img class="logo" (click)="GoToHome()" src="assets/svg/brand/logo-mat.png" width="184" height="41">
+      <a class="link" routerLink="/esports" i18n="@@tournaments">Tournaments</a>
+    </div>
+  </div>
+
+  <div class="app-header-mobile">
+    <div dropdown>
+      <button class="hamburger-button" dropdownToggle>
+        <svg width="40" height="35" style="enable-background:new 0 0 32 32;" viewBox="0 0 32 32"
+          xml:space="preserve">
+          <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" 
+          fill="#acacac"/>
+        </svg>
+      </button>
+      <div id="nav-dropdown" class="dropdown-menu nav-dropdown-container" *dropdownMenu>
+        <a class="nav-dropdown-el hamburger-font" routerLink="/home" i18n="@@home">Home</a>
+        <a class="nav-dropdown-el hamburger-font" routerLink="/esports" i18n="@@tournaments">Tournaments</a>
+      </div>
+    </div> 
+
+  </div>
+
+  <div class="usermenu-right">
+    <select (change)="SetLanguage($event.target.value)" class="lang-dropdown">
+        <option value="" hidden>{{Language}}</option>
+        <option *ngFor="let language of Languages" value={{language}}>
+          {{language}}
+        </option>
+    </select>
+
+    <div *ngIf="IsLogged">
+      <div dropdown>
+        <button dropdownToggle id="btn-acc" class="profile-button">
+          <img class="user-menu-arrow" src="assets/svg/arrow-down.svg">
+          <p class="nickname font" i18n="@@header-usermenu">User menu</p> 
+          <!-- <p class="balance">{{Balance | number : '1.2-2'}} </p> <p class="nickname font">USD</p>  -->
+        </button>
+        <ul *dropdownMenu id="profile-dropdown-mobile" class="dropdown-menu usermenu" role="menu">
+          <li role="menuitem" class="dropdown-item" routerLink="/cashier" i18n="@@cashier-tab">Cashier</li>
+          <li role="menuitem" class="dropdown-item" routerLink="/profile" i18n="@@profile-tab">Profile</li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem" class="dropdown-item" (click)="Logout()" i18n="@@sign-out">
+            <i class="fa fa-power-off fa-lg"></i>Sign out
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div *ngIf="!IsLogged" class="right-panel-navbar-mobile">
+      <div class="create-btn register-btn" (click)="showLoginModal()" i18n="@@login">Login</div>
+      <div class="header-button">
+        <button class="create-btn register-btn" data-toggle="modal" (click)="showRegisterModal()" i18n="@@register">
+          Join now
+        </button>
+      </div>
+      
+    </div>
+
+  </div>
+
+</header>

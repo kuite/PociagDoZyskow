@@ -1,0 +1,25 @@
+.main {
+    background-image: linear-gradient(to bottom,#2c2c2c,#1a1a1a 116px);
+    // background-color: transparent; 
+    padding-top: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+    flex-direction: column;
+    display: flex;
+    min-height: 1000px
+}
+
+// .main-div {
+//     flex-direction: column;
+//     display: flex;
+    
+// }
+
+.my-app-sidebar{
+    z-index: 10000;
+}
+
+.yp-body {
+
+}
+

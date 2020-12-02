@@ -1,0 +1,15 @@
+<div class="chat-box c-size">
+    <div class="chat-comments"> <!--[ngClass]="{ 'chat-expanded': chatExpanded, 'chat-collapsed': !chatExpanded }"-->
+        <div #scrollMe [scrollTop]="scrollMe.scrollHeight" *ngIf="messages.length > 0" class="messages-container">
+            <div *ngFor="let message of messages" class="msg-wrap">
+                <span class="username">{{message.author}}: </span><span class="text">{{message.text}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="chat-comment-input"> <!--ngclass directive as above comment-->
+        <input type="text" class="chat-msg-input title-input"  (keyup.enter)="sendMessage()" [(ngModel)]="message" required>
+        <button button class="send-btn" (click)="sendMessage()">
+            <img class="navbar-brand-full send" src="assets/svg/send-button.svg">
+        </button>
+    </div>
+</div>

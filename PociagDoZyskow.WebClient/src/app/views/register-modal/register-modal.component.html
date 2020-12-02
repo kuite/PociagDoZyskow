@@ -1,0 +1,59 @@
+<button hidden="true" data-toggle="modal" (click)="registerUserModal.show()"></button>
+<button hidden="true" data-toggle="modal" (click)="registerUserModal.hide()"></button>
+
+
+
+
+<div bsModal #registerUserModal="bs-modal" (onHidden)="onHideModal()" tabindex="-1" class="modal fade" role="dialog" aria-labelledby="registerUserModalLabel"
+  aria-hidden="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" i18n="@@register-create-title">Create new account</h3>
+        <button type="button" class="close" (click)="registerUserModal.hide()" >
+            <img class="btn-close-formnavbar-brand-full" src="assets/svg/discard-white.svg" width="30" height="40">
+        </button>
+      </div>
+
+
+      <div class="card-body p-4">
+          <input-text-yp class="input" [(ngModel)]="Username" [label]="'Username'"></input-text-yp>
+          <div *ngIf="!isUsernameValid" class="error-label">Your username should have more than 4 and less than 15 characters.</div>
+
+          <input-text-yp class="input" [(ngModel)]="Email" [label]="'Email'"></input-text-yp>
+          <div *ngIf="!isEmailValid" class="error-label">Your email is not valid.</div>
+
+          <input-text-yp class="input" [(ngModel)]="Password" [label]="'Password'" [ispassword]=true></input-text-yp>
+
+          <input-text-yp class="input" [(ngModel)]="RepeatPassword" [label]="'Repeat password'" [ispassword]=true (keyup.enter)="registerUser()"></input-text-yp>
+          <div *ngIf="!isPasswordValid" class="error-label">Your passwords don't match.</div>
+
+        <div (click)="SelectTermsAgreement()" class="terms">
+          <input class="chkbx-terms" type="checkbox" [(ngModel)]="AcceptedTerms">
+          <div class="terms-message"  i18n="@@register-accept-terms">I read and accept Terms and conditions.</div>
+          
+        </div>
+
+        <div class="incorrect-input-group">
+          <div *ngIf="ShowAcceptTermsMsg" class="error-label">Please accept terms.</div>
+        </div>
+
+
+        <re-captcha (resolved)="Resolved($event)" siteKey="6LdpRosUAAAAAFwga5ijAqCKeC3Mxcll_lug13-U"></re-captcha>
+        <div class="incorrect-input-group">
+          <div *ngIf="ShowCaptchaMsg" class="error-label">Please confirm you are human.</div>
+        </div>
+
+
+
+        <button type="button" class="btn btn-success btn-green-full" (click)="registerUser()" i18n="@@register-create-btn">Create Account</button>
+    
+      </div>
+    
+
+    </div>
+  </div>
+
+
+
+</div>

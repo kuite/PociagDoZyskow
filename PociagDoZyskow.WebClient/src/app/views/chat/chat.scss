@@ -1,0 +1,128 @@
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-comments {
+    width: 100%;
+    height: 90%;
+    background-color: #3f3e3e;
+    padding: 12px;
+    overflow: auto;
+}
+
+.adminname {
+    font-size: 16px;
+    color: #ffd600;
+    margin: 1px;
+}
+
+.username {
+    color: #acacac;
+    font-size: 16px;
+    margin: 1px;
+}
+
+.text {
+    font-size: 16px;
+    color: #fefffd;
+    margin: 1px;
+    word-break: break-all;
+}
+
+.chat-msg-input
+{
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.chat-comment-input {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    flex-direction: row;
+    justify-content: space-between;
+    // overflow-y: scroll;
+    // padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box; /* So the width will be 100% + 17px */
+}
+
+.chat-input {
+    height: 100%;
+    //color: white;
+    box-shadow:none;
+}
+
+.send-btn {
+    background-color: transparent;
+    border: transparent;
+    // display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    max-width: 40px;
+    max-height: 40px;
+    width: 15%;
+    height: 100%;
+}
+
+.messages-container {
+    margin-top: auto;
+    overflow-y: auto;
+}
+
+.msg-wrap {
+    margin-top: auto;
+    display: flex;
+    align-self: flex-end;       
+}
+
+.chat-comments {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    height: 350px;
+}
+
+img.send {
+    max-width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 9px;
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .c-input-size {
+        flex: 1;
+        width: 85%;
+        height: 100%;
+        min-height: 40px;
+        //color: white;
+    }
+    .c-size {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .msg-wrap {
+        max-width: 100%;    
+    }
+    .c-input-size {
+        flex: 1;
+        width: 82%;
+    }
+    .c-size {
+        width: 100%;
+        max-width: 950px;
+        min-width: 300px;
+        height: 100%;
+        max-height: 400px;
+    }
+    // .chat-comments {
+    //     min-height: 320px;
+    // }
+}

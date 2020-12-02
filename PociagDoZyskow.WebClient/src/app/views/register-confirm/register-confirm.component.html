@@ -1,0 +1,17 @@
+
+<div class="register-confirmation-wrapper">
+    <div *ngIf="IsConfirmed" class="register-confirmation-container" i18n="@@register-confirm">
+        Your email was successfulys verified.<br>
+        You can login now.
+    </div>
+    <div *ngIf="!IsConfirmed" class="register-confirmation-container">
+            Give us few seconds to confirm you address.<br>
+            If nothing happen, contact support.
+    </div>  
+    <div *ngIf="!IsLogged">
+
+    </div>
+    <div *ngIf="IsLogged">
+        
+    </div>
+</div>

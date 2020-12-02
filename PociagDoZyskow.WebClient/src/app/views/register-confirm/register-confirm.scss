@@ -1,0 +1,23 @@
+.register-confirmation-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 700px;
+    align-items: center;
+    height: 100%;
+}
+
+.register-confirmation-container {
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+}
+
+.gohome-btn {
+    font-size: 22px;
+    color: white;
+}

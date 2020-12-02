@@ -1,0 +1,30 @@
+<div class="single-event-container font">
+    <div class="icon-img-holder" (click)="ViewEvent(tournament)">
+        <img class="hosting-logo" src="{{TournamentIconPath}}" >
+    </div>
+    <div class="vid-info">
+        <div class="title-stream">
+            <div>{{tournament.title}}</div>
+        </div>
+        <div class="start-time-box">
+            <div *ngIf="TimeLeftInDays >= 1" class="start-time-label">IN {{TimeLeftInDays}} DAYS</div>
+            <div *ngIf="TimeLeftInHours >= 1 && TimeLeftInDays < 1" class="start-time-label">IN {{TimeLeftInHours}} HOURS</div>
+            <div *ngIf="TimeLeftInMinutes >= 0 && TimeLeftInHours < 1" class="start-time-label">IN {{TimeLeftInMinutes}} MINUTES</div>
+            <div *ngIf="TimeLeftInMinutes < 0 && !IsClosed" class="start-time-label">In progress</div>
+            <div *ngIf="IsClosed" class="start-time-label">Closed</div>
+        </div>
+        <div class="description-stream">
+            <div>{{tournament.category}}</div>
+        </div>
+        <div class="description-stream">
+            <div>{{PlayersJoinedCount}} / {{tournament.participantsMaxCount}} Players</div>
+        </div>
+        <div class="description-stream">
+            <div>Prize pool: {{TotalPrizePool*10}} YPC ({{TotalPrizePool}} USD) <br></div>
+        </div>
+        <div class="create-btn" (click)="ViewEvent(tournament)">
+            <div>Details</div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,25 @@
+1. Items in right navbar
+defined in _nav.ts
+style _nav.cs needs to be defined in custom styles
+we use sass for CSS
+
+2. Add page to routing
+- add import { HomeComponent } from './views/home/home.component'; to app.module.ts
+- add HomeComponent to declarations app.module.ts
+
+
+
+3. login wth facebook
+https://developers.facebook.com/
+
+
+
+
+
+angular tips:
+https://stackoverflow.com/questions/35359358/angular-2-change-event-on-every-keypress
+
+
+chosing stream to watch from stream overview doesnt work on < IE11 when clicking video thumbnail
+(This doesn't work in < IE11, and even in IE11 does not work on links)
+
